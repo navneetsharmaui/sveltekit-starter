@@ -36,8 +36,12 @@
 	import Counter from '$lib/Counter.svelte';
 </script>
 
+<svelte:head>
+	<title> Sveltekit </title>
+</svelte:head>
+
 <main>
-	<h1>Hello Navneet Sharma!</h1>
+	<h1>Hello Navneet!</h1>
 
 	<Counter />
 
