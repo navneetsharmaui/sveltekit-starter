@@ -1,9 +1,5 @@
 <svelte:head>
-	<title>
-		Notifications
-	</title>
+	<title>Notifications</title>
 </svelte:head>
 
-<h2>
-	Notifications
-</h2>
+<h2> Notifications </h2>

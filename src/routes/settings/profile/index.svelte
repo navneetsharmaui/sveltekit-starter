@@ -1,9 +1,5 @@
 <svelte:head>
-	<title>
-		Profile
-	</title>
+	<title>Profile</title>
 </svelte:head>
 
-<h2>
-	Profile
-</h2>
+<h2> Profile </h2>

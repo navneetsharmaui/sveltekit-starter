@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-	<title> Sveltekit </title>
+	<title>Sveltekit</title>
 </svelte:head>
 
 <main>
