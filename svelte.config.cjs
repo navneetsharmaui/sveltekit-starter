@@ -1,3 +1,5 @@
+/* jshint esversion: 9 */
+
 const sveltePreprocess = require('svelte-preprocess');
 const node = require('@sveltejs/adapter-node');
 const pkg = require('./package.json');

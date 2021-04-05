@@ -17,7 +17,7 @@
 	let title: string = '';
 
 	const getPathFromWindow = (): void => {
-		pathName = window ? window.location.pathname : '/home';
+		pathName = window ? window.location.pathname : '/';
 		title = getRouteTitle(pathName);
 	};
 
