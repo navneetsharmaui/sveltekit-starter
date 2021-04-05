@@ -1,6 +1,7 @@
 const sveltePreprocess = require('svelte-preprocess');
 const node = require('@sveltejs/adapter-node');
 const pkg = require('./package.json');
+const { resolve } = require('path');
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
@@ -9,9 +10,9 @@ module.exports = {
 	preprocess: [
 		sveltePreprocess({
 			defaults: {
-				style: "postcss",
+				style: 'postcss',
 			},
-			postcss: true
+			postcss: true,
 		}),
 	],
 	kit: {
@@ -21,11 +22,17 @@ module.exports = {
 		adapter: node(),
 
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
+		target: '#sveltekit-starter',
 
 		vite: {
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {}),
+			},
+			resolve: {
+				alias: {
+					$components: resolve(__dirname, './src/lib/shared/components'),
+					$models: resolve(__dirname, './src/lib/models'),
+				},
 			},
 		},
 	},

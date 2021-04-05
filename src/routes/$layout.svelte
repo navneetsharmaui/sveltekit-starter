@@ -1,8 +1,39 @@
-<script>
+<script lang="ts">
 	import '../app.scss';
 	import '../global.scss';
+
+	import { ApplicationTitles } from '$components';
+	import type { IApplicationRouteTitle } from '$lib/models';
+
+	const routeData: IApplicationRouteTitle[] = [
+		{
+			path: '/',
+			name: 'Home | Sveltekit',
+		},
+		{
+			path: '/home',
+			name: 'Home | Sveltekit',
+		},
+		{
+			path: '/about',
+			name: 'About | Sveltekit',
+		},
+		{
+			path: '/settings',
+			name: 'Settings | Sveltekit',
+		},
+		{
+			path: '/settings/profile',
+			name: 'Profile | Sveltekit',
+		},
+		{
+			path: '/settings/notifications',
+			name: 'Notifications | Sveltekit',
+		},
+	];
 </script>
 
+<ApplicationTitles routePathData="{routeData}" />
 <header class="text-gray-600 body-font">
 	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 		<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
