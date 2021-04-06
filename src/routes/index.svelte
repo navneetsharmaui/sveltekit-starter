@@ -32,8 +32,32 @@
 	}
 </style>
 
+<script lang="ts" context="module">
+	export async function load({ page, fetch, session }) {
+		console.log(page);
+		console.log(session);
+		return {};
+	}
+</script>
+
 <script lang="ts">
+	import { JSONHttpUtil } from '$lib/core';
+
 	import Counter from '$lib/Counter.svelte';
+
+	import { goto } from '$app/navigation';
+
+	import { Logger, LoggerUtils } from '$lib/utils';
+	import { onMount } from 'svelte';
+
+	const logger: Logger = LoggerUtils.getInstance('Index');
+
+	onMount(async () => {
+		const data = await JSONHttpUtil.get<any>(
+			'https://jsonplaceholder.typicode.com/photos?_limit=20',
+		);
+		logger.debug(data);
+	});
 </script>
 
 <section class="text-gray-600 body-font">

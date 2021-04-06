@@ -17,8 +17,10 @@
 	let title: string = '';
 
 	const getPathFromWindow = (): void => {
-		pathName = window ? window.location.pathname : '/';
-		title = getRouteTitle(pathName);
+		setTimeout(() => {
+			pathName = window ? window.location.pathname : '/';
+			title = getRouteTitle(pathName);
+		}, 300);
 	};
 
 	const onUpdate = (): void => {
