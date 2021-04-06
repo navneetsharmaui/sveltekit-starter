@@ -2,6 +2,7 @@
 
 const sveltePreprocess = require('svelte-preprocess');
 const node = require('@sveltejs/adapter-node');
+const ssr = require('@sveltejs/adapter-static');
 const pkg = require('./package.json');
 const { resolve } = require('path');
 
