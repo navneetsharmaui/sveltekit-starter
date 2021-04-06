@@ -5,8 +5,8 @@
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"start": "svelte-kit start",
-		"lint": "prettier --check . && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
-		"lint:fix": "prettier --check . && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
+		"lint": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
+		"lint:fix": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
 		"format": "prettier --write ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js}",
 		"prepare": "husky install",
 		"http-serve": "yarn http-server ./build"
@@ -18,6 +18,11 @@
 		"./.{ts,cjs,js}": [
 			"yarn lint:fix"
 		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "next",

@@ -11,8 +11,8 @@
 		return route.length === 1 ? route.map((data) => data.name).reduce((data) => data) : '404';
 	};
 
-	let pathName: string = '';
-	let title: string = '';
+	let pathName = '';
+	let title = '';
 
 	const getPathFromWindow = (): void => {
 		setTimeout(() => {

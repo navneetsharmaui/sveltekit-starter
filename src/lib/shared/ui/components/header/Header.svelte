@@ -1,12 +1,11 @@
 <style lang="scss" type="text/scss">
-
 	.text-color {
 		text-transform: uppercase;
 	}
 </style>
 
 <script lang="ts">
-	export let title: string = '';
+	export let title = '';
 </script>
 
 <header class="text-gray-600 body-font">
