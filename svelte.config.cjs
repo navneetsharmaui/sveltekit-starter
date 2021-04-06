@@ -33,6 +33,7 @@ module.exports = {
 			resolve: {
 				alias: {
 					$components: resolve(__dirname, './src/lib/shared/components'),
+					$ui: resolve(__dirname, './src/lib/shared/ui'),
 					$shared: resolve(__dirname, './src/lib/shared'),
 					$models: resolve(__dirname, './src/lib/models'),
 					$core: resolve(__dirname, './src/lib/core'),

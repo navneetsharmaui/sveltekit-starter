@@ -33,7 +33,9 @@
 			"$shared": ["src/lib/shared/index.ts"],
 			"$shared/*": ["src/lib/shared/*"],
 			"$components": ["src/lib/shared/components/index.ts"],
-			"$components/*": ["src/lib/shared/components/*"],
+			"$components/*": ["src/lib/shared/ui/*"],
+			"$ui": ["src/lib/shared/ui/index.ts"],
+			"$ui/*": ["src/lib/shared/components/*"],
 			"$models": ["src/lib/models/index.ts"],
 			"$models/*": ["src/lib/models/*"]
 		}
