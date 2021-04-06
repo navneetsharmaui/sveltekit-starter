@@ -1,12 +1,39 @@
+<style lang="scss">
+	h1 {
+		font-size: 2.8em;
+		font-weight: 700;
+		margin: 0 0 0.5em 0;
+	}
+	@media (min-width: 480px) {
+		h1 {
+			font-size: 4em;
+		}
+	}
+</style>
+
 <script lang="ts">
-	export let staus;
-	export let error;
+	import { dev } from '$app/env';
+
+	export let status: string;
+	export let error: Error;
 </script>
 
-<h1>
-	{staus}
-</h1>
+<svelte:head>
+	<title>{status}</title>
+</svelte:head>
 
-<p>
-	{error.message}
-</p>
+<div class="md:container md:mx-auto">
+	<div class="flex flex-col justify-center items-center">
+		<h1>
+			{status}
+		</h1>
+
+		<p>
+			{error.name}
+		</p>
+
+		{#if dev && error.stack}
+			<pre> {error.message} </pre>
+		{/if}
+	</div>
+</div>

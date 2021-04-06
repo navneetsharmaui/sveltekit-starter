@@ -7,10 +7,8 @@
 	export let routePathData: IApplicationRouteTitle[] = [];
 
 	const getRouteTitle = (value: string): string => {
-		return routePathData
-			.filter((data) => data.path === value)
-			.map((data) => data.name)
-			.reduce((data) => data);
+		const route = routePathData.filter((data) => data.path === value);
+		return route.length === 1 ? route.map((data) => data.name).reduce((data) => data) : '404';
 	};
 
 	let pathName: string = '';
