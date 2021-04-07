@@ -35,9 +35,11 @@
 			"$components": ["src/lib/shared/components/index.ts"],
 			"$components/*": ["src/lib/shared/ui/*"],
 			"$ui": ["src/lib/shared/ui/index.ts"],
-			"$ui/*": ["src/lib/shared/components/*"],
+			"$ui/*": ["src/lib/shared/ui/*"],
 			"$models": ["src/lib/models/index.ts"],
-			"$models/*": ["src/lib/models/*"]
+			"$models/*": ["src/lib/models/*"],
+			"$data": ["src/lib/data/index.ts"],
+			"$data/*": ["src/lib/data/*"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]

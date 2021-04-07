@@ -20,6 +20,10 @@
 			name: 'About | Sveltekit',
 		},
 		{
+			path: '/users',
+			name: 'Users | Sveltekit',
+		},
+		{
 			path: '/settings',
 			name: 'Settings | Sveltekit',
 		},

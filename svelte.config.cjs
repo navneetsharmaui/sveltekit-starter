@@ -29,7 +29,7 @@ module.exports = {
 
 		vite: {
 			ssr: {
-				noExternal: Object.keys(pkg.dependencies || {}),
+				noExternal: [...Object.keys(pkg.dependencies || {}), 'node-fetch'],
 			},
 			resolve: {
 				alias: {
@@ -37,6 +37,7 @@ module.exports = {
 					$ui: resolve(__dirname, './src/lib/shared/ui'),
 					$shared: resolve(__dirname, './src/lib/shared'),
 					$models: resolve(__dirname, './src/lib/models'),
+					$data: resolve(__dirname, './src/lib/data'),
 					$core: resolve(__dirname, './src/lib/core'),
 					$utils: resolve(__dirname, './src/lib/utils'),
 				},

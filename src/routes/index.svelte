@@ -14,8 +14,6 @@
 
 	// import Counter from '$lib/Counter.svelte';
 
-	// import { goto } from '$app/navigation';
-
 	import { Logger, LoggerUtils } from '$lib/utils';
 	import { onMount } from 'svelte';
 

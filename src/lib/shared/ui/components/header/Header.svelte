@@ -32,6 +32,7 @@
 			<a rel="prefetch" class="mr-5 hover:text-gray-900" href="/">Home</a>
 			<a rel="prefetch" class="mr-5 hover:text-gray-900" href="/about">About</a>
 			<a rel="prefetch" class="mr-5 hover:text-gray-900" href="/settings">Settings</a>
+			<a rel="prefetch" class="mr-5 hover:text-gray-900" href="/users">Users</a>
 		</nav>
 	</div>
 </header>
