@@ -2,6 +2,6 @@
 
 module.exports = {
 	$blue: '#056ef0',
-	$primaryColor: '#ff3e00',
+	$primaryColor: 'aqua',
 	$hoverPrimaryColor: '#b33106',
 };
