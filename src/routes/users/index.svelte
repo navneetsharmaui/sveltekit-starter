@@ -1,20 +1,7 @@
-<style lang="postcss" type="text/postcss">
-	.users-list {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 10px;
-	}
-
-	.user-card {
-		flex: 0 1 30%;
-	}
+<style lang="scss" type="text/scss">
 </style>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	// Models
 	import type { UserModel } from '$models/classes/user.model';
 	import { userData } from '$data/data';
@@ -28,9 +15,6 @@
 	// Utils
 	import { Logger, LoggerUtils } from '$utils/logger';
 
-	// Services
-	import { JSONHttpUtil } from '$core/services/https';
-
 	const logger: Logger = LoggerUtils.getInstance('Users');
 
 	const users: UserModel[] = [...userData];
@@ -40,15 +24,10 @@
 	};
 
 	const goPlaces = (url: string, params: string): void => {
-		goto(`${url}/${params}`);
+		goto(`${url}/${params}`)
+			.then((data) => logger.debug(data))
+			.catch((e) => logger.error(e));
 	};
-
-	onMount(async () => {
-		const data = await JSONHttpUtil.get<any>(
-			'https://jsonplaceholder.typicode.com/photos?_limit=20',
-		);
-		logger.debug(data);
-	});
 </script>
 
 <div>

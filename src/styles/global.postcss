@@ -41,3 +41,19 @@ p {
 		@apply max-w-none;
 	}
 }
+
+.users-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.user-card {
+	flex: 0 1 30%;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
