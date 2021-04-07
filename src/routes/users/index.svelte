@@ -20,13 +20,11 @@
 	const users: UserModel[] = [...userData];
 
 	const selectedUser = (user: UserModel): void => {
-		goPlaces('users', `${user.id}`);
+		goPlaces('/about');
 	};
 
-	const goPlaces = (url: string, params: string): void => {
-		goto(`${url}/${params}`)
-			.then((data) => logger.debug(data))
-			.catch((e) => logger.error(e));
+	const goPlaces = (url: string): void => {
+		goto(`${url}`).catch((e) => logger.error(e));
 	};
 </script>
 
