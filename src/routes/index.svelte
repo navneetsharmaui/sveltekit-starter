@@ -1,4 +1,4 @@
-<style lang="scss">
+<style lang="postcss">
 	h1 {
 		@apply text-red-600;
 		@apply uppercase;

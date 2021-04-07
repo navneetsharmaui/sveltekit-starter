@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '../styles/app.scss';
-	import '../styles/global.scss';
+	import '../styles/app.postcss';
+	import '../styles/global.postcss';
 
 	import { ApplicationTitles } from '$components';
 	import type { IApplicationRouteTitle } from '$lib/models';
