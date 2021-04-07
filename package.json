@@ -12,6 +12,9 @@
 		"http-serve": "yarn http-server ./build",
 		"postinstall": "husky install"
 	},
+	"installConfig": {
+		"pnp": true
+	},
 	"lint-staged": {
 		"./src/**/*.{svelte,ts}": [
 			"yarn lint:fix"
