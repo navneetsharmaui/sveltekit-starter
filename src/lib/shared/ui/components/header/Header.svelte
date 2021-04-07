@@ -1,7 +1,4 @@
 <style lang="scss" type="text/scss">
-	.text-color {
-		text-transform: uppercase;
-	}
 </style>
 
 <script lang="ts">

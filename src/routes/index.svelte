@@ -1,10 +1,4 @@
 <style lang="scss">
-	main {
-		@apply text-center;
-		@apply p-4;
-		@apply mx-auto;
-	}
-
 	h1 {
 		@apply text-red-600;
 		@apply uppercase;
@@ -33,7 +27,7 @@
 </style>
 
 <script lang="ts" context="module">
-	export async function load({ page, fetch, session }) {
+	export async function load({ page, session }) {
 		console.log(page);
 		console.log(session);
 		return {};
@@ -43,9 +37,9 @@
 <script lang="ts">
 	import { JSONHttpUtil } from '$lib/core';
 
-	import Counter from '$lib/Counter.svelte';
+	// import Counter from '$lib/Counter.svelte';
 
-	import { goto } from '$app/navigation';
+	// import { goto } from '$app/navigation';
 
 	import { Logger, LoggerUtils } from '$lib/utils';
 	import { onMount } from 'svelte';
