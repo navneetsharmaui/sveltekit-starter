@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:74c85c20f63f07d8cafb6ae555057036845475fa8e196f29649732f9e06ae1ccf8a1a43107f8ebd250750fcd0c2aa6972743d7a9b46ed74c8f4a99479f87157b#npm:8.1.0"],
             ["eslint-plugin-svelte3", "virtual:74c85c20f63f07d8cafb6ae555057036845475fa8e196f29649732f9e06ae1ccf8a1a43107f8ebd250750fcd0c2aa6972743d7a9b46ed74c8f4a99479f87157b#npm:3.1.2"],
             ["http-server", "npm:0.12.3"],
+            ["husky", "npm:6.0.0"],
             ["lint-staged", "npm:10.5.4"],
             ["postcss", "npm:8.2.9"],
             ["postcss-at-rules-variables", "virtual:74c85c20f63f07d8cafb6ae555057036845475fa8e196f29649732f9e06ae1ccf8a1a43107f8ebd250750fcd0c2aa6972743d7a9b46ed74c8f4a99479f87157b#npm:0.3.0"],
@@ -2655,6 +2656,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["humanize-ms", "npm:1.2.1"],
             ["ms", "npm:2.1.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["husky", [
+        ["npm:6.0.0", {
+          "packageLocation": "./.yarn/cache/husky-npm-6.0.0-384872ea98-61e1f7f53f.zip/node_modules/husky/",
+          "packageDependencies": [
+            ["husky", "npm:6.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -5581,6 +5591,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-prettier", "virtual:74c85c20f63f07d8cafb6ae555057036845475fa8e196f29649732f9e06ae1ccf8a1a43107f8ebd250750fcd0c2aa6972743d7a9b46ed74c8f4a99479f87157b#npm:8.1.0"],
             ["eslint-plugin-svelte3", "virtual:74c85c20f63f07d8cafb6ae555057036845475fa8e196f29649732f9e06ae1ccf8a1a43107f8ebd250750fcd0c2aa6972743d7a9b46ed74c8f4a99479f87157b#npm:3.1.2"],
             ["http-server", "npm:0.12.3"],
+            ["husky", "npm:6.0.0"],
             ["lint-staged", "npm:10.5.4"],
             ["postcss", "npm:8.2.9"],
             ["postcss-at-rules-variables", "virtual:74c85c20f63f07d8cafb6ae555057036845475fa8e196f29649732f9e06ae1ccf8a1a43107f8ebd250750fcd0c2aa6972743d7a9b46ed74c8f4a99479f87157b#npm:0.3.0"],

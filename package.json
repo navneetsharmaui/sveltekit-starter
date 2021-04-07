@@ -1,8 +1,6 @@
 {
 	"name": "sveltkit-starter",
 	"version": "0.0.1",
-
-	"private": "true",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -11,7 +9,8 @@
 		"lint:fix": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
 		"format": "prettier --write ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js}",
 		"eslint": "eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
-		"http-serve": "yarn http-server ./build"
+		"http-serve": "yarn http-server ./build",
+		"postinstall": "husky install"
 	},
 	"lint-staged": {
 		"./src/**/*.{svelte,ts}": [
@@ -34,6 +33,7 @@
 		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-svelte3": "^3.1.0",
 		"http-server": "^0.12.3",
+		"husky": "^6.0.0",
 		"lint-staged": "^10.5.4",
 		"postcss": "^8.2.9",
 		"postcss-at-rules-variables": "^0.3.0",

@@ -2143,6 +2143,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"husky@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "husky@npm:6.0.0"
+  bin:
+    husky: lib/bin.js
+  checksum: 61e1f7f53f3c969d361c2a1d4ed8018b9447406ea6cd644a2526d18b76877d135001d8cbd48a1d201fc1614d96995e691ecd2b82a8d8513a6b4a313da1188ccd
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:^0.6.2":
   version: 0.6.2
   resolution: "iconv-lite@npm:0.6.2"
@@ -4632,6 +4641,7 @@ fsevents@~2.3.1:
     eslint-config-prettier: ^8.1.0
     eslint-plugin-svelte3: ^3.1.0
     http-server: ^0.12.3
+    husky: ^6.0.0
     lint-staged: ^10.5.4
     postcss: ^8.2.9
     postcss-at-rules-variables: ^0.3.0
