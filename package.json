@@ -1,6 +1,13 @@
 {
 	"name": "sveltkit-starter",
 	"version": "0.0.1",
+	"author": {
+		"name": "Navneet Sharma",
+		"url": "https://navneetsharma.tech"
+	},
+	"description": "A sveltekit starter project with typescript, tailwindcss, postcss, husky, and storybook setup",
+	"license": "MIT",
+	"keywords": ["sveltekit", "typescript", "svelte"],
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",

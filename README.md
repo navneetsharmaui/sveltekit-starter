@@ -1,3 +1,4 @@
 # Sveltekit Starter
 
-Starter project created for the sveltekit and typescript.
+Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook.
+The project has the structure setup for the scaleable project.
