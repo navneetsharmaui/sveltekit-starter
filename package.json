@@ -10,7 +10,9 @@
 		"format": "prettier --write ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js}",
 		"eslint": "eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
 		"http-serve": "yarn http-server ./build",
-		"postinstall": "husky install"
+		"postinstall": "husky install",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
 	},
 	"installConfig": {
 		"pnp": true
@@ -24,6 +26,14 @@
 		]
 	},
 	"devDependencies": {
+		"@babel/core": "^7.13.14",
+		"@mdx-js/react": "^1.6.22",
+		"@storybook/addon-actions": "^6.2.5",
+		"@storybook/addon-docs": "^6.2.5",
+		"@storybook/addon-essentials": "^6.2.5",
+		"@storybook/addon-links": "^6.2.5",
+		"@storybook/addon-svelte-csf": "^1.0.0",
+		"@storybook/svelte": "^6.2.5",
 		"@sveltejs/adapter-node": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.0",
 		"@sveltejs/kit": "next",
@@ -31,6 +41,7 @@
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"autoprefixer": "^10.2.5",
+		"babel-loader": "^8.2.2",
 		"cssnano": "^4.1.10",
 		"eslint": "^7.22.0",
 		"eslint-config-prettier": "^8.1.0",
@@ -50,7 +61,8 @@
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"sass": "^1.0.0",
-		"svelte": "^3.29.0",
+		"svelte": "^3.37.0",
+		"svelte-loader": "^3.1.0",
 		"svelte-preprocess": "^4.7.0",
 		"tailwindcss": "^2.0.3",
 		"tslib": "^2.0.0",

@@ -20,6 +20,7 @@
 	const users: UserModel[] = [...userData];
 
 	const selectedUser = (user: UserModel): void => {
+		logger.debug(user);
 		goPlaces('/about');
 	};
 
