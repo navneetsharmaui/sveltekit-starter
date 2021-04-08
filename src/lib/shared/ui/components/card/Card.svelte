@@ -1,4 +1,5 @@
-<style lang="postcss" type="text/scss">
+<style lang="postcss">
+	@import './Card.postcss';
 </style>
 
 <script lang="ts">

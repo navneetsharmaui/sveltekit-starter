@@ -1,4 +1,4 @@
-<style lang="scss" type="text/scss">
+<style lang="postcss">
 </style>
 
 <script lang="ts">

@@ -3,6 +3,7 @@ node_modules
 /.svelte
 /build
 /functions
+storybook-static
 
 .yarn/*
 !.yarn/cache
