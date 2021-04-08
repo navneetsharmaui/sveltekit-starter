@@ -35,7 +35,7 @@
 		"@storybook/addon-knobs": "^6.2.5",
 		"@storybook/addon-links": "^6.2.5",
 		"@storybook/addon-notes": "^5.3.21",
-		"@storybook/addon-postcss": "latest",
+		"@storybook/addon-postcss": "^2.0.0",
 		"@storybook/addon-svelte-csf": "^1.0.0",
 		"@storybook/addons": "^6.2.5",
 		"@storybook/svelte": "^6.2.5",

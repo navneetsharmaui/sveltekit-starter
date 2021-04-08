@@ -1,5 +1,14 @@
 <style lang="postcss">
-	@import './Card.postcss';
+	.svelte-starter-card {
+		background: $card-background-color;
+		color: $card-text-color;
+		transition: $card-transition;
+		display: block;
+		position: relative;
+		padding: 16px;
+		border-radius: 4px;
+		box-shadow: $card-box-shadow;
+	}
 </style>
 
 <script lang="ts">
