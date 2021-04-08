@@ -4,6 +4,7 @@ node_modules
 /build
 /functions
 storybook-static
+storybook-static/*
 
 .yarn/*
 !.yarn/cache
