@@ -11,6 +11,7 @@
 
 <script lang="ts">
 	import { JSONHttpUtil } from '$lib/core';
+	import Title from '$components/title/Title.svelte';
 
 	// import Counter from '$lib/Counter.svelte';
 
@@ -26,6 +27,8 @@
 		logger.debug(data);
 	});
 </script>
+
+<Title title="Home" />
 
 <section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto flex flex-wrap">

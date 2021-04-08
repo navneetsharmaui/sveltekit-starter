@@ -1,7 +1,11 @@
 <script lang="ts" context="module">
+	import Title from '$components/title/Title.svelte';
+
 	export const hydrate = false;
 	export const prerender = true;
 </script>
+
+<Title title="About" />
 
 <section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto">

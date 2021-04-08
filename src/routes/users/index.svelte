@@ -14,6 +14,7 @@
 
 	// Utils
 	import { Logger, LoggerUtils } from '$utils/logger';
+	import Title from '$components/title/Title.svelte';
 
 	const logger: Logger = LoggerUtils.getInstance('Users');
 
@@ -28,6 +29,8 @@
 		goto(`${url}`).catch((e) => logger.error(e));
 	};
 </script>
+
+<Title title="Home" />
 
 <div>
 	<span class="users-list">
