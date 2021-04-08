@@ -7,9 +7,9 @@
 </style>
 
 <script lang="ts">
-	export let footerText: string;
+	export let footerText = '';
 </script>
 
-<header>
+<footer>
 	<p>{footerText}</p>
-</header>
+</footer>
