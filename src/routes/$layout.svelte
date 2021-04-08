@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../styles/app.postcss';
 	import '../styles/global.postcss';
 
 	import { ApplicationTitles } from '$components';
