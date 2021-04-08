@@ -1,3 +1,8 @@
+/* jshint esversion: 9 */
+
+const { withInfo } = require('@storybook/addon-info');
+const { MockedProvider } = require('@apollo/client/testing');
+
 export const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },
 	controls: {
@@ -6,8 +11,8 @@ export const parameters = {
 			date: /Date$/,
 		},
 	},
-	decorators: [require('@storybook/addon-info').withInfo],
+	decorators: [withInfo],
 	apolloClient: {
-		MockedProvider: require('@apollo/client/testing').MockedProvider,
+		MockedProvider: MockedProvider,
 	},
 };
