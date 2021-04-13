@@ -1,8 +1,10 @@
 <script lang="ts" context="module">
-	import Title from '$components/title/Title.svelte';
-
 	export const hydrate = false;
 	export const prerender = true;
+</script>
+
+<script lang="ts">
+	import Title from '$components/title/Title.svelte';
 </script>
 
 <Title title="About" />

@@ -1,3 +1,8 @@
+<script lang="ts" context="module">
+	export const hydrate = false;
+	export const prerender = true;
+</script>
+
 <div class="submenu">
 	<a href="/settings/profile">Profile</a>
 	<a href="/settings/notifications">Notifications</a>

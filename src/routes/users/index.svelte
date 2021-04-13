@@ -1,28 +1,34 @@
 <style lang="postcss">
 </style>
 
+<script lang="ts" context="module">
+	export async function load({ page, fetch }) {
+		return {
+			props: {
+				users: await fetch('/users.json').then((res) => res.json()),
+			},
+		};
+	}
+</script>
+
 <script lang="ts">
+	// Navigation Imports
+	import { goto } from '$app/navigation';
 	// Models
 	import type { UserModel } from '$models/classes/user.model';
-	import { userData } from '$data/data';
-
 	// Components
 	import { Card } from '$ui/components/card';
-
-	// External Imports
-	import { goto } from '$app/navigation';
-
 	// Utils
 	import { Logger, LoggerUtils } from '$utils/logger';
 	import Title from '$components/title/Title.svelte';
 
 	const logger: Logger = LoggerUtils.getInstance('Users');
 
-	const users: UserModel[] = [...userData];
+	export let users: UserModel[] = [];
 
 	const selectedUser = (user: UserModel): void => {
 		logger.debug(user);
-		goPlaces('/about');
+		goPlaces(`/users/${user.id}`);
 	};
 
 	const goPlaces = (url: string): void => {
@@ -30,7 +36,7 @@
 	};
 </script>
 
-<Title title="Home" />
+<Title title="Users" />
 
 <div>
 	<span class="users-list">
