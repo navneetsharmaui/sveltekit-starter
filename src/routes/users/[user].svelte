@@ -5,7 +5,7 @@
 	export async function load({ page, fetch }) {
 		return {
 			props: {
-				user: await fetch(`/users/${page.params.slug}.json`).then((res) => res.json()),
+				user: await fetch(`/users/${page.params.user}.json`).then((res) => res.json()),
 			},
 		};
 	}
