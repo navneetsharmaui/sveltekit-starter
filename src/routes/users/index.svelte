@@ -2,6 +2,7 @@
 </style>
 
 <script lang="ts" context="module">
+	export const ssr = false;
 	export async function load({ page, fetch }) {
 		return {
 			props: {
@@ -27,7 +28,6 @@
 	export let users: UserModel[] = [];
 
 	const selectedUser = (user: UserModel): void => {
-		logger.debug(user);
 		goPlaces(`/users/${user.id}`);
 	};
 

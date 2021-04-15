@@ -16,7 +16,7 @@
 		const data = await JSONHttpUtil.get<any>(
 			'https://jsonplaceholder.typicode.com/photos?_limit=20',
 		);
-		logger.debug(data);
+		// logger.debug(data);
 	});
 </script>
 
@@ -45,6 +45,8 @@
 				class="object-cover object-center rounded"
 				alt="hero"
 				src="https://dummyimage.com/720x600"
+				width="720"
+				height="600"
 			/>
 		</div>
 	</div>

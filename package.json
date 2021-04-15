@@ -1,6 +1,6 @@
 {
 	"name": "sveltkit-starter",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"author": {
 		"name": "Navneet Sharma",
 		"url": "https://navneetsharma.tech"
@@ -10,7 +10,11 @@
 	"keywords": [
 		"sveltekit",
 		"typescript",
-		"svelte"
+		"svelte",
+		"SSR",
+		"sveltekit-starter",
+		"starter-template",
+		"template"
 	],
 	"scripts": {
 		"dev": "svelte-kit dev",

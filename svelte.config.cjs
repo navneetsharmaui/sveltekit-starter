@@ -22,12 +22,21 @@ module.exports = {
 		// By default, `npm run build` will create a standard Node app.
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
-		adapter: node(),
+		adapter: {
+			adapt: (utils) => ssr(utils),
+		},
+		ssr: true,
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#sveltekit-starter',
 
-		vite: {
+		prerender: {
+			crawl: true,
+			enabled: true,
+			force: false,
+			pages: ['*'],
+		},
+		vite: () => ({
 			ssr: {
 				noExternal: [...Object.keys(pkg.dependencies || {}), 'node-fetch'],
 			},
@@ -42,6 +51,6 @@ module.exports = {
 					$utils: resolve(__dirname, './src/lib/utils'),
 				},
 			},
-		},
+		}),
 	},
 };

@@ -25,7 +25,12 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
 	const { request } = event;
 
-	if (request.method !== 'GET' || request.headers.has('range')) return;
+	if (
+		request.method !== 'GET' ||
+		request.headers.has('range') ||
+		(request.cache === 'only-if-cached' && request.mode !== 'same-origin')
+	)
+		return;
 
 	const url = new URL(request.url);
 	const cached = caches.match(request);
