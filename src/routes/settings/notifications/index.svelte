@@ -3,4 +3,4 @@
 </script>
 
 <Title title="Notifications" />
-<h2> Notifications </h2>
+<h2 class="sm:text-3xl text-2xl font-normal mb-4 text-gray-900">Notifications</h2>

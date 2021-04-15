@@ -3,66 +3,20 @@
 	export const prerender = true;
 </script>
 
-<div class="submenu">
-	<a href="/settings/profile">Profile</a>
-	<a href="/settings/notifications">Notifications</a>
-</div>
-
-<slot />
-<section class="text-gray-600 body-font overflow-hidden">
+<section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto">
-		<div class="-my-8 divide-y-2 divide-gray-100">
-			<div class="py-8 flex flex-wrap md:flex-nowrap">
-				<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-					<span class="font-semibold title-font text-gray-700">CATEGORY</span>
-					<span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-				</div>
-				<div class="md:flex-grow">
-					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2"
-						>Bitters hashtag waistcoat fashion axe chia unicorn</h2
-					>
-					<p class="leading-relaxed"
-						>Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up
-						snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies,
-						poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland
-						craft beer.</p
-					>
-				</div>
+		<div class="flex flex-col text-center w-full mb-20">
+			<h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Settings</h1>
+			<p class="lg:w-2/3 mx-auto leading-relaxed text-base"
+				>The page with nested Layouts. Click on the below link to load the nested layouts.</p
+			>
+		</div>
+		<div class="flex flex-col text-center w-full mb-20">
+			<div class="submenu">
+				<a sveltekit:prefetch href="/settings/profile">Profile</a>
+				| <a sveltekit:prefetch href="/settings/notifications">Notifications</a>
 			</div>
-			<div class="py-8 flex flex-wrap md:flex-nowrap">
-				<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-					<span class="font-semibold title-font text-gray-700">CATEGORY</span>
-					<span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-				</div>
-				<div class="md:flex-grow">
-					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2"
-						>Meditation bushwick direct trade taxidermy shaman</h2
-					>
-					<p class="leading-relaxed"
-						>Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up
-						snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies,
-						poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland
-						craft beer.</p
-					>
-				</div>
-			</div>
-			<div class="py-8 flex flex-wrap md:flex-nowrap">
-				<div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-					<span class="font-semibold title-font text-gray-700">CATEGORY</span>
-					<span class="text-sm text-gray-500">12 Jun 2019</span>
-				</div>
-				<div class="md:flex-grow">
-					<h2 class="text-2xl font-medium text-gray-900 title-font mb-2"
-						>Woke master cleanse drinking vinegar salvia</h2
-					>
-					<p class="leading-relaxed"
-						>Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up
-						snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies,
-						poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland
-						craft beer.</p
-					>
-				</div>
-			</div>
+			<slot />
 		</div>
 	</div>
 </section>

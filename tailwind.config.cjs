@@ -9,7 +9,10 @@ module.exports = {
 		extend: {},
 	},
 	variants: {
-		extend: {},
+		extend: {
+			listStyleType: ['hover', 'focus'],
+			listStylePosition: ['hover', 'focus'],
+		},
 	},
 	plugins: [],
 };
