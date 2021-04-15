@@ -13,15 +13,13 @@
 
 <script lang="ts">
 	import { dev } from '$app/env';
+	import Title from '$components/title/Title.svelte';
 
 	export let status: string;
 	export let error: Error;
 </script>
 
-<svelte:head>
-	<title>{status}</title>
-</svelte:head>
-
+<Title title="{status}: {error.message} | Sveltekit" />
 <div class="md:container md:mx-auto">
 	<div class="flex flex-col justify-center items-center">
 		<h1>
