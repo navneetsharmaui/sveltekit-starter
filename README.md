@@ -8,6 +8,7 @@ Sveltekit starter project created with Sveltekit, Typescript, Tailwindcss, Postc
 The project has the ***SSR (Server Side Rendering)*** setup. These template is easy to configure and built upon as it has scalable structure.
 
 ## :100: Project LightHouse Report :fire:
+
 ![sveltekit-lighthouse-report](https://user-images.githubusercontent.com/11630812/114931396-d2bce100-9e53-11eb-86ba-b91850eb2af3.png)
 
 ## :paperclip: Menu
@@ -20,6 +21,8 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 
 - [:heavy_check_mark:] Server side rendering built with SEO in mind
 - [:heavy_check_mark:] PWA + Service Worker + Offline
+- [:heavy_check_mark:] Tailwindcss + Postcss + SCSS Syntax Support in Postcss
+- [:heavy_check_mark:] Global Style and Variable preconfigured for Postcss
 - [:heavy_check_mark:] Browser sync, auto refresh, auto reload
 - [:heavy_check_mark:] 100% on Google Speedpage and 100% Lighthouse report
 - [:heavy_check_mark:] Friendly and Scalable boilerplate
