@@ -48,4 +48,4 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 
 - Code and Contributions have **MIT License**
 
-*Copyright (c) 2021 [Navneet Sharma](https://navnetsharma.tech) ([@asnavneetsharma](https://twitter.com/asnavneetsharma))*
+*Copyright (c) 2021 [Navneet Sharma](https://navneetsharma.tech) ([@asnavneetsharma](https://twitter.com/asnavneetsharma))*
