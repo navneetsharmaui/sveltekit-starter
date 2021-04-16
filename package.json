@@ -28,7 +28,7 @@
 		"postinstall": "husky install",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"test": "jest src",
+		"test": "jest src --coverage --runInBand",
 		"test:watch": "yarn test -- --watch"
 	},
 	"installConfig": {

@@ -1,4 +1,4 @@
-<style lang="postcss">
+<style type="text/css">
 	button {
 		font-family: inherit;
 		font-size: inherit;
