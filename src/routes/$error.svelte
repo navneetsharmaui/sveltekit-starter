@@ -11,6 +11,18 @@
 	}
 </style>
 
+<script lang="ts" context="module">
+	export function load({ error, status }) {
+		return {
+			props: {
+				title: `${status}: ${error.message}`,
+				status,
+				error,
+			},
+		};
+	}
+</script>
+
 <script lang="ts">
 	import { dev } from '$app/env';
 	import Title from '$components/title/Title.svelte';
@@ -19,17 +31,15 @@
 	export let error: Error;
 </script>
 
-<Title title="{status}: {error.message} | Sveltekit" />
+<Title title="{status} | Sveltekit" />
 <div class="md:container md:mx-auto">
 	<div class="flex flex-col justify-center items-center">
 		<h1>
 			{status}
 		</h1>
-
 		<p>
 			{error.name}
 		</p>
-
 		{#if dev && error.stack}
 			<pre> {error.message} </pre>
 		{/if}
