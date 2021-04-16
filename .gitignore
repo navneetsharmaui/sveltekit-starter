@@ -3,6 +3,8 @@ node_modules
 /.svelte
 /build
 /functions
+coverage
+coverage/*
 storybook-static
 storybook-static/*
 
