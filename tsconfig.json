@@ -22,6 +22,7 @@
 		"baseUrl": ".",
 		"allowJs": true,
 		"checkJs": true,
+		"types": ["jest", "@testing-library/jest-dom"],
 		"paths": {
 			"$app/*": [".svelte/dev/runtime/app/*", ".svelte/build/runtime/app/*"],
 			"$service-worker": [".svelte/build/runtime/service-worker"],
@@ -42,5 +43,5 @@
 			"$data/*": ["src/lib/data/*"]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "./jest-setup.ts"]
 }
