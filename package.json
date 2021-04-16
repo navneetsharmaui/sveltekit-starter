@@ -18,7 +18,9 @@
 	],
 	"scripts": {
 		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"build:ssr": "yarn cross-env ADAPTER=@sveltejs/adapter-static OPTIONS='{}' yarn build",
+		"build:node": "yarn cross-env ADAPTER=@sveltejs/adapter-node OPTIONS='{}' yarn build",
+		"build": "cross-env-shell svelte-kit build --verbose",
 		"start": "svelte-kit start",
 		"lint": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
 		"lint:fix": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
@@ -39,6 +41,9 @@
 		"./.{ts,cjs,js}": [
 			"yarn lint:fix"
 		]
+	},
+	"dependencies": {
+		"node-fetch": "^2.6.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.13.15",
@@ -68,6 +73,7 @@
 		"autoprefixer": "^10.2.5",
 		"babel-loader": "^8.2.2",
 		"chromatic": "^5.6.2",
+		"cross-env": "^7.0.3",
 		"cssnano": "^4.1.11",
 		"eslint": "^7.24.0",
 		"eslint-config-prettier": "^8.2.0",
@@ -75,6 +81,7 @@
 		"http-server": "^0.12.3",
 		"husky": "^6.0.0",
 		"lint-staged": "^10.5.4",
+		"marked": "^2.0.3",
 		"postcss": "^8.2.10",
 		"postcss-at-rules-variables": "^0.3.0",
 		"postcss-cli": "^8.3.1",

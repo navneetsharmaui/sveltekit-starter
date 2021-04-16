@@ -25,6 +25,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
 	const { request } = event;
 
+	if (!(request.url.indexOf('http') === 0)) return;
 	if (
 		request.method !== 'GET' ||
 		request.headers.has('range') ||

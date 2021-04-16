@@ -1,8 +1,14 @@
 .DS_Store
 node_modules
+/node_modules
 /.svelte
 /build
 /functions
+/.vercel_build_output
+/workers-site
+
+# Storybook files #
+###################
 storybook-static
 storybook-static/*
 
@@ -27,3 +33,11 @@ Thumbs.db
 # KDE/Linux generated files #
 #############################
 .directory
+
+# Runtime data #
+################
+pids
+*.pid
+*.seed
+*.pid.lock
+*.eslintcache
