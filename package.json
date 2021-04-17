@@ -40,16 +40,14 @@
 		"build": "cross-env-shell svelte-kit build --verbose",
 		"start": "svelte-kit start",
 		"lint": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
-		"lint:fix": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore . --fix",
+		"lint:fix": "prettier --check ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js} && eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
 		"format": "prettier --write ./src/**/*.{js,svelte,ts} ./*.{ts,cjs,js}",
 		"eslint": "eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
+		"eslint:fix": "eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore . --fix",
 		"http-serve": "yarn http-server ./build",
 		"postinstall": "husky install",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
-	},
-	"installConfig": {
-		"pnp": true
 	},
 	"lint-staged": {
 		"./src/**/*.{svelte,ts}": [
