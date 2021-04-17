@@ -23,12 +23,5 @@ module.exports = {
 	rules: {
 		"semi": ["error", "always"],
 		"no-console": ["warn"],
-		"indent": [
-			"error",
-			"tab",
-			{
-				"SwitchCase": 1
-			}
-		],
 	},
 };

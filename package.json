@@ -49,6 +49,9 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
 	},
+	"installConfig": {
+		"pnp": true
+	},
 	"lint-staged": {
 		"./src/**/*.{svelte,ts}": [
 			"yarn lint:fix"
