@@ -3638,23 +3638,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-node@npm:^1.0.0-next.12":
+"@sveltejs/adapter-node@npm:^1.0.0-next.0":
   version: 1.0.0-next.12
   resolution: "@sveltejs/adapter-node@npm:1.0.0-next.12"
   checksum: bc55cbfd78b7cb164303492698d37dd9cb2d64db63d481d18a7f9115328e017e2a88cdb088571eec4a9c58201669bd0f9097f690c3b288f0debd934706005f7c
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.0-next.4":
+"@sveltejs/adapter-static@npm:^1.0.0-next.0":
   version: 1.0.0-next.4
   resolution: "@sveltejs/adapter-static@npm:1.0.0-next.4"
   checksum: 9007d9e4b3ea99f198cc926e05afaa570ff198982339f4e4be180e605aa38f62c4fa8c7f2b5e86ef02573cef397a475b096680472055a40bc8da8ecea3def87b
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.76":
-  version: 1.0.0-next.76
-  resolution: "@sveltejs/kit@npm:1.0.0-next.76"
+"@sveltejs/kit@npm:^1.0.0-next.77":
+  version: 1.0.0-next.77
+  resolution: "@sveltejs/kit@npm:1.0.0-next.77"
   dependencies:
     "@sveltejs/vite-plugin-svelte": 1.0.0-next.5
     cheap-watch: ^1.0.3
@@ -3664,7 +3664,7 @@ __metadata:
     vite: ^2.1.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: c5682818e50152707bc3165874cfd32a24694aecea1148864d56c36c3586c0071e1e9f02303ecbcdf8cc6d5b4f19edc780faf37c691157b0d18e40ea67098418
+  checksum: 45fb208b05abe4a61641f4f9098493c8457cf55cfa04e15ce1b08b1585ad97dbdee3f898fe8ab6f11476b24a82bfde8d9d6b0c38c3bf09fa3b96531f84670f3d
   languageName: node
   linkType: hard
 
@@ -6173,7 +6173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:>=2.0.0 <4.0.0, chokidar@npm:^3.3.0, chokidar@npm:^3.4.1, chokidar@npm:^3.4.2, chokidar@npm:^3.5.1":
+"chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.3.0, chokidar@npm:^3.4.1, chokidar@npm:^3.4.2, chokidar@npm:^3.5.1":
   version: 3.5.1
   resolution: "chokidar@npm:3.5.1"
   dependencies:
@@ -6229,7 +6229,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^5.6.2":
+"chromatic@npm:^5.7.1":
   version: 5.7.1
   resolution: "chromatic@npm:5.7.1"
   dependencies:
@@ -15907,14 +15907,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.32.8":
-  version: 1.32.8
-  resolution: "sass@npm:1.32.8"
+"sass@npm:^1.32.10":
+  version: 1.32.10
+  resolution: "sass@npm:1.32.10"
   dependencies:
-    chokidar: ">=2.0.0 <4.0.0"
+    chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: d319b3d7459451b6532b492984e3cbb37381e6c6379622f668900b196c0d545f5a2c32819cf02b5405fb2ef79720fe1f8f16b7614a2fef3fb7af8dfec83a6597
+  checksum: dc310c9d4f73fc9fd39c7c3cb7adc481f1d3a7cbd51704ed94972738b181b3db1e485864497edf2d2954340a34b49bfccac61b792e2609431227a6ab521997db
   languageName: node
   linkType: hard
 
@@ -17079,16 +17079,16 @@ fsevents@^1.2.7:
     "@storybook/addon-svelte-csf": ^1.0.0
     "@storybook/addons": ^6.2.8
     "@storybook/svelte": ^6.2.8
-    "@sveltejs/adapter-node": ^1.0.0-next.12
-    "@sveltejs/adapter-static": ^1.0.0-next.4
-    "@sveltejs/kit": ^1.0.0-next.76
+    "@sveltejs/adapter-node": ^1.0.0-next.0
+    "@sveltejs/adapter-static": ^1.0.0-next.0
+    "@sveltejs/kit": ^1.0.0-next.77
     "@types/node": ^14.14.41
     "@typescript-eslint/eslint-plugin": ^4.22.0
     "@typescript-eslint/parser": ^4.22.0
     "@yarnpkg/pnpify": ^3.0.0-rc.3
     autoprefixer: ^10.2.5
     babel-loader: ^8.2.2
-    chromatic: ^5.6.2
+    chromatic: ^5.7.1
     cross-env: ^7.0.3
     cssnano: ^4.1.11
     eslint: ^7.24.0
@@ -17110,7 +17110,7 @@ fsevents@^1.2.7:
     postcss-simple-vars: ^6.0.3
     prettier: ~2.2.1
     prettier-plugin-svelte: ^2.2.0
-    sass: ^1.32.8
+    sass: ^1.32.10
     storybook-addon-apollo-client: ^4.0.6
     svelte: ^3.37.0
     svelte-loader: ^3.1.1

@@ -1,9 +1,13 @@
 /* jshint esversion: 9 */
 
+// command env properties
+const adapt = process.env.ADAPTER;
+const isSSR = process.env.SSR ? true : false;
+
+// Imports
 const sveltePreprocess = require('svelte-preprocess');
 const pkg = require('./package.json');
 const { resolve } = require('path');
-const adapt = process.env.ADAPTER;
 const adapter = require(adapt || '@sveltejs/adapter-node');
 const options = JSON.stringify(process.env.OPTIONS || '{}');
 
@@ -24,7 +28,7 @@ module.exports = {
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
 		adapter: adapter(options),
-		ssr: true,
+		ssr: isSSR,
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#sveltekit-starter',
