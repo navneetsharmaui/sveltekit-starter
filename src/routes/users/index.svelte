@@ -2,7 +2,7 @@
 </style>
 
 <script lang="ts" context="module">
-	export const ssr = false;
+	// export const ssr = false;
 	export async function load({ page, fetch }) {
 		return {
 			props: {
@@ -42,8 +42,8 @@
 	<div class="container px-5 py-24 mx-auto">
 		<div class="flex flex-col text-center w-full mb-10">
 			<p class="lg:w-2/3 mx-auto leading-relaxed text-base"
-				>This page is setup in a way where you can programmatically route to sub routes.
-				Click on each user card to go to there details view.</p
+				>This page is setup in a way where you can programmatically route to sub routes. Click on each user card
+				to go to there details view.</p
 			>
 		</div>
 		<div class="flex flex-col text-center w-full mb-20">

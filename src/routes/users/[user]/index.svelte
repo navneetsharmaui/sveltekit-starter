@@ -51,9 +51,7 @@
 						</div>
 						<div class="font-medium">{user.name}</div>
 						<div class="font-normal">{user.job}</div>
-						<a
-							class="text-red-500 cursor-pointer inline-flex items-center"
-							href="/users"
+						<a class="text-red-500 cursor-pointer inline-flex items-center" href="/users"
 							>Go back
 							<svg
 								class="w-4 h-4 ml-2"
