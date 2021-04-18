@@ -3638,6 +3638,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sveltejs/adapter-netlify@npm:^1.0.0-next.0":
+  version: 1.0.0-next.5
+  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.5"
+  dependencies:
+    toml: ^3.0.0
+  checksum: d6bfb1c38c6d4357a255668a5f4d0916d826e56e05c1fd9508db052cff9e750d9b10d43a8b08782c6e11a2795bddb073e2c876a9661aab021a0e21ce298aa05b
+  languageName: node
+  linkType: hard
+
 "@sveltejs/adapter-node@npm:^1.0.0-next.0":
   version: 1.0.0-next.12
   resolution: "@sveltejs/adapter-node@npm:1.0.0-next.12"
@@ -3649,6 +3658,13 @@ __metadata:
   version: 1.0.0-next.4
   resolution: "@sveltejs/adapter-static@npm:1.0.0-next.4"
   checksum: 9007d9e4b3ea99f198cc926e05afaa570ff198982339f4e4be180e605aa38f62c4fa8c7f2b5e86ef02573cef397a475b096680472055a40bc8da8ecea3def87b
+  languageName: node
+  linkType: hard
+
+"@sveltejs/adapter-vercel@npm:^1.0.0-next.0":
+  version: 1.0.0-next.11
+  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.11"
+  checksum: 798fe8f999f54ed4fcbe63032ea7c3de4f3b5e0bc64f388466141f1db3057c956eb520fa087fb21fbd9043fd02f1898d46ff00aa2f1bbf4c9caa7ab4208ce6a9
   languageName: node
   linkType: hard
 
@@ -17079,8 +17095,10 @@ fsevents@^1.2.7:
     "@storybook/addon-svelte-csf": ^1.0.0
     "@storybook/addons": ^6.2.8
     "@storybook/svelte": ^6.2.8
+    "@sveltejs/adapter-netlify": ^1.0.0-next.0
     "@sveltejs/adapter-node": ^1.0.0-next.0
     "@sveltejs/adapter-static": ^1.0.0-next.0
+    "@sveltejs/adapter-vercel": ^1.0.0-next.0
     "@sveltejs/kit": ^1.0.0-next.77
     "@types/node": ^14.14.41
     "@typescript-eslint/eslint-plugin": ^4.22.0
@@ -17508,6 +17526,13 @@ fsevents@^1.2.7:
   version: 1.0.0
   resolution: "toidentifier@npm:1.0.0"
   checksum: 95720e8a0f98f1525f50ccbecbc2a23f0a1b4e448de03819dbbeda03adf0d2010fe64525fbc9d549765242550d341bb891672e4ac0b2cac58613cdd742324255
+  languageName: node
+  linkType: hard
+
+"toml@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "toml@npm:3.0.0"
+  checksum: ae35b4c1d1632207156157103ba91c4f6c1278185b143f758594263acc25a23a94dc75ff2ef8eb206605f683b4f09b953678e40893a03a84dfb0624e47b90ec6
   languageName: node
   linkType: hard
 
