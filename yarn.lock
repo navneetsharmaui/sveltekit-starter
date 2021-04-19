@@ -3668,9 +3668,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.1":
-  version: 1.0.0-next.78
-  resolution: "@sveltejs/kit@npm:1.0.0-next.78"
+"@sveltejs/kit@npm:^1.0.0-next.83":
+  version: 1.0.0-next.83
+  resolution: "@sveltejs/kit@npm:1.0.0-next.83"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.0-next.7
     cheap-watch: ^1.0.3
@@ -3680,7 +3680,7 @@ __metadata:
     vite: ^2.1.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 5f953340f105159c56b6b6244c8e13c243527ac4f985af70e90e13751e1a5ad71c538b7d76a997988e65d23ff8c9a3d29d58a2ce4a67663a565ad7860be88a9d
+  checksum: 26d0d616de6f22690b015b54a12f80a98f3229fd513960caf38320a6e92051435282efc52d9fc55eeef86617018e54b136219ba4b92a37283d5dd7f1130deebe
   languageName: node
   linkType: hard
 
@@ -16945,7 +16945,7 @@ fsevents@^1.2.7:
     "@sveltejs/adapter-node": ^1.0.0-next.14
     "@sveltejs/adapter-static": ^1.0.0-next.4
     "@sveltejs/adapter-vercel": ^1.0.0-next.11
-    "@sveltejs/kit": ^1.0.0-next.1
+    "@sveltejs/kit": ^1.0.0-next.83
     "@types/node": ^14.14.41
     "@typescript-eslint/eslint-plugin": ^4.22.0
     "@typescript-eslint/parser": ^4.22.0
