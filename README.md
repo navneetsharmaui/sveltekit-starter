@@ -9,7 +9,8 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 
 ## :100: Project LightHouse Report :fire:
 
-![sveltekit-lighthouse-report](https://user-images.githubusercontent.com/11630812/114931396-d2bce100-9e53-11eb-86ba-b91850eb2af3.png)
+![sveltekit-starter-lighthouse-report](https://user-images.githubusercontent.com/11630812/115241377-5d485d80-a13e-11eb-8667-611770992c28.png)
+
 
 ## :paperclip: Menu
 
