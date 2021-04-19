@@ -30,6 +30,7 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 - [:heavy_check_mark:] Typescript + TSPaths (absolute for imports in component) preconfigured
 - [:heavy_check_mark:] Prettiers, ESLint, and Husky preconfigured
 - [:heavy_check_mark:] Github and VS Code dotfiles preconfigured
+- [:heavy_check_mark:] Storybook support
 
 ### :pushpin: TODO
 
