@@ -20,24 +20,27 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 
 ## :bulb: Features
 
-- [:heavy_check_mark:] Server side rendering built with SEO in mind
-- [:heavy_check_mark:] PWA + Service Worker + Offline
-- [:heavy_check_mark:] Tailwindcss + Postcss + SCSS Syntax Support in Postcss
-- [:heavy_check_mark:] Global Style and Variable preconfigured for Postcss
-- [:heavy_check_mark:] Browser sync, auto refresh, auto reload
-- [:heavy_check_mark:] 100% on Google Speedpage and 100% Lighthouse report
-- [:heavy_check_mark:] Friendly and Scalable boilerplate
-- [:heavy_check_mark:] Typescript + TSPaths (absolute for imports in component) preconfigured
-- [:heavy_check_mark:] Prettiers, ESLint, and Husky preconfigured
-- [:heavy_check_mark:] Github and Vscode dotfiles preconfigured
+- [:heavy_check_mark:] Server side rendering built with SEO in mind.
+- [:heavy_check_mark:] PWA + Service Worker + Offline.
+- [:heavy_check_mark:] Tailwindcss + Postcss + SCSS Syntax Support in Postcss.
+- [:heavy_check_mark:] Global Style and Variable preconfigured for Postcss.
+- [:heavy_check_mark:] StorybookJS preconfigured (with postcss support).
+- [:heavy_check_mark:] Browser sync, auto refresh, auto reload.
+- [:heavy_check_mark:] 100% on Google Speedpage and 100% Lighthouse report.
+- [:heavy_check_mark:] Friendly and Scalable boilerplate.
+- [:heavy_check_mark:] Typescript + TSPaths (absolute for imports in component) preconfigured.
+- [:heavy_check_mark:] Prettiers, ESLint, and Husky preconfigured.
+- [:heavy_check_mark:] Github and Vscode dotfiles preconfigured.
 
 ### :pushpin: TODO
 
-- [:heavy_multiplication_x:] Images LazyLoad
-- [:heavy_multiplication_x:] Route Transition animation
-- [:heavy_multiplication_x:] E2E Test configuration using Cypress
-- [:heavy_multiplication_x:] JEST Test configuration
-- [:heavy_multiplication_x:] Internationalization (i18n)
+- [:heavy_multiplication_x:] Images LazyLoad.
+- [:heavy_multiplication_x:] Route Transition animation.
+- [:heavy_multiplication_x:] E2E Test configuration using Cypress.
+- [:heavy_multiplication_x:] JEST Test configuration.
+- [:heavy_multiplication_x:] Internationalization (i18n).
+- [:heavy_multiplication_x:] More examples of Storybook Stories for the UI Components.
+- [:heavy_multiplication_x:] State management Setup.
 
 ## :hammer: Project Setup
 
