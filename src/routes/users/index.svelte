@@ -14,7 +14,7 @@
 
 <script lang="ts">
 	// Navigation Imports
-	import { goto } from '$app/navigation';
+	// import { goto } from '$app/navigation';
 	// Models
 	import type { UserModel } from '$models/classes/user.model';
 	// Components
@@ -27,13 +27,13 @@
 
 	export let users: UserModel[] = [];
 
-	const selectedUser = (user: UserModel): void => {
-		goPlaces(`/users/${user.id}`);
-	};
+	// const selectedUser = (user: UserModel): void => {
+	// 	goPlaces(`/users/${user.id}`);
+	// };
 
-	const goPlaces = (url: string): void => {
-		goto(`${url}`).catch((e) => logger.error(e));
-	};
+	// const goPlaces = (url: string): void => {
+	// 	goto(`${url}`).catch((e) => logger.error(e));
+	// };
 </script>
 
 <Title title="Users" />
@@ -50,7 +50,7 @@
 			<span class="users-list">
 				{#each users as user}
 					<div class="user-card">
-						<Card on:click="{() => selectedUser(user)}">
+						<Card>
 							<span slot="card-content">
 								<div
 									class="w-16 h-16 sm:mb-4 mb-4 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 flex-shrink-0"
@@ -69,7 +69,11 @@
 									</svg>
 								</div>
 
-								<div class="font-medium">{user.name}</div>
+								<div class="font-medium">
+									<a sveltekit:prefetch class=" hover:text-gray-900" href="{`/users/${user.id}`}">
+										{user.name}
+									</a>
+								</div>
 							</span>
 						</Card>
 					</div>

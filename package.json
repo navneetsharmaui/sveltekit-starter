@@ -68,7 +68,7 @@
 		"postinstall": "husky install",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-		"test": "jest src --coverage --runInBand",
+		"test": "cross-env TAILWIND_MODE=build jest src --coverage --runInBand",
 		"test:watch": "yarn test -- --watch"
 	},
 	"lint-staged": {
