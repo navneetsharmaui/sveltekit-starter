@@ -3,6 +3,7 @@
 // command env properties
 const adapt = process.env.ADAPTER;
 const isSSR = process.env.SSR ? true : false;
+const isAMP = process.env.APM ? true : false;
 
 // Imports
 const sveltePreprocess = require('svelte-preprocess');
@@ -29,6 +30,7 @@ module.exports = {
 		// specifying a different adapter
 		adapter: adapter(options),
 		ssr: isSSR,
+		amp: isAMP,
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#sveltekit-starter',
