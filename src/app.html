@@ -3,31 +3,30 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			name="description"
-			content="Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook)."
-		/>
-		<link
-			rel="prefetch"
-			as="style"
-			onload="this.rel = 'stylesheet'"
-			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"
-		/>
-		<link
-			rel="prefetch"
-			as="style"
-			onload="this.rel = 'stylesheet'"
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-		/>
-
 		<meta name="theme-color" content="#333333" />
 		<link rel="manifest" href="/manifest.json" />
-
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" />
+			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		</noscript>
 		%svelte.head%
 	</head>
 	<body>
 		<div id="sveltekit-starter">%svelte.body%</div>
+		<noscript> Please enable JavaScript to continue using this application. </noscript>
 	</body>
 </html>

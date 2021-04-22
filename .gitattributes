@@ -1,0 +1,8 @@
+* text=auto
+* text eol=lf
+# Required to stop YN0018 - CACHE_CHECKSUM_MISMATCH
+*.zip binary
+
+# Remove Yarn 2 from linguist
+.yarn/* linguist-vendored
+.pnp.js linguist-vendored

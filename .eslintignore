@@ -1,0 +1,7 @@
+/dist
+/build
+/.svelte
+/.yarn
+/examples
+node_modules
+/node_modules

@@ -1,10 +1,14 @@
 .DS_Store
 node_modules
+/node_modules
 /.svelte
 /build
 /functions
-coverage
-coverage/*
+/.vercel_build_output
+/workers-site
+
+# Storybook files #
+###################
 storybook-static
 storybook-static/*
 
@@ -15,3 +19,32 @@ storybook-static/*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jest files #
+#############################
+coverage
+coverage/*
+
+
+# KDE/Linux generated files #
+#############################
+.directory
+
+# Runtime data #
+################
+pids
+*.pid
+*.seed
+*.pid.lock
+*.eslintcache
+

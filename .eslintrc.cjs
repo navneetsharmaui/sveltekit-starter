@@ -25,5 +25,8 @@ module.exports = {
 		es2017: true,
 		node: true,
 	},
-	rules: {},
+	rules: {
+		"semi": ["error", "always"],
+		"no-console": ["warn"],
+	},
 };
