@@ -1,6 +1,18 @@
 <style lang="postcss" type="text/postcss">
 </style>
 
+<script lang="ts" context="module">
+	export async function load({ fetch }) {
+		try {
+			await fetch('/sitemap.xml');
+
+			return true;
+		} catch (error) {
+			console.error(error);
+		}
+	}
+</script>
+
 <script lang="ts">
 	import { JSONHttpUtil } from '$lib/core';
 	import Title from '$components/title/Title.svelte';

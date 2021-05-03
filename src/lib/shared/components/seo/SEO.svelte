@@ -20,8 +20,8 @@
 			description: metaData.title,
 			...metaData.twitter,
 		},
-		rss: 'feeds/blog.atom',
-		atom: 'feeds/blog.rss',
+		rss: '/blog.atom',
+		atom: '/blog.rss',
 		...metaData,
 	};
 
@@ -83,11 +83,11 @@
 	{/if}
 
 	{#if metaData && metaData.sitemapUrl}
-		<link rel="sitemap" type="application/xml" href="{metaData.sitemapUrl}" />
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="{metaData.sitemapUrl}" />
 	{/if}
 
 	{#if metaData && metaData.rss}
-		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="{metaData.rss}" />
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{metaData.rss}" />
 	{/if}
 
 	{#if metaData && metaData.atom}
