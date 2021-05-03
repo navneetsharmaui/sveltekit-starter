@@ -20,7 +20,7 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 
 ## :bulb: Features
 
-- [:heavy_check_mark:] Server side rendering built with SEO in mind.
+- [:heavy_check_mark:] Server side rendering built with ***SEO*** in mind.
 - [:heavy_check_mark:] PWA + Service Worker + Offline.
 - [:heavy_check_mark:] Tailwindcss + Postcss + SCSS Syntax Support in Postcss.
 - [:heavy_check_mark:] Global Style and Variable preconfigured for Postcss.
