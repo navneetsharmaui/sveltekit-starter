@@ -31,13 +31,13 @@ The project has the ***SSR (Server Side Rendering)*** setup. These template is e
 - [:heavy_check_mark:] Typescript + TSPaths (absolute for imports in component) preconfigured.
 - [:heavy_check_mark:] Prettiers, ESLint, and Husky preconfigured.
 - [:heavy_check_mark:] Github and Vscode dotfiles preconfigured.
+- [:heavy_check_mark:] JEST Test configuration.
 
 ### :pushpin: TODO
 
 - [:heavy_multiplication_x:] Images LazyLoad.
 - [:heavy_multiplication_x:] Route Transition animation.
 - [:heavy_multiplication_x:] E2E Test configuration using Cypress.
-- [:heavy_multiplication_x:] JEST Test configuration.
 - [:heavy_multiplication_x:] Internationalization (i18n).
 - [:heavy_multiplication_x:] More examples of Storybook Stories for the UI Components.
 - [:heavy_multiplication_x:] State management Setup.
