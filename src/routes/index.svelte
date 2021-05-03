@@ -15,12 +15,25 @@
 
 <script lang="ts">
 	import { JSONHttpUtil } from '$lib/core';
-	import Title from '$components/title/Title.svelte';
 
 	// import Counter from '$lib/Counter.svelte';
 
 	import { Logger, LoggerUtils } from '$lib/utils';
 	import { onMount } from 'svelte';
+
+	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+	import type { IMetaTagProperties } from '$lib/models';
+
+	const metaData: Partial<IMetaTagProperties> = {
+		title: 'Home | Sveltekit',
+		description:
+			'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook).',
+		url: 'https://sveltekit-starter.vercelapp.com',
+		logoUrl: 'https://sveltekit-starter.vercelapp.com/favicon.ico',
+		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter home'],
+		searchUrl: 'https://sveltekit-starter.vercelapp.com',
+		sitemapUrl: 'https://sveltekit-starter.vercelapp.com/sitemap.xml',
+	};
 
 	const logger: Logger = LoggerUtils.getInstance('Index');
 
@@ -30,7 +43,7 @@
 	});
 </script>
 
-<Title title="Home" />
+<HeadTags metaData="{metaData}" />
 
 <section class="text-gray-600 body-font">
 	<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">

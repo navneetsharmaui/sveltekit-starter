@@ -4,10 +4,21 @@
 </script>
 
 <script lang="ts">
-	import Title from '$components/title/Title.svelte';
+	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+	import type { IMetaTagProperties } from '$lib/models';
+
+	const metaData: Partial<IMetaTagProperties> = {
+		title: 'About | Sveltekit',
+		description: 'About page of Sveltekit starter project',
+		url: 'https://sveltekit-starter.vercelapp.com/about',
+		logoUrl: 'https://sveltekit-starter.vercelapp.com/favicon.ico',
+		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter about'],
+		searchUrl: 'https://sveltekit-starter.vercelapp.com/about',
+		sitemapUrl: 'https://sveltekit-starter.vercelapp.com/sitemap.xml',
+	};
 </script>
 
-<Title title="About" />
+<HeadTags metaData="{metaData}" />
 
 <section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto">

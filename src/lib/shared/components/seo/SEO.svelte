@@ -10,18 +10,16 @@
 		robots: 'index,follow',
 		openGraph: {
 			title: metaData.title,
-			description: metaData.title,
+			description: metaData.description,
 			url: metaData.url,
 			locale: 'en_US',
 			...metaData.openGraph,
 		},
 		twitter: {
 			title: metaData.title,
-			description: metaData.title,
+			description: metaData.description,
 			...metaData.twitter,
 		},
-		rss: '/blog.atom',
-		atom: '/blog.rss',
 		...metaData,
 	};
 

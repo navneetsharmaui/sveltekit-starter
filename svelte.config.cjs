@@ -3,7 +3,7 @@
 // command env properties
 const adapt = process.env.ADAPTER;
 const isSSR = process.env.SSR ? true : false;
-const isAMP = process.env.APM ? true : false;
+const isAMP = process.env.AMP ? true : false;
 
 // Imports
 const sveltePreprocess = require('svelte-preprocess');
