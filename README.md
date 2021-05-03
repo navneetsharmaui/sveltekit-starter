@@ -7,10 +7,9 @@
 Sveltekit starter project created with Sveltekit, Typescript, Tailwindcss, Postcss, SCSS, Husky, ESLint, Prettier, Storybook, and Jest.
 The project has the ***SSR (Server Side Rendering)*** setup. These template is easy to configure and built upon as it has scalable structure.
 
-## :100: Project LightHouse Report :fire:
+## :100: :fire: Project LightHouse Report
 
 ![sveltekit-starter-lighthouse-report](https://user-images.githubusercontent.com/11630812/115241377-5d485d80-a13e-11eb-8667-611770992c28.png)
-
 
 ## :paperclip: Menu
 
