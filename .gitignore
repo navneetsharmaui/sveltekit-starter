@@ -6,6 +6,7 @@ node_modules
 /functions
 /.vercel_build_output
 /workers-site
+static/global.css
 
 # Storybook files #
 ###################
