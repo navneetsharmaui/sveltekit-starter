@@ -8,11 +8,9 @@ module.exports = {
 		'@storybook/addon-storyshots',
 		'@storybook/addon-essentials',
 		'@storybook/addon-knobs',
-		'@storybook/addon-graphql',
 		'@storybook/addon-events',
 		'@storybook/addon-queryparams',
 		'@storybook/addon-cssresources',
-		'storybook-addon-apollo-client',
 		{
 			name: '@storybook/addon-postcss',
 			options: {
