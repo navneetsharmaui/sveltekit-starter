@@ -3872,60 +3872,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-netlify@npm:next":
-  version: 1.0.0-next.10
-  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.10"
+"@sveltejs/adapter-netlify@npm:^1.0.0-next.11":
+  version: 1.0.0-next.11
+  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.11"
   dependencies:
-    "@sveltejs/kit": 1.0.0-next.91
+    "@sveltejs/kit": 1.0.0-next.98
     esbuild: ^0.11.12
     toml: ^3.0.0
-  checksum: 4195ed5b3ec07a4769b270a8226e2cb1059b97c03d49dcef05dee392b37a692b02850423589a2cc252a291f1654723dc61621fb52b28fbb1c8a99dc6fe950e9f
+  checksum: b0492e10783e33733a0f2501fd5c761b9c79d68ca366ec22de070661589c4fc191ae94aaad171e2220b0f13bd715c980eaf62eb7cab1ae827aa51ecf0f01e144
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-node@npm:next":
-  version: 1.0.0-next.17
-  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.17"
-  checksum: 65a5a2ebad1fb7b1613a332ba5821bbf50fcabdeb175ea58907a15e3c8a9a3a5677dfac22d1653b766be8c53f0a7638ee5af5dc7c7225bbeb8a8c21279126b3c
+"@sveltejs/adapter-node@npm:^1.0.0-next.18":
+  version: 1.0.0-next.18
+  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.18"
+  checksum: 8b05deee1b85abfe3eebb18f8731dd32d43f98a8032f5f3630cf9436ff1fa0890f6fde0a009146ed6016619887ff9ba71dcc9a911b8799208c1e39214e57367c
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:next":
-  version: 1.0.0-next.7
-  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.7"
-  checksum: 33ab603074b649dfea5f3ebe4360374575aec7e9f4f6295031527ce2081be95e6cabd724f50bdb258ef9345ffa1381b7298e1044a892ee1fb0efa9861eb50da9
+"@sveltejs/adapter-static@npm:^1.0.0-next.8":
+  version: 1.0.0-next.8
+  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.8"
+  checksum: c841ea6a33cc4d86c4165122a49fc5050772d08634a55f8f221be67434f9cb31222c4c186e6fd15747494441bdf50250588b532b0eaaa3ab3d2d0e7f6e856870
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-vercel@npm:next":
-  version: 1.0.0-next.15
-  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.15"
+"@sveltejs/adapter-vercel@npm:^1.0.0-next.16":
+  version: 1.0.0-next.16
+  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.16"
   dependencies:
-    "@sveltejs/kit": 1.0.0-next.91
+    "@sveltejs/kit": 1.0.0-next.98
     esbuild: ^0.11.12
-  checksum: 27b23194d4ec3d67e7fcdb33da2d7f2c162e44606c1b6de4918f5c2ca0ab505175dad52602f0da957233ccd7084058b7edaef588692d095cce901883bd19cfce
+  checksum: 987085f65b6bed847e89916efdaa3ed0ede8a988a18cac7b9017d01ce9051bbfd7fcbe0f8d98a31ac80b46ab82a39e984c95f14d9ffc2158534ff24308ead14d
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:1.0.0-next.91":
-  version: 1.0.0-next.91
-  resolution: "@sveltejs/kit@npm:1.0.0-next.91"
-  dependencies:
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.7
-    cheap-watch: ^1.0.3
-    sade: ^1.7.4
-  peerDependencies:
-    svelte: ^3.32.1
-    vite: ^2.2.3
-  bin:
-    svelte-kit: svelte-kit.js
-  checksum: fc67c39186b2d2dd331b53906523a1f51bd5dd47a0d48dd4ebdf34087d988cad6e69d8200d60744c9b0549f98a7f3e80b490cb3b30f13f1b72ceceb83c8d994d
-  languageName: node
-  linkType: hard
-
-"@sveltejs/kit@npm:next":
-  version: 1.0.0-next.95
-  resolution: "@sveltejs/kit@npm:1.0.0-next.95"
+"@sveltejs/kit@npm:1.0.0-next.98, @sveltejs/kit@npm:^1.0.0-next.98":
+  version: 1.0.0-next.98
+  resolution: "@sveltejs/kit@npm:1.0.0-next.98"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.0-next.9
     cheap-watch: ^1.0.3
@@ -3935,26 +3919,7 @@ __metadata:
     vite: ^2.2.3
   bin:
     svelte-kit: svelte-kit.js
-  checksum: e85b16d59e9c10a1be88b6a1ca3dd81d78ba4b60613a309a12b439b871f41ead3d7a811e434b9ef15259846049b6561940773e64a6ef97d4633bd86b327ed36c
-  languageName: node
-  linkType: hard
-
-"@sveltejs/vite-plugin-svelte@npm:^1.0.0-next.7":
-  version: 1.0.0-next.7
-  resolution: "@sveltejs/vite-plugin-svelte@npm:1.0.0-next.7"
-  dependencies:
-    "@rollup/pluginutils": ^4.1.0
-    chalk: ^4.1.0
-    debug: ^4.3.2
-    hash-sum: ^2.0.0
-    require-relative: ^0.8.7
-    slash: ^3.0.0
-    source-map: ^0.7.3
-    svelte-hmr: ^0.14.0
-  peerDependencies:
-    svelte: ^3.37.0
-    vite: ^2.1.5
-  checksum: 49d935947b2395de404bd8c59c8ef8e97dacefc5622da618e22672fa6e265257d2b1ca43ed25ecb8e8e6dd9fbc21e9c00a4b24c22632e626ac35741e50142155
+  checksum: 0b3ac2e9cb8aa8f0795678b49a46371d42b7f2f1359812a02391f08d38f1e4b162fdcad05c6d4c33f82a35ffe91518152c040a9b3630c0858c30a11a8529c72c
   languageName: node
   linkType: hard
 
@@ -17851,15 +17816,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"svelte-hmr@npm:^0.14.0":
-  version: 0.14.0
-  resolution: "svelte-hmr@npm:0.14.0"
-  peerDependencies:
-    svelte: ">=3.19.0"
-  checksum: 1d75daa90e5cc200c20f044e48ed32edc1b1697a4a2bc0f2824f641234cf79606f1c709a5809947dfb8a47a29ac8e9bfcff7eb3a60f224913f5a16a492ae7b2c
-  languageName: node
-  linkType: hard
-
 "svelte-hmr@npm:^0.14.2":
   version: 0.14.3
   resolution: "svelte-hmr@npm:0.14.3"
@@ -17981,11 +17937,11 @@ fsevents@^1.2.7:
     "@storybook/addon-svelte-csf": ^1.0.0
     "@storybook/addons": ^6.2.9
     "@storybook/svelte": ^6.2.9
-    "@sveltejs/adapter-netlify": next
-    "@sveltejs/adapter-node": next
-    "@sveltejs/adapter-static": next
-    "@sveltejs/adapter-vercel": next
-    "@sveltejs/kit": next
+    "@sveltejs/adapter-netlify": ^1.0.0-next.11
+    "@sveltejs/adapter-node": ^1.0.0-next.18
+    "@sveltejs/adapter-static": ^1.0.0-next.8
+    "@sveltejs/adapter-vercel": ^1.0.0-next.16
+    "@sveltejs/kit": ^1.0.0-next.98
     "@testing-library/jest-dom": ^5.12.0
     "@testing-library/svelte": ^3.0.3
     "@types/jest": ^26.0.23
