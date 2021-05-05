@@ -1,35 +1,19 @@
-<script>
+<script lang="ts">
 	import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
 	import Card from './Card.svelte';
 </script>
 
-<Meta
-	title="UI/Card"
-	component="{Card}"
-	argTypes="{{
-		onClick: { action: 'onClick' },
-		name: { control: 'text' },
-		job: { control: 'text' },
-	}}"
-/>
+<Meta title="UI/Card" component="{Card}" />
 
 <!--  -->
 
 <Template let:args>
-	<Card {...args} on:click="{args.onClick}" />
+	<Card {...args} on:click="{args.onClick}">
+		<span slot="card-content">
+			<div> Navneet </div>
+			<div> SSE </div>
+		</span>
+	</Card>
 </Template>
 
-<Story
-	name="Primary"
-	args="{{
-		name: 'Navneet',
-		job: 'SSE',
-	}}"
->
-	<span slot="card-content">
-		<div> Navneet </div>
-		<div> SSE </div>
-	</span>
-</Story>
-
-<Story name="Secondary" />
+<Story name="Primary" />
