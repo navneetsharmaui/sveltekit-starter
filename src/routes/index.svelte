@@ -38,8 +38,8 @@
 	const logger: Logger = LoggerUtils.getInstance('Index');
 
 	onMount(async () => {
-		// const data = await JSONHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
-		// logger.debug(data);
+		const data = await JSONHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
+		logger.debug(data);
 	});
 </script>
 

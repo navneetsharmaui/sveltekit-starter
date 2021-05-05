@@ -25,7 +25,6 @@
 		"types": ["node", "jest", "@testing-library/jest-dom"],
 		"paths": {
 			"$app/*": [".svelte-kit/dev/runtime/app/*", ".svelte-kit/build/runtime/app/*"],
-			"$service-worker": [".svelte-kit/build/runtime/service-worker"],
 			"$lib/*": ["src/lib/*"],
 			"$core": ["src/lib/core/index.ts"],
 			"$core/*": ["src/lib/core/*"],
