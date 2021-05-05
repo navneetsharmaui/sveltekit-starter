@@ -1,5 +1,8 @@
 /* jshint esversion: 9 */
 
+const postcss = require('postcss');
+const sveltePreprocess = require('svelte-preprocess');
+
 module.exports = {
 	stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx|svelte)'],
 	addons: [
@@ -15,13 +18,20 @@ module.exports = {
 			name: '@storybook/addon-postcss',
 			options: {
 				postcssLoaderOptions: {
-					implementation: require('postcss'),
+					implementation: postcss,
 				},
 			},
 		},
 		'@storybook/addon-svelte-csf',
 	],
 	svelteOptions: {
-		preprocess: require('../svelte.config.cjs').preprocess,
+		preprocess: [
+			sveltePreprocess({
+				defaults: {
+					style: 'postcss',
+				},
+				postcss: true,
+			}),
+		],
 	},
 };
