@@ -6,3 +6,18 @@
 /examples
 node_modules
 /node_modules
+/functions
+
+/.vercel_build_output
+/workers-site
+static/global.css
+
+# Storybook files #
+###################
+storybook-static
+storybook-static/*
+
+# Jest files #
+#############################
+coverage
+coverage/*

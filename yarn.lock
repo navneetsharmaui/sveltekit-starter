@@ -3907,7 +3907,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:1.0.0-next.98, @sveltejs/kit@npm:^1.0.0-next.98":
+"@sveltejs/kit@npm:1.0.0-next.98":
   version: 1.0.0-next.98
   resolution: "@sveltejs/kit@npm:1.0.0-next.98"
   dependencies:
@@ -3920,6 +3920,22 @@ __metadata:
   bin:
     svelte-kit: svelte-kit.js
   checksum: 0b3ac2e9cb8aa8f0795678b49a46371d42b7f2f1359812a02391f08d38f1e4b162fdcad05c6d4c33f82a35ffe91518152c040a9b3630c0858c30a11a8529c72c
+  languageName: node
+  linkType: hard
+
+"@sveltejs/kit@npm:^1.0.0-next.100":
+  version: 1.0.0-next.100
+  resolution: "@sveltejs/kit@npm:1.0.0-next.100"
+  dependencies:
+    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.9
+    cheap-watch: ^1.0.3
+    sade: ^1.7.4
+  peerDependencies:
+    svelte: ^3.34.0
+    vite: ^2.2.3
+  bin:
+    svelte-kit: svelte-kit.js
+  checksum: 79d728aa7ac40eee5dea832c386aafce54ed83008a900019955cc6a64fa41de099aab018b3a2b96e09669db1dd7ff3960e41b06a818a8a8658f877dafb6abeaf
   languageName: node
   linkType: hard
 
@@ -4296,10 +4312,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^15.0.1":
-  version: 15.0.1
-  resolution: "@types/node@npm:15.0.1"
-  checksum: 4e4fb69394efb224272ad7c6b6dc16a381b97e46a8f3c21d33fec51ef13a4d635f571b446d127eae333ea6a763f304b787f4b3f73e24e1f3b05a21b481900dfb
+"@types/node@npm:^15.0.2":
+  version: 15.0.2
+  resolution: "@types/node@npm:15.0.2"
+  checksum: ea8dd741bf16ad3318cca505783b7c211a5c8bea49202f99ba88d2ce8a804e994e1fd1b575b994e434e8b8ead810da966d588ea112998f8fe8d95cd74c396f8a
   languageName: node
   linkType: hard
 
@@ -15114,14 +15130,14 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.13":
-  version: 8.2.13
-  resolution: "postcss@npm:8.2.13"
+"postcss@npm:^8.2.14":
+  version: 8.2.14
+  resolution: "postcss@npm:8.2.14"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.22
     source-map: ^0.6.1
-  checksum: df64697cbd6d8e501eac2eaed501dc9a9c848538b4b51c53bfe7ed62a91736e97135d1fe22384b69af11bb2387a6cb483f5eecd14b19ca192ab5497ed5522124
+  checksum: 46bcc7c05f2b6b0e22e36af03e0244366871bd5cd9e3ca35e0ba2a87fb9080063322ee1dcef307d6e116fdac7c85941aaebd3755a3c88b4533bb8722b7bba4d2
   languageName: node
   linkType: hard
 
@@ -17941,11 +17957,11 @@ fsevents@^1.2.7:
     "@sveltejs/adapter-node": ^1.0.0-next.18
     "@sveltejs/adapter-static": ^1.0.0-next.8
     "@sveltejs/adapter-vercel": ^1.0.0-next.16
-    "@sveltejs/kit": ^1.0.0-next.98
+    "@sveltejs/kit": ^1.0.0-next.100
     "@testing-library/jest-dom": ^5.12.0
     "@testing-library/svelte": ^3.0.3
     "@types/jest": ^26.0.23
-    "@types/node": ^15.0.1
+    "@types/node": ^15.0.2
     "@typescript-eslint/eslint-plugin": ^4.22.1
     "@typescript-eslint/parser": ^4.22.1
     "@yarnpkg/pnpify": ^3.0.0-rc.3
@@ -17965,7 +17981,7 @@ fsevents@^1.2.7:
     marked: ^2.0.3
     node-fetch: ^2.6.1
     npm-run-all: ^4.1.5
-    postcss: ^8.2.13
+    postcss: ^8.2.14
     postcss-at-rules-variables: ^0.3.0
     postcss-cli: ^8.3.1
     postcss-import: ^14.0.1
@@ -17982,7 +17998,7 @@ fsevents@^1.2.7:
     svelte-loader: ^3.1.1
     svelte-preprocess: ^4.7.3
     tailwindcss: ^2.1.2
-    ts-jest: ^26.5.5
+    ts-jest: ^26.5.6
     tslib: ^2.2.0
     typescript: ^4.2.4
     vite: ^2.2.4
@@ -18490,9 +18506,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^26.5.5":
-  version: 26.5.5
-  resolution: "ts-jest@npm:26.5.5"
+"ts-jest@npm:^26.5.6":
+  version: 26.5.6
+  resolution: "ts-jest@npm:26.5.6"
   dependencies:
     bs-logger: 0.x
     buffer-from: 1.x
@@ -18509,7 +18525,7 @@ fsevents@^1.2.7:
     typescript: ">=3.8 <5.0"
   bin:
     ts-jest: cli.js
-  checksum: a7fe56357bfd7e7cd833ea4a97408910ee67796fb7f3938c7155c69dc7b35f3172b76503e16282715e07a4a2b5026efd4803f0b090b3930e0c79c58d25b740db
+  checksum: fd32a8b256091d45d850c491fd090f74a368d44bccc8fedfa0dd074757727e7f07621eb2a69ebf081428f44a357a879237a2cf0aef970896410d454d0bf87ac6
   languageName: node
   linkType: hard
 
