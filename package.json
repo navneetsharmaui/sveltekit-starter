@@ -131,6 +131,7 @@
 		"@testing-library/svelte": "^3.0.3",
 		"@types/jest": "^26.0.23",
 		"@types/node": "^15.0.2",
+		"@types/yargs": "^16.0.1",
 		"@typescript-eslint/eslint-plugin": "^4.22.1",
 		"@typescript-eslint/parser": "^4.22.1",
 		"@yarnpkg/pnpify": "^3.0.0-rc.3",
@@ -170,7 +171,8 @@
 		"ts-node": "^9.1.1",
 		"tslib": "^2.2.0",
 		"typescript": "^4.2.4",
-		"vite": "^2.2.4"
+		"vite": "^2.2.4",
+		"yargs": "^17.0.1"
 	},
 	"type": "module"
 }
