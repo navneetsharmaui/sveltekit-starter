@@ -2,8 +2,10 @@ import fs from 'fs';
 
 import { userData } from '$data/data';
 
-const URL = process.env.BASE_URL;
-const BASE_URL = URL ? URL : 'https://sveltekit-starter.vercelapp.com';
+import { variables } from '$data/variables';
+
+const URL = variables.basePath;
+const baseURL = URL ? URL : 'https://sveltekit-starter.vercelapp.com';
 const pages = [''];
 
 fs.readdirSync('./src/routes').forEach((file) => {
@@ -28,7 +30,7 @@ ${pages
 		(page: string) => `
 	<url>
 		<loc>
-			${BASE_URL}/${page ? `${page}/` : ''}
+			${baseURL}/${page ? `${page}/` : ''}
 		</loc>
 		<priority>0.85</priority>
 	</url>
@@ -40,7 +42,7 @@ ${userData
 		(userData) => `
 	<url>
 		<loc>
-			${BASE_URL}/users/${userData.id}/
+			${baseURL}/users/${userData.id}/
 		</loc>
 		<priority>0.69</priority>
 	</url>

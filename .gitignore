@@ -50,3 +50,7 @@ pids
 *.pid.lock
 *.eslintcache
 
+/.env
+/.env.*
+/.env.local
+/.env.*.local
