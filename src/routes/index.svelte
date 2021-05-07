@@ -28,11 +28,7 @@
 		title: 'Home | Sveltekit',
 		description:
 			'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook).',
-		url: 'https://sveltekit-starter.vercelapp.com',
-		logoUrl: 'https://sveltekit-starter.vercelapp.com/favicon.ico',
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter home'],
-		searchUrl: 'https://sveltekit-starter.vercelapp.com',
-		sitemapUrl: 'https://sveltekit-starter.vercelapp.com/sitemap.xml',
 	};
 
 	const logger: Logger = LoggerUtils.getInstance('Index');

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { IMetaTagProperties } from '$lib/models';
+	import { variables } from '$data/variables';
 
 	/**
 	 * @type {IMetaTagProperties}
@@ -7,20 +8,23 @@
 	export let metaData: Partial<IMetaTagProperties> = {};
 
 	metaData = {
+		...metaData,
 		robots: 'index,follow',
 		openGraph: {
+			...metaData.openGraph,
 			title: metaData.title,
 			description: metaData.description,
-			url: metaData.url,
+			url: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
 			locale: 'en_US',
-			...metaData.openGraph,
 		},
 		twitter: {
+			...metaData.twitter,
 			title: metaData.title,
 			description: metaData.description,
-			...metaData.twitter,
+			site: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
 		},
-		...metaData,
+		url: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
+		searchUrl: metaData.searchUrl ? `${variables.basePath}${metaData.searchUrl}` : variables.basePath,
 	};
 
 	const jsonLd = (content) => `<${'script'} type="application/ld+json">${JSON.stringify(content)}</${'script'}>`;
@@ -28,26 +32,26 @@
 	$: {
 		if (!!metaData.image && typeof metaData.image === 'string') {
 			metaData.openGraph = {
-				image: metaData.image,
 				...metaData.openGraph,
+				image: metaData.image,
 			};
 			metaData.twitter = {
-				image: metaData.image,
 				...metaData.twitter,
+				image: metaData.image,
 			};
 		}
 		if (typeof metaData.image === 'object') {
 			metaData.openGraph = {
-				image: metaData.url,
+				...metaData.openGraph,
+				image: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
 				'image:width': metaData.image.width,
 				'image:height': metaData.image.height,
 				'image:alt': metaData.image.alt || metaData.title,
-				...metaData.openGraph,
 			};
 			metaData.twitter = {
-				image: metaData.url,
-				'image:alt': metaData.image.alt || metaData.title,
 				...metaData.twitter,
+				image: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
+				'image:alt': metaData.image.alt || metaData.title,
 			};
 		}
 	}
@@ -61,6 +65,8 @@
 
 	<meta name="robots" content="{metaData.robots}" />
 	<meta name="googlebot" content="{metaData.robots}" />
+
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
 	{#if metaData && metaData.title}
 		<title>{metaData.title}</title>
@@ -77,10 +83,6 @@
 
 	{#if metaData && metaData.url}
 		<link rel="canonical" href="{metaData.url}" />
-	{/if}
-
-	{#if metaData && metaData.sitemapUrl}
-		<link rel="sitemap" type="application/xml" title="Sitemap" href="{metaData.sitemapUrl}" />
 	{/if}
 
 	{#if metaData && metaData.rss}
@@ -100,7 +102,7 @@
 	{/if}
 
 	{#if metaData && metaData.openGraph}
-		{#each Object.keys(metaData.twitter) as tag}
+		{#each Object.keys(metaData.openGraph) as tag}
 			<meta name="og:{tag}" content="{metaData.openGraph[tag]}" />
 		{/each}
 	{/if}
@@ -116,7 +118,7 @@
 			'@context': 'https://schema.org',
 			'@type': 'Organization',
 			url: metaData.url,
-			logo: metaData.logoUrl,
+			logo: `${variables.basePath}/favicon.ico`,
 		})}
 	{/if}
 

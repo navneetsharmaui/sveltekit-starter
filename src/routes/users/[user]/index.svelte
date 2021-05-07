@@ -26,21 +26,17 @@
 		title: `${user.name} | Sveltekit`,
 		description:
 			'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook).',
-		url: `https://sveltekit-starter.vercelapp.com/users/${user.id}`,
-		logoUrl: 'https://sveltekit-starter.vercelapp.com/favicon.ico',
+		url: `/${user.id}`,
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter users'],
-		searchUrl: `https://sveltekit-starter.vercelapp.com/users/${user.id}`,
-		sitemapUrl: 'https://sveltekit-starter.vercelapp.com/sitemap.xml',
+		searchUrl: `/${user.id}`,
 	};
 	$: {
 		if (user && user.id) {
 			metaData = {
 				title: `${user.name} | Sveltekit`,
-				url: `https://sveltekit-starter.vercelapp.com/users/${user.id}`,
-				logoUrl: 'https://sveltekit-starter.vercelapp.com/favicon.ico',
-				keywords: ['sveltekit', 'sveltekit-starter', 'sveltekit-starter-users'],
-				searchUrl: `https://sveltekit-starter.vercelapp.com/users/${user.id}`,
-				sitemapUrl: 'https://sveltekit-starter.vercelapp.com/sitemap.xml',
+				url: `/users/${user.id}`,
+				keywords: ['sveltekit', 'sveltekit-starter', 'sveltekit-starter-users', `sveltekit ${user.id}`],
+				searchUrl: `/users/${user.id}`,
 			};
 		}
 	}

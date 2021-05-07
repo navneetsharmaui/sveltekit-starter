@@ -28,11 +28,9 @@
 		title: 'Users | Sveltekit',
 		description:
 			'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook).',
-		url: 'https://sveltekit-starter.vercelapp.com/users',
-		logoUrl: 'https://sveltekit-starter.vercelapp.com/favicon.ico',
+		url: '/users',
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter users'],
-		searchUrl: 'https://sveltekit-starter.vercelapp.com/users',
-		sitemapUrl: 'https://sveltekit-starter.vercelapp.com/sitemap.xml',
+		searchUrl: '/users',
 	};
 
 	const logger: Logger = LoggerUtils.getInstance('Users');
