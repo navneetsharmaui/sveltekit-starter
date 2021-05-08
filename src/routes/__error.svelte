@@ -1,4 +1,4 @@
-<style lang="scss">
+<style lang="postcss">
 	h1 {
 		font-size: 2.8em;
 		font-weight: 700;
@@ -24,14 +24,54 @@
 </script>
 
 <script lang="ts">
+	/**
+	 * Start: Sevelte Imports
+	 */
 	import { dev } from '$app/env';
-	import Title from '$components/title/Title.svelte';
+	/**
+	 * End: Sevelte Imports
+	 */
 
+	/**
+	 * Start: Local Imports
+	 */
+
+	//  Components
+	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+
+	// Models
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
+	/**
+	 * End: Local Imports
+	 */
+
+	/**
+	 * Start: Exported Properties
+	 */
+
+	/**
+	 * @type {string}
+	 */
 	export let status: string;
+
+	/**
+	 * @type {string}
+	 */
 	export let error: Error;
+	/**
+	 * End: Exported Properties
+	 */
+
+	/**
+	 * @type {IMetaTagProperties}
+	 */
+	const metaData: Partial<IMetaTagProperties> = {
+		title: `${status} | Sveltekit`,
+		description: '404 page of Sveltekit starter project',
+	};
 </script>
 
-<Title title="{status} | Sveltekit" />
+<HeadTags metaData="{metaData}" />
 <div class="md:container md:mx-auto">
 	<div class="flex flex-col justify-center items-center">
 		<h1>

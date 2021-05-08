@@ -14,16 +14,36 @@
 </script>
 
 <script lang="ts">
+	/**
+	 * Start: Svelte Imports
+	 */
+	import { onMount } from 'svelte';
+	/**
+	 * End: Svelte Imports
+	 */
+
+	/**
+	 * Start: Local Imports
+	 */
+
+	// Core services
 	import { JSONHttpUtil } from '$lib/core';
 
-	// import Counter from '$lib/Counter.svelte';
+	// Utils
+	import { Logger, LoggerUtils } from '$lib/utils/logger';
 
-	import { Logger, LoggerUtils } from '$lib/utils';
-	import { onMount } from 'svelte';
-
+	// Components
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
-	import type { IMetaTagProperties } from '$lib/models';
 
+	// Models
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
+	/**
+	 * End: Local Imports
+	 */
+
+	/**
+	 * @type {IMetaTagProperties}
+	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'Home | Sveltekit',
 		description:

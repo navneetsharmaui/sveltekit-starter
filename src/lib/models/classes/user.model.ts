@@ -1,5 +1,5 @@
-import type { IUser } from '../interfaces/iuser.interface';
-import type { IDeserializable } from '../interfaces/ideserializable.interface';
+import type { IUser } from '$models/interfaces/iuser.interface';
+import type { IDeserializable } from '$models/interfaces/ideserializable.interface';
 
 export class UserModel implements IDeserializable<IUser>, IUser {
 	public name: string;

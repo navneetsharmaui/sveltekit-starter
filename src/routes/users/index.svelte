@@ -2,7 +2,6 @@
 </style>
 
 <script lang="ts" context="module">
-	// export const ssr = false;
 	export async function load({ page, fetch }) {
 		return {
 			props: {
@@ -13,16 +12,25 @@
 </script>
 
 <script lang="ts">
-	// Navigation Imports
+	// Sevelte Imports
 	// import { goto } from '$app/navigation';
-	// Models
-	import type { UserModel } from '$models/classes/user.model';
-	// Components
-	import { Card } from '$ui/components/card';
+
+	/**
+	 * Start: Local Imports
+	 */
 	// Utils
 	import { Logger, LoggerUtils } from '$utils/logger';
+
+	// Components
+	import { Card } from '$ui/components/card';
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+
+	// Models
+	import type { UserModel } from '$models/classes/user.model';
 	import type { IMetaTagProperties } from '$lib/models';
+	/**
+	 * End: Local Imports
+	 */
 
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'Users | Sveltekit',

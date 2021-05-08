@@ -1,7 +1,19 @@
 <script lang="ts">
+	/**
+	 * Start: Local Imports
+	 */
+	// Components
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
-	import type { IMetaTagProperties } from '$lib/models';
 
+	// Models
+	import type { IMetaTagProperties } from '$lib/models';
+	/**
+	 * End: Local Imports
+	 */
+
+	/**
+	 * @type {IMetaTagProperties}
+	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'Profile | Sveltekit',
 		description:

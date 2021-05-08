@@ -12,15 +12,27 @@
 </script>
 
 <script lang="ts">
-	// Models
-	import type { UserModel } from '$models/classes/user.model';
+	/**
+	 * Start: Local Imports
+	 */
 	// Components
 	import { Card } from '$ui/components/card';
-	// Utils
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
-	import type { IMetaTagProperties } from '$lib/models';
 
+	// Models
+	import type { UserModel } from '$models/classes/user.model';
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
+	/**
+	 * End: Local Imports
+	 */
+
+	/**
+	 * Start: Exported Properties
+	 */
 	export let user: UserModel;
+	/**
+	 * End: Exported Properties
+	 */
 
 	let metaData: Partial<IMetaTagProperties> = {
 		title: `${user.name} | Sveltekit`,

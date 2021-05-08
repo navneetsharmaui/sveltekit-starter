@@ -1,3 +1,3 @@
-export interface IDeserializable<T = unknown> {
+export interface IDeserializable<T> {
 	deserialize(input: T): this;
 }

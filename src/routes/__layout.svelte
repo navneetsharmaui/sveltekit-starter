@@ -1,8 +1,19 @@
 <script lang="ts">
-	import type { IHeaderNavLink } from '$lib/models/interfaces/iheader-nav-link.interface';
-
+	/**
+	 * Start: Local Imports
+	 */
+	// Components
 	import Header from '$ui/components/header/Header.svelte';
 
+	// Models
+	import type { IHeaderNavLink } from '$lib/models/interfaces/iheader-nav-link.interface';
+	/**
+	 * End: Local Imports
+	 */
+
+	/**
+	 * @type {IHeaderNavLink}
+	 */
 	const navLinks: IHeaderNavLink[] = [
 		{
 			path: '/',

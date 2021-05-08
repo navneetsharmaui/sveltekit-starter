@@ -4,9 +4,21 @@
 </script>
 
 <script lang="ts">
+	/**
+	 * Start: Local Imports
+	 */
+	// Components
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
-	import type { IMetaTagProperties } from '$lib/models';
 
+	// Models
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
+	/**
+	 * End: Local Imports
+	 */
+
+	/**
+	 * @type {IMetaTagProperties}
+	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'About | Sveltekit',
 		description: 'About page of Sveltekit starter project',
