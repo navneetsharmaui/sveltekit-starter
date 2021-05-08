@@ -1988,9 +1988,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@eslint/eslintrc@npm:0.4.0"
+"@eslint/eslintrc@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "@eslint/eslintrc@npm:0.4.1"
   dependencies:
     ajv: ^6.12.4
     debug: ^4.1.1
@@ -2001,7 +2001,7 @@ __metadata:
     js-yaml: ^3.13.1
     minimatch: ^3.0.4
     strip-json-comments: ^3.1.1
-  checksum: d3f51b741997cbf36662d8b5a52985bfa5d2873e48cadccd95c67fcce1706327ec98ebb6f0be79c6ecbc31bdeca32c2b1c4f66fd1cf3934c434d1ac269cbceac
+  checksum: 418f5810c8dd9897d2457ceef098197d0e5f1ad345fbe4cd9256fd4223d7ea83d5e350f9091b3ab3483b6b1c367fa560df3ba1fccc7eb8ca6e1aae5a5b126d60
   languageName: node
   linkType: hard
 
@@ -3883,17 +3883,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-node@npm:^1.0.0-next.18":
-  version: 1.0.0-next.18
-  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.18"
-  checksum: 8b05deee1b85abfe3eebb18f8731dd32d43f98a8032f5f3630cf9436ff1fa0890f6fde0a009146ed6016619887ff9ba71dcc9a911b8799208c1e39214e57367c
+"@sveltejs/adapter-node@npm:^1.0.0-next.19":
+  version: 1.0.0-next.19
+  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.19"
+  checksum: 0c676f712ec2ae38155b23d0352d9d5036caaa2491d7a03cadadbd99602f0c1fe4e808b82e0f60cc34c0dc99e87116371c1b66592a24a5c4bbffd31c4dfaae6d
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.0-next.8":
-  version: 1.0.0-next.8
-  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.8"
-  checksum: c841ea6a33cc4d86c4165122a49fc5050772d08634a55f8f221be67434f9cb31222c4c186e6fd15747494441bdf50250588b532b0eaaa3ab3d2d0e7f6e856870
+"@sveltejs/adapter-static@npm:^1.0.0-next.9":
+  version: 1.0.0-next.9
+  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.9"
+  checksum: c35187ad38d36e43561e78d9133cd27fd84c2b8a1ec9e2fd3190959b7adb0d4430b7073475896120ae23b676249238b3af2742bef689774e936fa9dd957b8304
   languageName: node
   linkType: hard
 
@@ -3923,19 +3923,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.100":
-  version: 1.0.0-next.100
-  resolution: "@sveltejs/kit@npm:1.0.0-next.100"
+"@sveltejs/kit@npm:^1.0.0-next.102":
+  version: 1.0.0-next.102
+  resolution: "@sveltejs/kit@npm:1.0.0-next.102"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.0-next.9
     cheap-watch: ^1.0.3
     sade: ^1.7.4
+    vite: ^2.2.4
   peerDependencies:
-    svelte: ^3.34.0
-    vite: ^2.2.3
+    svelte: ^3.38.2
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 79d728aa7ac40eee5dea832c386aafce54ed83008a900019955cc6a64fa41de099aab018b3a2b96e09669db1dd7ff3960e41b06a818a8a8658f877dafb6abeaf
+  checksum: 7c4e74a35e6cc89bd6b3e8f387d8f72f4ee7404ac49004584c6728182b3d39970cf8576ec79dbb4dbcf276da63be62f4c05b83b9836634d9a16e212673bfc06e
   languageName: node
   linkType: hard
 
@@ -7013,14 +7013,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.0.0, commander@npm:^6.2.0, commander@npm:^6.2.1":
+"commander@npm:^6.0.0, commander@npm:^6.2.1":
   version: 6.2.1
   resolution: "commander@npm:6.2.1"
   checksum: 47856aae6f194404122e359d8463e5e1a18f7cbab26722ce69f1379be8514bd49a160ef81a983d3d2091e3240022643354101d1276c797dcdd0b5bfc3c3f04a3
   languageName: node
   linkType: hard
 
-"commander@npm:^7.1.0":
+"commander@npm:^7.1.0, commander@npm:^7.2.0":
   version: 7.2.0
   resolution: "commander@npm:7.2.0"
   checksum: bdc0eca5e25cd24af8440163d3c9a996785bbac4b49a590365699cdc1ed08cefbac8f268153208ab2bc5dc3cb1d3fb573fd1590c681e36e371342186bd331a4c
@@ -7662,7 +7662,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.2.0, debug@npm:^4.3.1, debug@npm:^4.3.2":
+"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
@@ -8723,12 +8723,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.25.0":
-  version: 7.25.0
-  resolution: "eslint@npm:7.25.0"
+"eslint@npm:^7.26.0":
+  version: 7.26.0
+  resolution: "eslint@npm:7.26.0"
   dependencies:
     "@babel/code-frame": 7.12.11
-    "@eslint/eslintrc": ^0.4.0
+    "@eslint/eslintrc": ^0.4.1
     ajv: ^6.10.0
     chalk: ^4.0.0
     cross-spawn: ^7.0.2
@@ -8766,7 +8766,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: 6e1782e2264ebf987504746ee82e996bf0ef2c29a2eaea869b54cb8aa1eaf10945b1d563618515e65ac934ca626f3609282127773f45868ad4a98744458a3c62
+  checksum: 08f99befd764fbd6ea811e9eec27d5c6b9dc9d1bbfe5ffa1016e4f1fe526a4f45ea127c4e30c554c423ee55eb290ce9af4fb7fedf9b7af3f84076a444c2bbdf6
   languageName: node
   linkType: hard
 
@@ -8902,7 +8902,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^4.0.0, execa@npm:^4.1.0":
+"execa@npm:^4.0.0":
   version: 4.1.0
   resolution: "execa@npm:4.1.0"
   dependencies:
@@ -12346,28 +12346,28 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.5.4":
-  version: 10.5.4
-  resolution: "lint-staged@npm:10.5.4"
+"lint-staged@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "lint-staged@npm:11.0.0"
   dependencies:
-    chalk: ^4.1.0
+    chalk: ^4.1.1
     cli-truncate: ^2.1.0
-    commander: ^6.2.0
+    commander: ^7.2.0
     cosmiconfig: ^7.0.0
-    debug: ^4.2.0
+    debug: ^4.3.1
     dedent: ^0.7.0
     enquirer: ^2.3.6
-    execa: ^4.1.0
-    listr2: ^3.2.2
-    log-symbols: ^4.0.0
-    micromatch: ^4.0.2
+    execa: ^5.0.0
+    listr2: ^3.8.2
+    log-symbols: ^4.1.0
+    micromatch: ^4.0.4
     normalize-path: ^3.0.0
     please-upgrade-node: ^3.2.0
     string-argv: 0.3.1
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: dbcafe3679668379fc03f3aef481c3f710794ec03dd5c3915f26a0de110977fbcb44b55ab6dfcff9e8e5789c568ea5629e92f55944fc43f6f6fa1890ee5b07ba
+  checksum: e5d9c38f468fae090939d150f8a1676ca208e50c714f20c9957a16833eeae20ca9676c8679883d0a005fda58375581c26352e18a2227d6449a29adaca650f957
   languageName: node
   linkType: hard
 
@@ -12408,11 +12408,11 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"listr2@npm:^3.2.2":
-  version: 3.7.1
-  resolution: "listr2@npm:3.7.1"
+"listr2@npm:^3.8.2":
+  version: 3.8.2
+  resolution: "listr2@npm:3.8.2"
   dependencies:
-    chalk: ^4.1.0
+    chalk: ^4.1.1
     cli-truncate: ^2.1.0
     figures: ^3.2.0
     indent-string: ^4.0.0
@@ -12423,7 +12423,7 @@ fsevents@^1.2.7:
     wrap-ansi: ^7.0.0
   peerDependencies:
     enquirer: ">= 2.3.0 < 3"
-  checksum: 3f213bafd8174575bdde4694b6e20edae5d1faeb2c764a0621912f75f2d02b586557ed8fb1a623dd72e566c18e63569db5e4cdc4051c13a3c97bee5288e34e1b
+  checksum: ecc039103c8d1065782d327b87045431b609105bcdada16cd209daf1b2f971605ba5c083fbe74e4d17a0002d7f8ab038c94c4feaaf48a0601dba628cd6f0b6e3
   languageName: node
   linkType: hard
 
@@ -12627,7 +12627,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"log-symbols@npm:^4.0.0":
+"log-symbols@npm:^4.1.0":
   version: 4.1.0
   resolution: "log-symbols@npm:4.1.0"
   dependencies:
@@ -13095,7 +13095,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.2":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
   version: 4.0.4
   resolution: "micromatch@npm:4.0.4"
   dependencies:
@@ -17977,10 +17977,10 @@ fsevents@^1.2.7:
     "@storybook/addons": ^6.2.9
     "@storybook/svelte": ^6.2.9
     "@sveltejs/adapter-netlify": ^1.0.0-next.11
-    "@sveltejs/adapter-node": ^1.0.0-next.18
-    "@sveltejs/adapter-static": ^1.0.0-next.8
+    "@sveltejs/adapter-node": ^1.0.0-next.19
+    "@sveltejs/adapter-static": ^1.0.0-next.9
     "@sveltejs/adapter-vercel": ^1.0.0-next.16
-    "@sveltejs/kit": ^1.0.0-next.100
+    "@sveltejs/kit": ^1.0.0-next.102
     "@testing-library/jest-dom": ^5.12.0
     "@testing-library/svelte": ^3.0.3
     "@types/jest": ^26.0.23
@@ -17995,13 +17995,13 @@ fsevents@^1.2.7:
     chromatic: ^5.8.0
     cross-env: ^7.0.3
     cssnano: ^5.0.2
-    eslint: ^7.25.0
+    eslint: ^7.26.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-jest-dom: ^3.8.1
     eslint-plugin-svelte3: ^3.2.0
     husky: ^6.0.0
     jest: ^26.6.3
-    lint-staged: ^10.5.4
+    lint-staged: ^11.0.0
     marked: ^2.0.3
     node-fetch: ^2.6.1
     npm-run-all: ^4.1.5
