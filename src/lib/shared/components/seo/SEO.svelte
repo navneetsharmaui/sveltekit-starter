@@ -1,11 +1,18 @@
 <script lang="ts">
-	import type { IMetaTagProperties } from '$lib/models';
-	import { variables } from '$data/variables';
+	// Start: Local Imports
+	// Models
+	import type { IMetaTagProperties } from '$lib/models/interfaces/imeta-tag-properties.interface';
 
+	// Data
+	import { variables } from '$data/variables';
+	// End: Local Imports
+
+	// Start: Exported Properties
 	/**
 	 * @type {IMetaTagProperties}
 	 */
 	export let metaData: Partial<IMetaTagProperties> = {};
+	// End: Exported Properties
 
 	metaData = {
 		...metaData,

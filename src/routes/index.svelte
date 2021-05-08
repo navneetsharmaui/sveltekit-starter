@@ -14,17 +14,11 @@
 </script>
 
 <script lang="ts">
-	/**
-	 * Start: Svelte Imports
-	 */
+	// Start: Svelte Imports
 	import { onMount } from 'svelte';
-	/**
-	 * End: Svelte Imports
-	 */
+	// End: Svelte Imports
 
-	/**
-	 * Start: Local Imports
-	 */
+	// Start: Local Imports
 
 	// Core services
 	import { JSONHttpUtil } from '$lib/core';
@@ -37,9 +31,7 @@
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
-	/**
-	 * End: Local Imports
-	 */
+	// End: Local Imports
 
 	/**
 	 * @type {IMetaTagProperties}

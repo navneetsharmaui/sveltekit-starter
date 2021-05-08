@@ -1,15 +1,11 @@
 <script lang="ts">
-	/**
-	 * Start: Local Imports
-	 */
+	// Start: Local Imports
 	// Components
 	import Header from '$ui/components/header/Header.svelte';
 
 	// Models
 	import type { IHeaderNavLink } from '$lib/models/interfaces/iheader-nav-link.interface';
-	/**
-	 * End: Local Imports
-	 */
+	// End: Local Imports
 
 	/**
 	 * @type {IHeaderNavLink}

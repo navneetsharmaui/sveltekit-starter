@@ -1,15 +1,11 @@
 <script lang="ts">
-	/**
-	 * Start: Local Imports
-	 */
+	// Start: Local Imports
 	// Components
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$lib/models';
-	/**
-	 * End: Local Imports
-	 */
+	// End: Local Imports
 
 	/**
 	 * @type {IMetaTagProperties}

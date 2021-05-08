@@ -15,9 +15,7 @@
 	// Sevelte Imports
 	// import { goto } from '$app/navigation';
 
-	/**
-	 * Start: Local Imports
-	 */
+	// Start: Local Imports
 	// Utils
 	import { Logger, LoggerUtils } from '$utils/logger';
 
@@ -28,9 +26,7 @@
 	// Models
 	import type { UserModel } from '$models/classes/user.model';
 	import type { IMetaTagProperties } from '$lib/models';
-	/**
-	 * End: Local Imports
-	 */
+	// End: Local Imports
 
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'Users | Sveltekit',

@@ -2,11 +2,23 @@
 </style>
 
 <script lang="ts">
-	import type { IHeaderNavLink } from '$lib/models/interfaces/iheader-nav-link.interface';
+	// Start: Local Imports
 
+	// Models
+	import type { IHeaderNavLink } from '$lib/models/interfaces/iheader-nav-link.interface';
+	// End: Local Imports
+
+	// Start: Exported Properties
+	/**
+	 * @type {string}
+	 */
 	export let title = '';
 
+	/**
+	 * @type {IHeaderNavLink}
+	 */
 	export let navLinks: IHeaderNavLink[] = [];
+	// End: Exported Properties
 </script>
 
 <header class="text-gray-600 body-font">

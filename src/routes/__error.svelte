@@ -24,31 +24,20 @@
 </script>
 
 <script lang="ts">
-	/**
-	 * Start: Sevelte Imports
-	 */
+	// Start: Sevelte Imports
 	import { dev } from '$app/env';
-	/**
-	 * End: Sevelte Imports
-	 */
+	// End: Sevelte Imports
 
-	/**
-	 * Start: Local Imports
-	 */
+	// Start: Local Imports
 
 	//  Components
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
-	/**
-	 * End: Local Imports
-	 */
+	// End: Local Imports
 
-	/**
-	 * Start: Exported Properties
-	 */
-
+	// Start: Exported Properties
 	/**
 	 * @type {string}
 	 */
@@ -58,9 +47,7 @@
 	 * @type {string}
 	 */
 	export let error: Error;
-	/**
-	 * End: Exported Properties
-	 */
+	// End: Exported Properties
 
 	/**
 	 * @type {IMetaTagProperties}

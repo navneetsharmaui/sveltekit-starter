@@ -4,17 +4,13 @@
 </script>
 
 <script lang="ts">
-	/**
-	 * Start: Local Imports
-	 */
+	// Start: Local Imports
 	// Components
 	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
-	/**
-	 * End: Local Imports
-	 */
+	// End: Local Imports
 
 	/**
 	 * @type {IMetaTagProperties}
