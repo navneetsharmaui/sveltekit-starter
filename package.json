@@ -100,6 +100,8 @@
 		]
 	},
 	"dependencies": {
+		"@lukeed/uuid": "^2.0.0",
+		"cookie": "^0.4.1",
 		"node-fetch": "^2.6.1"
 	},
 	"devDependencies": {
@@ -129,8 +131,10 @@
 		"@sveltejs/kit": "^1.0.0-next.102",
 		"@testing-library/jest-dom": "^5.12.0",
 		"@testing-library/svelte": "^3.0.3",
+		"@types/cookie": "^0.4.0",
 		"@types/jest": "^26.0.23",
 		"@types/node": "^15.0.2",
+		"@types/node-fetch": "^2.5.10",
 		"@types/yargs": "^16.0.1",
 		"@typescript-eslint/eslint-plugin": "^4.22.1",
 		"@typescript-eslint/parser": "^4.22.1",

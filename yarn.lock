@@ -2242,6 +2242,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lukeed/csprng@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@lukeed/csprng@npm:1.0.0"
+  checksum: 8d2ad2b5d162016b14231a77e9df9fd2cc68642f39cbba55c03d6fa5335f34b87db216b4ab22c08aa70fa45d5ec3e5b8c70d34738fc40a05a5fda4d580240c03
+  languageName: node
+  linkType: hard
+
+"@lukeed/uuid@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@lukeed/uuid@npm:2.0.0"
+  dependencies:
+    "@lukeed/csprng": ^1.0.0
+  checksum: ff86024270120e34e4fa9809a107b34ece233bab39ca95da19de0dcb55c678d341a328a77e8c86a0455584e9ab11b6574a0ecd39782aa8f64b12e8452a63e93b
+  languageName: node
+  linkType: hard
+
 "@mdx-js/loader@npm:^1.6.22":
   version: 1.6.22
   resolution: "@mdx-js/loader@npm:1.6.22"
@@ -4114,6 +4130,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cookie@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@types/cookie@npm:0.4.0"
+  checksum: be9ef4172b97878fe38874c47d25bddcc58886fa4e621b3336bf2e08983763b5391a0d0b4ace34372adc3bd44da05ea9bcf885b0f5b5ab56bc72e0baba5e6346
+  languageName: node
+  linkType: hard
+
 "@types/emscripten@npm:^1.38.0":
   version: 1.39.4
   resolution: "@types/emscripten@npm:1.39.4"
@@ -4288,7 +4311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.5.7":
+"@types/node-fetch@npm:^2.5.10, @types/node-fetch@npm:^2.5.7":
   version: 2.5.10
   resolution: "@types/node-fetch@npm:2.5.10"
   dependencies:
@@ -7136,6 +7159,13 @@ __metadata:
   version: 0.4.0
   resolution: "cookie@npm:0.4.0"
   checksum: 7aaef4b642c533600fdd001d963a507dfcd814267503374e51d9743475d024feeff8b0b4ddd0777a25791a2efbdfd8bc4a0fe0696104efa195e8f8584807d410
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "cookie@npm:0.4.1"
+  checksum: b8e0928e3e7aba013087974b33a6eec730b0a68b7ec00fc3c089a56ba2883bcf671252fc2ed64775aa1ca64796b6e1f6fdddba25a66808aef77614d235fd3e06
   languageName: node
   linkType: hard
 
@@ -17959,6 +17989,7 @@ fsevents@^1.2.7:
   dependencies:
     "@babel/core": ^7.14.0
     "@babel/preset-env": ^7.14.1
+    "@lukeed/uuid": ^2.0.0
     "@mdx-js/react": ^1.6.22
     "@storybook/addon-a11y": ^6.2.9
     "@storybook/addon-actions": ^6.2.9
@@ -17983,8 +18014,10 @@ fsevents@^1.2.7:
     "@sveltejs/kit": ^1.0.0-next.102
     "@testing-library/jest-dom": ^5.12.0
     "@testing-library/svelte": ^3.0.3
+    "@types/cookie": ^0.4.0
     "@types/jest": ^26.0.23
     "@types/node": ^15.0.2
+    "@types/node-fetch": ^2.5.10
     "@types/yargs": ^16.0.1
     "@typescript-eslint/eslint-plugin": ^4.22.1
     "@typescript-eslint/parser": ^4.22.1
@@ -17993,6 +18026,7 @@ fsevents@^1.2.7:
     babel-jest: ^26.6.3
     babel-loader: ^8.2.2
     chromatic: ^5.8.0
+    cookie: ^0.4.1
     cross-env: ^7.0.3
     cssnano: ^5.0.2
     eslint: ^7.26.0
