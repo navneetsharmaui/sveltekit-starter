@@ -22,15 +22,19 @@ module.exports = {
 				},
 			},
 		},
+		'@storybook/preset-scss',
 		'@storybook/addon-svelte-csf',
 	],
 	svelteOptions: {
 		preprocess: [
 			sveltePreprocess({
 				defaults: {
-					style: 'postcss',
+					style: 'scss',
 				},
 				postcss: true,
+				scss: {
+					prependData: `@import 'src/styles/_variables.scss';`,
+				},
 			}),
 		],
 	},

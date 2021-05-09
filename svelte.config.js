@@ -51,15 +51,18 @@ const config = {
 	preprocess: [
 		sveltePreprocess({
 			defaults: {
-				style: 'postcss',
+				style: 'scss',
 			},
 			postcss: true,
+			scss: {
+				prependData: `@import 'src/styles/_variables.scss';`,
+			},
 		}),
 	],
 	kit: {
 		ssr: isSSR,
 		amp: isAMP,
-		target: '#sveltekit-starter',
+		target: '#starter',
 		prerender: {
 			crawl: true,
 			enabled: true,

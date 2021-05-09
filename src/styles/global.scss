@@ -1,6 +1,6 @@
-@import './variables.postcss';
-@import './app.postcss';
-@import './cards.postcss';
+@import './_variables.scss';
+@import './_app.scss';
+@import './_cards.scss';
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';

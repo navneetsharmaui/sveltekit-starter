@@ -1,4 +1,4 @@
-<style lang="postcss">
+<style lang="scss" type="text/scss">
 	h1 {
 		font-size: 2.8em;
 		font-weight: 700;
