@@ -17,8 +17,6 @@ const dev = mode === 'development';
 module.exports = {
 	syntax: 'postcss-scss',
 	plugins: [
-		// Some plugins, like postcss-nested, need to run before Tailwind
-
 		postcssMixins(),
 		postcssAtRulesVariables(),
 		postcssImport(),
@@ -27,9 +25,6 @@ module.exports = {
 		}),
 		postcssNested(),
 		tailwindcss(),
-
-		// But others, like autoprefixer, need to run after
-
 		autoprefixer(),
 		!dev &&
 			cssnano({
