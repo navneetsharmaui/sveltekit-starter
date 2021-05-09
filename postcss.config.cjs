@@ -8,6 +8,7 @@ const tailwindcss = require('tailwindcss');
 const postcssNested = require('postcss-nested');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const purgeCSS = require('@fullhuman/postcss-purgecss');
 
 const variables = require('./config/postcss/variables.cjs');
 
@@ -25,7 +26,13 @@ module.exports = {
 		}),
 		postcssNested(),
 		tailwindcss(),
-		autoprefixer(),
+		purgeCSS({
+			content: ['./src/**/*.{svelte, html, postcss}'],
+			defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+		}),
+		autoprefixer({
+			cascade: true,
+		}),
 		!dev &&
 			cssnano({
 				preset: 'default',
