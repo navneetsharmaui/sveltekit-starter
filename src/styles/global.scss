@@ -1,10 +1,6 @@
-@import './_variables.scss';
+@import './variables/index.scss';
 @import './_app.scss';
 @import './_cards.scss';
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 .paragraph-text {
 	color: $primary-color;

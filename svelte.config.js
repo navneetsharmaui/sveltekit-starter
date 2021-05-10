@@ -55,7 +55,8 @@ const config = {
 			},
 			postcss: true,
 			scss: {
-				prependData: `@import 'src/styles/_variables.scss';`,
+				prependData: `@import 'src/styles/variables/index.scss';`,
+				outputStyle: 'compressed',
 			},
 		}),
 	],

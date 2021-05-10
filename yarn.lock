@@ -5684,7 +5684,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.5":
+"autoprefixer@npm:^10.0.2, autoprefixer@npm:^10.2.5":
   version: 10.2.5
   resolution: "autoprefixer@npm:10.2.5"
   dependencies:
@@ -7575,6 +7575,22 @@ __metadata:
   bin:
     cssesc: bin/cssesc
   checksum: 673783eda1f89af3faefc0e4b833f40621f484ce102a23396e7a65cc4c42798bd91ee3656c8b04a0a5ca38d40ada5bc8663e4541c380a7a81af2de5b2322e443
+  languageName: node
+  linkType: hard
+
+"cssnano-preset-advanced@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "cssnano-preset-advanced@npm:5.0.1"
+  dependencies:
+    autoprefixer: ^10.0.2
+    cssnano-preset-default: ^5.0.1
+    postcss-discard-unused: ^5.0.0
+    postcss-merge-idents: ^5.0.0
+    postcss-reduce-idents: ^5.0.0
+    postcss-zindex: ^5.0.0
+  peerDependencies:
+    postcss: ^8.2.1
+  checksum: 31bbc90bbaa5321aa38158460cbd95a1f87964e4c901f53cd26108e02fb46384355f78ee11ca78de88924dede3beff4f89d5944eeb98543a8ef319ee1303938f
   languageName: node
   linkType: hard
 
@@ -10530,7 +10546,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"htmlparser2@npm:^3.10.1":
+"htmlparser2@npm:^3.10.0, htmlparser2@npm:^3.10.1":
   version: 3.10.1
   resolution: "htmlparser2@npm:3.10.1"
   dependencies:
@@ -14754,6 +14770,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"postcss-discard-unused@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "postcss-discard-unused@npm:5.0.0"
+  dependencies:
+    postcss-selector-parser: ^6.0.4
+  peerDependencies:
+    postcss: ^8.2.1
+  checksum: 5f7668308a95659294ca06400c83f7e2aa00861b74a8be342fb97d733831d48604e693b451e41b61b23ae0f0afb1cae605f4bd6185ad9638832e211ecb855b50
+  languageName: node
+  linkType: hard
+
 "postcss-flexbugs-fixes@npm:^4.2.1":
   version: 4.2.1
   resolution: "postcss-flexbugs-fixes@npm:4.2.1"
@@ -14772,6 +14799,18 @@ fsevents@^1.2.7:
     postcss: ^6.0.9
     postcss-value-parser: ^3.3.0
   checksum: e73d086194755571d594b99f47b77953f912deb2fb6641f490c25c7cf10b169c5706df2ece4cd2adee0d23aa6a626db6f4e54ae46949c1132aaff82cba3df3d0
+  languageName: node
+  linkType: hard
+
+"postcss-html@npm:^0.36.0":
+  version: 0.36.0
+  resolution: "postcss-html@npm:0.36.0"
+  dependencies:
+    htmlparser2: ^3.10.0
+  peerDependencies:
+    postcss: ">=5.0.0"
+    postcss-syntax: ">=0.36.0"
+  checksum: 4b086be249e7bcbeebf7f77a1a296a2d36c37f42d950909525e4947baf9c675264d8ca0ce3ebbc149992eb05363aa3d0fce867f172ce55aa969de2f04708b572
   languageName: node
   linkType: hard
 
@@ -14821,6 +14860,18 @@ fsevents@^1.2.7:
     postcss: ^7.0.0 || ^8.0.1
     webpack: ^4.0.0 || ^5.0.0
   checksum: 685a54e5768171d27ada47f304b7a375ac5ec768844e70238bb88089636494efa29ec082525efaac889f7dfac0fbea55cf0f4680c12597b7b80cabf442390c46
+  languageName: node
+  linkType: hard
+
+"postcss-merge-idents@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "postcss-merge-idents@npm:5.0.0"
+  dependencies:
+    cssnano-utils: ^2.0.0
+    postcss-value-parser: ^4.1.0
+  peerDependencies:
+    postcss: ^8.2.1
+  checksum: 4bd6ac4818ee44c125e88c37e9fbef051d670286960e2b9ea1257e92324eecf1adf29ac8e39ce56b15e569c14f56f5b6b9168c9d101b9bcae84a85a71c2f236b
   languageName: node
   linkType: hard
 
@@ -15128,6 +15179,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"postcss-reduce-idents@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "postcss-reduce-idents@npm:5.0.0"
+  dependencies:
+    postcss-value-parser: ^4.1.0
+  peerDependencies:
+    postcss: ^8.2.1
+  checksum: fe83e9d38086cb222c23a48b26d736dc9bc468056e40fcf951216cf342fec062afc0bd8008f1b0e1ada154ddfafd5403d3ef4a0c93c7a588627b3504f0d0f307
+  languageName: node
+  linkType: hard
+
 "postcss-reduce-initial@npm:^5.0.0":
   version: 5.0.0
   resolution: "postcss-reduce-initial@npm:5.0.0"
@@ -15219,6 +15281,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"postcss-syntax@npm:^0.36.2":
+  version: 0.36.2
+  resolution: "postcss-syntax@npm:0.36.2"
+  peerDependencies:
+    postcss: ">=5.0.0"
+  checksum: d4deadf4476244fee2840c08b0308561f1891e784b3c4f1301ac5a3edcffff5a54d2d703b847af717d352a36ae8d741a200454abd55180d38638e96b0cdbb3dd
+  languageName: node
+  linkType: hard
+
 "postcss-unique-selectors@npm:^5.0.0":
   version: 5.0.0
   resolution: "postcss-unique-selectors@npm:5.0.0"
@@ -15243,6 +15314,18 @@ fsevents@^1.2.7:
   version: 4.1.0
   resolution: "postcss-value-parser@npm:4.1.0"
   checksum: 70831403886859289f650550a38889857022c5bbe264fd5d39cfad5207b3e1d33422edc031c1a922f3ae29d0dff98837a8bf126c840374d2b0079e7d57cf7d71
+  languageName: node
+  linkType: hard
+
+"postcss-zindex@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "postcss-zindex@npm:5.0.0"
+  dependencies:
+    has: ^1.0.3
+    uniqs: ^2.0.0
+  peerDependencies:
+    postcss: ^8.2.1
+  checksum: 8dd3e5e1f378db841bca2f486252bf27a9c5129fed9fe92b2b9dcd84aca558721418e6edc6a9a5bd0eb15fb2e8e693a52625190ac18d07951d19f144452b1c76
   languageName: node
   linkType: hard
 
@@ -15304,13 +15387,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "prettier-plugin-svelte@npm:2.2.0"
+"prettier-plugin-svelte@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "prettier-plugin-svelte@npm:2.3.0"
   peerDependencies:
     prettier: ^1.16.4 || ^2.0.0
     svelte: ^3.2.0
-  checksum: 80835696c33995c0fac921f4d1f0481aa712bbaafa52ae1f663b2582d11be2937f0597bd6e9d14b23e4093bc2ff17b6b42ee0ffa9c0d8200bf982a708a2f362d
+  checksum: 0bde958a10809774da773874172cb00ef23c1b8cd4de42b248c84e46d4876575884a73736e779f974e3f4f74c542b29b00b8a95ae326972b728ab9fac1989682
   languageName: node
   linkType: hard
 
@@ -15320,6 +15403,15 @@ fsevents@^1.2.7:
   bin:
     prettier: bin-prettier.js
   checksum: 92c6c9f4b87eba1f28466edee57dd18c80d00b858edda77d46d1950d20e6e302b68ee255fc91133ba931e63c4577b5ae30da194d9626a8f3c0177778b91bf056
+  languageName: node
+  linkType: hard
+
+"prettier@npm:~2.3.0":
+  version: 2.3.0
+  resolution: "prettier@npm:2.3.0"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 652640cc8b71bc5277cfb8bf6f161783ca588efcf683c3d630837b39da8d57fef35c9e00ae5855a8e3c75136c42274046c913cc2b2d2968558315f31c6a26981
   languageName: node
   linkType: hard
 
@@ -16884,15 +16976,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^11.0.1":
-  version: 11.0.1
-  resolution: "sass-loader@npm:11.0.1"
+"sass-loader@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "sass-loader@npm:11.1.0"
   dependencies:
     klona: ^2.0.4
     neo-async: ^2.6.2
   peerDependencies:
     fibers: ">= 3.1.0"
-    node-sass: ^4.0.0 || ^5.0.0
+    node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
     sass: ^1.3.0
     webpack: ^5.0.0
   peerDependenciesMeta:
@@ -16902,7 +16994,7 @@ fsevents@^1.2.7:
       optional: true
     sass:
       optional: true
-  checksum: fdd50c6c65b4c912564e799a1a21a235ece179531ddf705ebd4b2671990118ee768da73b60ac7fe5089e9e2d1d0a2ede9b87da2c153a8d1147c2144e605093de
+  checksum: f9addb8626f3d1c3b8b765b112253ead664c09132a92d2ee636551aa8f14cfb04359795cc43843b06a2e944a1892792a3d9b5dc4e3a95a642025637a072df784
   languageName: node
   linkType: hard
 
@@ -18176,6 +18268,7 @@ fsevents@^1.2.7:
     cross-env: ^7.0.3
     css-loader: ^5.2.4
     cssnano: ^5.0.2
+    cssnano-preset-advanced: ^5.0.1
     eslint: ^7.26.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-jest-dom: ^3.8.1
@@ -18189,16 +18282,18 @@ fsevents@^1.2.7:
     postcss: ^8.2.14
     postcss-at-rules-variables: ^0.3.0
     postcss-cli: ^8.3.1
+    postcss-html: ^0.36.0
     postcss-import: ^14.0.1
     postcss-load-config: ^3.0.1
     postcss-mixins: ^7.0.3
     postcss-nested: ^5.0.5
     postcss-scss: ^3.0.5
     postcss-simple-vars: ^6.0.3
-    prettier: ~2.2.1
-    prettier-plugin-svelte: ^2.2.0
+    postcss-syntax: ^0.36.2
+    prettier: ~2.3.0
+    prettier-plugin-svelte: ^2.3.0
     sass: ^1.32.12
-    sass-loader: ^11.0.1
+    sass-loader: ^11.1.0
     style-loader: ^2.0.0
     svelte: ^3.38.2
     svelte-jester: ^1.5.0
