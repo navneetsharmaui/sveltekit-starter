@@ -15,7 +15,7 @@
 	// Start: Local Imports
 	// Components
 	import { Card } from '$ui/components/card';
-	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { UserModel } from '$models/classes/user.model';

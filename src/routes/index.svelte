@@ -21,13 +21,13 @@
 	// Start: Local Imports
 
 	// Core services
-	import { JSONHttpUtil } from '$lib/core';
+	import { JSONHttpUtil } from '$lib/core/services/https';
 
 	// Utils
 	import { Logger, LoggerUtils } from '$lib/utils/logger';
 
 	// Components
-	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';

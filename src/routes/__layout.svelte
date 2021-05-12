@@ -4,7 +4,7 @@
 	import Header from '$ui/components/header/Header.svelte';
 
 	// Models
-	import type { IHeaderNavLink } from '$lib/models/interfaces/iheader-nav-link.interface';
+	import type { IHeaderNavLink } from '$models/interfaces/iheader-nav-link.interface';
 	// End: Local Imports
 
 	/**
