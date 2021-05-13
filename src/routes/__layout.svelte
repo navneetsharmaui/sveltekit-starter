@@ -30,5 +30,10 @@
 	];
 </script>
 
+<!-- Start: Header Navigation -->
 <Header title="Sveltekit Starter" navLinks="{navLinks}" />
+<!-- End: Header Navigation -->
+
+<!-- Start: Defaull layout slot -->
 <slot />
+<!-- End: Defaull layout slot -->

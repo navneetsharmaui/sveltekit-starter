@@ -12,6 +12,7 @@
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 	// End: Local Imports
 
+	// Start: Local component properties
 	/**
 	 * @type {IMetaTagProperties}
 	 */
@@ -22,10 +23,14 @@
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter about'],
 		searchUrl: '/about',
 	};
+	// End: Local component properties
 </script>
 
+<!-- Start: Header Tag -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tag -->
 
+<!-- Start: About page section -->
 <section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="flex flex-col text-center w-full mb-20">
@@ -39,3 +44,4 @@
 		</div>
 	</div>
 </section>
+<!-- End: About page section -->

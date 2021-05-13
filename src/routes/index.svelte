@@ -51,8 +51,11 @@
 	});
 </script>
 
+<!-- Start: Header Tag -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tag -->
 
+<!-- Start: Home Page container -->
 <section class="text-gray-600 body-font">
 	<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 		<div
@@ -77,3 +80,4 @@
 		</div>
 	</div>
 </section>
+<!-- End: Home Page container -->

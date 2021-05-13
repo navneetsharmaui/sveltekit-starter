@@ -58,17 +58,26 @@
 	};
 </script>
 
+<!-- Start: Header Tage -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tage -->
+
+<!-- Start: Error View Layout -->
 <div class="md:container md:mx-auto">
 	<div class="flex flex-col justify-center items-center">
+		<!-- Start: Error Status Code -->
 		<h1>
 			{status}
 		</h1>
+		<!-- End: Error Status Code -->
 		<p>
 			{error.name}
 		</p>
+		<!-- Start: Error Message container -->
 		{#if dev && error.stack}
 			<pre> {error.message} </pre>
 		{/if}
+		<!-- End: Error Message container -->
 	</div>
 </div>
+<!-- End: Error View Layout -->

@@ -28,6 +28,15 @@
 	import type { IMetaTagProperties } from '$lib/models';
 	// End: Local Imports
 
+	// Start: Exported properties
+	export let users: UserModel[] = [];
+	// End: Exported properties
+
+	// Start: Local component properties
+
+	/**
+	 * @type {IMetaTagProperties}
+	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'Users | Sveltekit',
 		description:
@@ -38,9 +47,9 @@
 	};
 
 	const logger: Logger = LoggerUtils.getInstance('Users');
+	// End: Local component properties
 
-	export let users: UserModel[] = [];
-
+	// Start: Local functions
 	// const selectedUser = (user: UserModel): void => {
 	// 	goPlaces(`/users/${user.id}`);
 	// };
@@ -48,10 +57,14 @@
 	// const goPlaces = (url: string): void => {
 	// 	goto(`${url}`).catch((e) => logger.error(e));
 	// };
+	// End: Local functions
 </script>
 
+<!-- Start: Header Tag -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tag -->
 
+<!-- Start: Users List Section -->
 <section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="flex flex-col text-center w-full mb-10">
@@ -61,9 +74,11 @@
 			>
 		</div>
 		<div class="flex flex-col text-center w-full mb-20">
+			<!-- Start: Users list -->
 			<span class="users-list">
 				{#each users as user}
 					<div class="user-card">
+						<!-- Start: Users details card -->
 						<Card>
 							<span slot="card-content">
 								<div
@@ -90,9 +105,12 @@
 								</div>
 							</span>
 						</Card>
+						<!-- End: Users details card -->
 					</div>
 				{/each}
 			</span>
+			<!-- End: Users list -->
 		</div>
 	</div>
 </section>
+<!-- End: Users List Section -->

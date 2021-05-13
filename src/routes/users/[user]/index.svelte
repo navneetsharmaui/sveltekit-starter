@@ -2,6 +2,15 @@
 </style>
 
 <script lang="ts" context="module">
+	/**
+	 * The load function whihc automatically gets executed with page and fetch parameters provided when the route
+	 * is loaded. The load function here is asynchronous as the we are fetching the data from the external file.
+	 *
+	 * @param page
+	 * @param fetch
+	 *
+	 * return props Type{{user: UserModel}}
+	 */
 	export async function load({ page, fetch }) {
 		return {
 			props: {
@@ -26,6 +35,11 @@
 	export let user: UserModel;
 	// End: Exported Properties
 
+	// Start: Local component properties
+
+	/**
+	 * @type {IMetaTagProperties}
+	 */
 	let metaData: Partial<IMetaTagProperties> = {
 		title: `${user.name} | Sveltekit`,
 		description:
@@ -34,6 +48,8 @@
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter users'],
 		searchUrl: `/${user.id}`,
 	};
+
+	// Start: Reactive properties
 	$: {
 		if (user && user.id) {
 			metaData = {
@@ -44,10 +60,16 @@
 			};
 		}
 	}
+	// End: Reactive properties
+
+	// End: Local component properties
 </script>
 
+<!-- Start: Header Tag -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tag -->
 
+<!-- Start: User Section -->
 <section class="text-gray-600 body-font">
 	<div class="container px-5 py-24 mx-auto">
 		<div class="flex flex-col text-center w-full mb-20">
@@ -55,7 +77,9 @@
 		</div>
 		<div class="flex flex-col text-center w-full mb-20">
 			<div class="lg:w-1/4 mx-auto">
+				<!-- Start: User Card -->
 				<Card>
+					<!-- Start: Projected Slot with user details -->
 					<span slot="card-content">
 						<div
 							class="w-16 h-16 sm:mb-4 mb-4 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 flex-shrink-0"
@@ -91,8 +115,11 @@
 							</svg>
 						</a>
 					</span>
+					<!-- End: Projected Slot with user details -->
 				</Card>
+				<!-- End: User Card -->
 			</div>
 		</div>
 	</div>
 </section>
+<!-- End: User Section -->

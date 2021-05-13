@@ -7,6 +7,7 @@
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 	// End: Local Imports
 
+	// Start: Local component properties
 	/**
 	 * @type {IMetaTagProperties}
 	 */
@@ -18,6 +19,9 @@
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter settings'],
 		searchUrl: '/settings',
 	};
+	// End: Local component properties
 </script>
 
+<!-- Start: Header Tage -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tage -->
