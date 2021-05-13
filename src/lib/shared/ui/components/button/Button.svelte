@@ -1,4 +1,4 @@
-<style lang="postcss">
+<style lang="scss" type="text/scss">
 	.rounded {
 		border-radius: 35px;
 	}

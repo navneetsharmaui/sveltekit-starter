@@ -1,4 +1,4 @@
-<style lang="postcss" type="text/postcss">
+<style lang="scss" type="text/scss">
 </style>
 
 <script lang="ts" context="module">
@@ -21,13 +21,13 @@
 	// Start: Local Imports
 
 	// Core services
-	import { JSONHttpUtil } from '$lib/core';
+	import { JSONHttpUtil } from '$lib/core/services/https';
 
 	// Utils
 	import { Logger, LoggerUtils } from '$lib/utils/logger';
 
 	// Components
-	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
@@ -51,8 +51,11 @@
 	});
 </script>
 
+<!-- Start: Header Tag -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tag -->
 
+<!-- Start: Home Page container -->
 <section class="text-gray-600 body-font">
 	<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
 		<div
@@ -77,3 +80,4 @@
 		</div>
 	</div>
 </section>
+<!-- End: Home Page container -->

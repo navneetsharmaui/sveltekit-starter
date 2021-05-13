@@ -1,4 +1,4 @@
-<style lang="postcss" type="text/postcss">
+<style lang="scss" type="text/scss">
 	.svelte-starter-card {
 		background: $card-background-color;
 		color: $card-text-color;

@@ -1,4 +1,4 @@
-<style lang="postcss">
+<style lang="scss" type="text/scss">
 	h1 {
 		font-size: 2.8em;
 		font-weight: 700;
@@ -31,7 +31,7 @@
 	// Start: Local Imports
 
 	//  Components
-	import HeadTags from '$shared/components/head-tags/HeadTags.svelte';
+	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
@@ -58,17 +58,26 @@
 	};
 </script>
 
+<!-- Start: Header Tage -->
 <HeadTags metaData="{metaData}" />
+<!-- End: Header Tage -->
+
+<!-- Start: Error View Layout -->
 <div class="md:container md:mx-auto">
 	<div class="flex flex-col justify-center items-center">
+		<!-- Start: Error Status Code -->
 		<h1>
 			{status}
 		</h1>
+		<!-- End: Error Status Code -->
 		<p>
 			{error.name}
 		</p>
+		<!-- Start: Error Message container -->
 		{#if dev && error.stack}
 			<pre> {error.message} </pre>
 		{/if}
+		<!-- End: Error Message container -->
 	</div>
 </div>
+<!-- End: Error View Layout -->

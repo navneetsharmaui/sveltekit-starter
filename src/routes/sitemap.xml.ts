@@ -1,3 +1,4 @@
+// TODO: Move sitemap generator to an external script and generate it with build process
 import fs from 'fs';
 
 import { userData } from '$data/data';

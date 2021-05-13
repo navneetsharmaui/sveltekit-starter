@@ -7,7 +7,9 @@ node_modules
 /functions
 /.vercel_build_output
 /workers-site
-static/global.css
+
+# Ignore the build css
+static/*.css
 
 # Storybook files #
 ###################
@@ -50,6 +52,8 @@ pids
 *.pid.lock
 *.eslintcache
 
+# environment files #
+#####################
 /.env
 /.env.*
 /.env.local
