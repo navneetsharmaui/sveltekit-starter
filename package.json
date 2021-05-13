@@ -1,11 +1,11 @@
 {
 	"name": "sveltkit-starter",
+	"description": "A sveltekit starter project with typescript, tailwindcss, postcss, scss, husky, and storybook setup",
 	"version": "1.0.0",
 	"author": {
 		"name": "Navneet Sharma",
 		"url": "https://navneetsharma.tech"
 	},
-	"description": "A sveltekit starter project with typescript, tailwindcss, postcss, scss, husky, and storybook setup",
 	"license": "MIT",
 	"keywords": [
 		"sveltekit",
@@ -33,6 +33,10 @@
 		"starter template",
 		"template"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/navneetsharmaui/sveltekit-starter.git"
+	},
 	"scripts": {
 		"dev:postcss": "cross-env TAILWIND_MODE=build postcss src/styles/global.scss -o static/global.css -w",
 		"dev:postcss:tailwindcss": "cross-env STYLE_TYPE=TAILWIND TAILWIND_MODE=build postcss src/styles/tailwind.postcss -o static/tailwind.css",
