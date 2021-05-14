@@ -85,6 +85,9 @@ const config = {
 					$utils: resolve(__dirname, './src/lib/utils'),
 				},
 			},
+			optimizeDeps: {
+				include: ['detect-node', 'broadcast-channel'],
+			},
 		}),
 	},
 };

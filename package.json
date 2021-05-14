@@ -109,6 +109,7 @@
 	},
 	"dependencies": {
 		"@lukeed/uuid": "^2.0.0",
+		"@sveltestack/svelte-query": "^1.4.0",
 		"cookie": "^0.4.1",
 		"node-fetch": "^2.6.1"
 	},

@@ -14,6 +14,10 @@
 </script>
 
 <script lang="ts">
+	// Start: External Imports
+	import { useQuery } from '@sveltestack/svelte-query';
+	// End: External Imports
+
 	// Start: Svelte Imports
 	import { onMount } from 'svelte';
 	// End: Svelte Imports
@@ -33,6 +37,7 @@
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 	// End: Local Imports
 
+	// Start: Local component properties
 	/**
 	 * @type {IMetaTagProperties}
 	 */
@@ -45,10 +50,20 @@
 
 	const logger: Logger = LoggerUtils.getInstance('Index');
 
+	const queryResult = useQuery('repoData', () =>
+		JSONHttpUtil.get<any>('https://api.github.com/repos/SvelteStack/svelte-query'),
+	);
+
+	// End: Local component properties
+
+	// Start: Local component methods
+
 	onMount(async () => {
 		const data = await JSONHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
 		logger.debug(data);
 	});
+
+	// End: Local component methods
 </script>
 
 <!-- Start: Header Tag -->
@@ -80,4 +95,22 @@
 		</div>
 	</div>
 </section>
+
+{#if $queryResult.isLoading}
+	<span>Loading...</span>
+{:else if $queryResult.error}
+	<span> An error has occurred.</span>
+{:else}
+	<div>
+		<h1>
+			{$queryResult.data.name}
+		</h1>
+		<p>
+			{$queryResult.data.description}
+		</p>
+		<strong>👀 {$queryResult.data.subscribers_count}</strong>
+		<strong>✨ {$queryResult.data.stargazers_count}</strong>
+		<strong>🍴 {$queryResult.data.forks_count}</strong>
+	</div>
+{/if}
 <!-- End: Home Page container -->
