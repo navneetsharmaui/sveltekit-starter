@@ -8,3 +8,6 @@ export * from './imeta-tag-properties.interface';
 export * from './iopen-graph-meta-tag-properties.interface';
 export * from './itwitter-meta-tag-properties.interface';
 export * from './iheader-nav-link.interface';
+export * from './iconfig.interface';
+export * from './icore-config.interface';
+export * from './ienvironment.interface';

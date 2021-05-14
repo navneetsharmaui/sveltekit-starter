@@ -1,0 +1,28 @@
+import {
+	EnvironmentName,
+	EnvironmentType,
+	SVELTEKIT_DATA_ENPOINTS_PROD,
+	SVELTEKIT_ENPOINT_CONFIG,
+	SVELTEKIT_SEARCH_ENPOINTS_PROD,
+} from '$lib/models';
+import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
+
+export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_ENPOINT_CONFIG> = {
+	name: EnvironmentName.PRODUCTION,
+	environmentType: EnvironmentType.PROD,
+	production: true,
+	isDebugMode: false,
+	apiUrls: {
+		CHUCK_NORRIS: 'https://api.chucknorris.io/jokes/',
+		IN_MEMORY: '',
+		KIT: '',
+	},
+	svekitDBConfig: {
+		apiKey: '',
+		defaultAPILang: 'en-US',
+		endPoints: {
+			SEARCH: SVELTEKIT_SEARCH_ENPOINTS_PROD.SEARCH,
+			SERVICE: SVELTEKIT_DATA_ENPOINTS_PROD.SERVICE,
+		},
+	},
+};
