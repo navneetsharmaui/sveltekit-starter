@@ -39,7 +39,8 @@
 			"$models": ["src/lib/models/index.ts"],
 			"$models/*": ["src/lib/models/*"],
 			"$data": ["src/lib/data/index.ts"],
-			"$data/*": ["src/lib/data/*"]
+			"$data/*": ["src/lib/data/*"],
+			"$environment/*": ["src/environments/*"]
 		}
 	},
 	"include": [

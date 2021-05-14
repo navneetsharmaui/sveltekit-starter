@@ -83,6 +83,7 @@ const config = {
 					$data: resolve(__dirname, './src/lib/data'),
 					$core: resolve(__dirname, './src/lib/core'),
 					$utils: resolve(__dirname, './src/lib/utils'),
+					$environment: resolve(__dirname, './src/environments'),
 				},
 			},
 			optimizeDeps: {

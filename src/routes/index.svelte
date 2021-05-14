@@ -25,7 +25,7 @@
 	// Start: Local Imports
 
 	// Core services
-	import { JSONHttpUtil } from '$lib/core/services/https';
+	import { JSONHttpUtil } from '$core/services/https';
 
 	// Utils
 	import { Logger, LoggerUtils } from '$lib/utils/logger';
@@ -50,8 +50,11 @@
 
 	const logger: Logger = LoggerUtils.getInstance('Index');
 
-	const queryResult = useQuery('repoData', () =>
-		JSONHttpUtil.get<any>('https://api.github.com/repos/SvelteStack/svelte-query'),
+	const githubApiUrl = 'https://api.github.com/repos';
+	const githubUserName = 'SvelteStack';
+	const githubRepoName = 'svelte-query';
+	const queryResult = useQuery<any, Error>('repoData', () =>
+		JSONHttpUtil.get<any>(`${githubApiUrl}/${githubUserName}/${githubRepoName}`),
 	);
 
 	// End: Local component properties
@@ -99,7 +102,7 @@
 {#if $queryResult.isLoading}
 	<span>Loading...</span>
 {:else if $queryResult.error}
-	<span> An error has occurred.</span>
+	<span> An error has occurred {$queryResult.error.message}</span>
 {:else}
 	<div>
 		<h1>
