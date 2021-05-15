@@ -25,7 +25,7 @@
 	// Start: Local Imports
 
 	// Core services
-	import { JSONHttpUtil } from '$core/services/https';
+	import { jsonHttpUtil } from '$core/core';
 
 	// Utils
 	import { Logger, LoggerUtils } from '$lib/utils/logger';
@@ -54,7 +54,7 @@
 	const githubUserName = 'SvelteStack';
 	const githubRepoName = 'svelte-query';
 	const queryResult = useQuery<any, Error>('repoData', () =>
-		JSONHttpUtil.get<any>(`${githubApiUrl}/${githubUserName}/${githubRepoName}`),
+		jsonHttpUtil.get<any>(`${githubApiUrl}/${githubUserName}/${githubRepoName}`),
 	);
 
 	// End: Local component properties
@@ -62,7 +62,7 @@
 	// Start: Local component methods
 
 	onMount(async () => {
-		const data = await JSONHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
+		const data = await jsonHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
 		logger.debug(data);
 	});
 

@@ -1,3 +1,6 @@
+import { singleton } from 'tsyringe';
+
+@singleton()
 export class JSONHttp {
 	public async get<T>(url: string): Promise<T> {
 		const res = await this.fetch(url);
@@ -8,5 +11,3 @@ export class JSONHttp {
 		return await fetch(url);
 	}
 }
-
-export const JSONHttpUtil = new JSONHttp();

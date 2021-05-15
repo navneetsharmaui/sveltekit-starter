@@ -1,1 +1,1 @@
-export { JSONHttp, JSONHttpUtil } from './http-json';
+export { JSONHttp } from './http-json';

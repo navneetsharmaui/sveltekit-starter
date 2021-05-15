@@ -1,7 +1,9 @@
+import { singleton, inject } from 'tsyringe';
+
 import type { SVELTEKIT_ENPOINT_CONFIG } from '$models/types/sveltekit-endpoits.type';
 import type { ISveltekitCoreConfig } from '$models/interfaces/isveltekit-core-config.interface';
 import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
-import { environment } from '$environment/environment';
+import { SveltekitCoreConfigToken } from '$lib/core/tokens';
 
 /**
  * A facacde class for the Environment properties.
@@ -15,10 +17,14 @@ import { environment } from '$environment/environment';
  * @alpha
  * @public
  */
-class SveltekitStarterEnvironmentFacade<
+@singleton()
+export class SveltekitStarterEnvironmentFacade<
 	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_ENPOINT_CONFIG>,
 > {
-	constructor(private readonly coreConfig: ISveltekitCoreConfig<T>) {}
+	constructor(
+		@inject(SveltekitCoreConfigToken)
+		private readonly coreConfig: ISveltekitCoreConfig<T>,
+	) {}
 
 	public get endPoints(): SVELTEKIT_ENPOINT_CONFIG {
 		return this.coreConfig.environment.svekitDBConfig.endPoints;
@@ -28,7 +34,3 @@ class SveltekitStarterEnvironmentFacade<
 		return this.coreConfig.environment.svekitDBConfig.defaultAPILang;
 	}
 }
-
-export const sveltekitStarterEnvironmentFacade = new SveltekitStarterEnvironmentFacade({
-	environment: environment,
-});

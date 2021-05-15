@@ -2,6 +2,7 @@
 	// Start: Local Imports
 
 	// Start: External Imports
+	import 'reflect-metadata';
 	import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
 	// End: External Imports
 
