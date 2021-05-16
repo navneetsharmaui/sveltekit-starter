@@ -33,4 +33,8 @@ export class SveltekitStarterEnvironmentFacade<
 	public get defaultAPILang(): string {
 		return this.coreConfig.environment.svekitDBConfig.defaultAPILang;
 	}
+
+	public get environmentName(): string {
+		return this.coreConfig.environment.name;
+	}
 }
