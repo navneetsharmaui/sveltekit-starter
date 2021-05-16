@@ -4626,10 +4626,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^15.0.3":
-  version: 15.0.3
-  resolution: "@types/node@npm:15.0.3"
-  checksum: 72bfbac4282443a7b5d5b43c7c39fe855aa1687b5fa5629b735fd2ceacf371b711ccfc956c8af1b1cbd9c74c79be845a801a4c7275048f340aa0df3beec6b10f
+"@types/node@npm:^15.3.0":
+  version: 15.3.0
+  resolution: "@types/node@npm:15.3.0"
+  checksum: 44039665ab71a6ec12e6637a9db4ec3123fdfaf52952ca8028a6f1b37c41c2d380e88d28a41e02693bf9d4815307e0ad938815bf8ffedc5f4d045855fa28db06
   languageName: node
   linkType: hard
 
@@ -17324,9 +17324,9 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^11.1.0":
-  version: 11.1.0
-  resolution: "sass-loader@npm:11.1.0"
+"sass-loader@npm:^11.1.1":
+  version: 11.1.1
+  resolution: "sass-loader@npm:11.1.1"
   dependencies:
     klona: ^2.0.4
     neo-async: ^2.6.2
@@ -17342,7 +17342,7 @@ fsevents@^1.2.7:
       optional: true
     sass:
       optional: true
-  checksum: f9addb8626f3d1c3b8b765b112253ead664c09132a92d2ee636551aa8f14cfb04359795cc43843b06a2e944a1892792a3d9b5dc4e3a95a642025637a072df784
+  checksum: 6d8ded8e2a0742f6b62dddc577324b74a7a0781f5405574d3af4ee34c9a6189debff1b90e3acd65a62ebbf6dc52c47a9a2be6c1786ac2435bd39c91c2ebe7367
   languageName: node
   linkType: hard
 
@@ -18603,7 +18603,7 @@ fsevents@^1.2.7:
     "@testing-library/svelte": ^3.0.3
     "@types/cookie": ^0.4.0
     "@types/jest": ^26.0.23
-    "@types/node": ^15.0.3
+    "@types/node": ^15.3.0
     "@types/node-fetch": ^2.5.10
     "@types/yargs": ^16.0.1
     "@typescript-eslint/eslint-plugin": ^4.23.0
@@ -18643,7 +18643,7 @@ fsevents@^1.2.7:
     prettier-plugin-svelte: ^2.3.0
     reflect-metadata: ^0.1.13
     sass: ^1.32.13
-    sass-loader: ^11.1.0
+    sass-loader: ^11.1.1
     style-loader: ^2.0.0
     svelte: ^3.38.2
     svelte-jester: ^1.5.0

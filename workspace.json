@@ -1,0 +1,70 @@
+{
+	"version": 1,
+	"projects": {
+		"sveltekit-starter": {
+			"projectType": "application",
+			"root": "./",
+			"sourceRoot": "src",
+			"routes": "src/routes",
+			"assets": "static",
+			"architect": {
+				"build": {
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
+									"with": "libs/my-tickets/environments/src/lib/environment.prod.ts"
+								}
+							]
+						},
+						"dev": {
+							"fileReplacements": [
+								{
+									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
+									"with": "libs/my-tickets/environments/src/lib/environment.dev.ts"
+								}
+							]
+						},
+						"qa": {
+							"fileReplacements": [
+								{
+									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
+									"with": "libs/my-tickets/environments/src/lib/environment.qa.ts"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
+									"with": "libs/my-tickets/environments/src/lib/environment.prod.ts"
+								}
+							]
+						},
+						"dev": {
+							"fileReplacements": [
+								{
+									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
+									"with": "libs/my-tickets/environments/src/lib/environment.dev.ts"
+								}
+							]
+						},
+						"qa": {
+							"fileReplacements": [
+								{
+									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
+									"with": "libs/my-tickets/environments/src/lib/environment.qa.ts"
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}
