@@ -1,7 +1,7 @@
 import { singleton, inject } from 'tsyringe';
 
-import type { SVELTEKIT_ENPOINT_CONFIG } from '$models/types/sveltekit-endpoits.type';
-import type { ISveltekitCoreConfig } from '$models/interfaces/isveltekit-core-config.interface';
+import type { SVELTEKIT_STARTER_ENPOINT_CONFIG } from '$models/types/sveltekit-endpoits.type';
+import type { ISveltekitStarterCoreConfig } from '$models/interfaces/isveltekit-core-config.interface';
 import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
 import { SveltekitCoreConfigToken } from '$lib/core/tokens';
 
@@ -19,19 +19,19 @@ import { SveltekitCoreConfigToken } from '$lib/core/tokens';
  */
 @singleton()
 export class SveltekitStarterEnvironmentFacade<
-	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_ENPOINT_CONFIG>,
+	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG>,
 > {
 	constructor(
 		@inject(SveltekitCoreConfigToken)
-		private readonly coreConfig: ISveltekitCoreConfig<T>,
+		private readonly coreConfig: ISveltekitStarterCoreConfig<T>,
 	) {}
 
-	public get endPoints(): SVELTEKIT_ENPOINT_CONFIG {
-		return this.coreConfig.environment.svekitDBConfig.endPoints;
+	public get endPoints(): SVELTEKIT_STARTER_ENPOINT_CONFIG {
+		return this.coreConfig.environment.chuckNorriesAPIConfig.endPoints;
 	}
 
 	public get defaultAPILang(): string {
-		return this.coreConfig.environment.svekitDBConfig.defaultAPILang;
+		return this.coreConfig.environment.chuckNorriesAPIConfig.defaultAPILang;
 	}
 
 	public get environmentName(): string {

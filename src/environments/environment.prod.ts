@@ -2,24 +2,25 @@ import {
 	EnvironmentName,
 	EnvironmentType,
 	SVELTEKIT_DATA_ENPOINTS_PROD,
-	SVELTEKIT_ENPOINT_CONFIG,
+	SVELTEKIT_STARTER_ENPOINT_CONFIG,
 	SVELTEKIT_SEARCH_ENPOINTS_PROD,
 } from '$lib/models';
 import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
 
-export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_ENPOINT_CONFIG> = {
+export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG> = {
 	name: EnvironmentName.PRODUCTION,
 	environmentType: EnvironmentType.PROD,
 	production: true,
 	isDebugMode: false,
 	apiUrls: {
-		CHUCK_NORRIS: 'https://api.chucknorris.io/jokes/',
+		CHUCK_NORRIS: import.meta.env.VITE_CHUCK_NORRIS_API_URL,
 		IN_MEMORY: '',
-		KIT: '',
+		GITHUB: import.meta.env.VITE_GITHUB_API_URL,
 	},
-	svekitDBConfig: {
-		apiKey: '',
-		defaultAPILang: 'en-US',
+	chuckNorriesAPIConfig: {
+		defaultAPILang: import.meta.env.VITE_CHUCK_NORRIS_API_LANG
+			? import.meta.env.VITE_CHUCK_NORRIS_API_LANG
+			: 'en-US',
 		endPoints: {
 			SEARCH: SVELTEKIT_SEARCH_ENPOINTS_PROD.SEARCH,
 			SERVICE: SVELTEKIT_DATA_ENPOINTS_PROD.SERVICE,

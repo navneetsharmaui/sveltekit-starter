@@ -8922,12 +8922,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.11.18, esbuild@npm:^0.11.19, esbuild@npm:^0.11.20":
+"esbuild@npm:^0.11.18, esbuild@npm:^0.11.19":
   version: 0.11.20
   resolution: "esbuild@npm:0.11.20"
   bin:
     esbuild: bin/esbuild
   checksum: 553f88218a18d018d690f6512b10f4a37b6e7545b48aad02a1ed77e4b7a01d0261dc4213557d694c55f9e130527a064ed1db872c878a2133a0b3a90122299c82
+  languageName: node
+  linkType: hard
+
+"esbuild@npm:^0.11.23":
+  version: 0.11.23
+  resolution: "esbuild@npm:0.11.23"
+  bin:
+    esbuild: bin/esbuild
+  checksum: 9226fc3d74f7555c96778c5d9204312c578e9c11b472deebfbab52c4ac58b9efc3a40be529368f6ccbe257d0059c6b8fd142c179824a3227d055d912c7b5a94a
   languageName: node
   linkType: hard
 
@@ -18655,7 +18664,7 @@ fsevents@^1.2.7:
     tslib: ^2.2.0
     tsyringe: ^4.5.0
     typescript: ^4.2.4
-    vite: ^2.3.2
+    vite: ^2.3.3
     yargs: ^17.0.1
   languageName: unknown
   linkType: soft
@@ -19966,11 +19975,11 @@ typescript@^4.2.4:
   languageName: node
   linkType: hard
 
-"vite@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "vite@npm:2.3.2"
+"vite@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "vite@npm:2.3.3"
   dependencies:
-    esbuild: ^0.11.20
+    esbuild: ^0.11.23
     fsevents: ~2.3.1
     postcss: ^8.2.10
     resolve: ^1.19.0
@@ -19980,7 +19989,7 @@ typescript@^4.2.4:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 313830563377cac21af6d25e07cae99b666e987bb8da41e193c9182940da7a52e70c2cac725f20fdec96241990f070413b113fcee94cdb1164a2a3a188ccb859
+  checksum: 5f552de62f5fc36f49fae6d22672efa170ae8dfe1551a9cb38fd89f222e1941e9b10a39b8f65461c91654ef5d7c4b20f6d0cefe8dda28d2e186cb1cd92458e5f
   languageName: node
   linkType: hard
 
