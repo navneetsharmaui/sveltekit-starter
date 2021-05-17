@@ -9,10 +9,8 @@ module.exports = {
 	ignorePatterns: ['*.cjs'],
 	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
 	settings: {
-		'svelte3/typescript': typescript,
-		'svelte3/ignore-styles': function () {
-			return true;
-		},
+		'svelte3/typescript': () => typescript,
+		'svelte3/ignore-styles': () => true,
 	},
 	parserOptions: {
 		sourceType: 'module',
