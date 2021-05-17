@@ -48,10 +48,12 @@
 	"include": [
 		"src/**/*.d.ts",
 		"src/*.d.ts",
+		"src/*.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
 		"src/**/**/**/*.ts",
 		"src/**/*.svelte",
+		"scripts/*.ts",
 		"./jest-setup.ts"
 	],
 	"exclude": [
