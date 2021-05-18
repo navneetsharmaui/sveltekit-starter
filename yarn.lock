@@ -4155,76 +4155,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-netlify@npm:^1.0.0-next.12":
-  version: 1.0.0-next.12
-  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.12"
+"@sveltejs/adapter-netlify@npm:^1.0.0-next.13":
+  version: 1.0.0-next.13
+  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.13"
   dependencies:
-    "@sveltejs/kit": 1.0.0-next.103
+    "@sveltejs/kit": 1.0.0-next.108
     esbuild: ^0.11.18
     toml: ^3.0.0
-  checksum: 62b31483c189d69b03e2430834eaafb423710c67dcfd358da7e5ada8f4712b5cd2055ae5ede7f2167ac7c99b0f21d8af70bd614939f30c1f0422fe0147cc0e71
+  checksum: e25f93b5d84d23c0dfcf6972f019a370a2ec9c781daf533818b5e9c7ff755ed88d7f7a04d310f639205a99b193afc8bc0801875a48a6aa38fc8629d41e75db5f
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-node@npm:^1.0.0-next.20":
-  version: 1.0.0-next.20
-  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.20"
-  checksum: 2c9d4d1086de6bd1d82348d0618ae89966c05a034d83b50537586d07377ca57439e4f5a3bef2f257751b011675939a22469a422984b7dfbbee2b82e1bd829894
+"@sveltejs/adapter-node@npm:^1.0.0-next.21":
+  version: 1.0.0-next.21
+  resolution: "@sveltejs/adapter-node@npm:1.0.0-next.21"
+  checksum: 6ed64d98e0b0dde5d3823399be1dcd8fa94d23c0d01b8326dd0eb238d30561f31369a4d5e69f9a8e570a8d996eaadfbc16ca31608d09387a0382d5f6ca65c73d
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.0-next.9":
-  version: 1.0.0-next.9
-  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.9"
-  checksum: c35187ad38d36e43561e78d9133cd27fd84c2b8a1ec9e2fd3190959b7adb0d4430b7073475896120ae23b676249238b3af2742bef689774e936fa9dd957b8304
+"@sveltejs/adapter-static@npm:^1.0.0-next.10":
+  version: 1.0.0-next.10
+  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.10"
+  checksum: 991e70aff5aa78bd8be7337e0c331871ba783ae51f038287cca90e3422ff735011b1378806ff425e48ef279133673e84166c24eb5247541877883ee286e52fae
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-vercel@npm:^1.0.0-next.17":
-  version: 1.0.0-next.17
-  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.17"
+"@sveltejs/adapter-vercel@npm:^1.0.0-next.18":
+  version: 1.0.0-next.18
+  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.18"
   dependencies:
-    "@sveltejs/kit": 1.0.0-next.104
+    "@sveltejs/kit": 1.0.0-next.108
     esbuild: ^0.11.18
-  checksum: 0c09557b9e30c88c31ce4ca91794dcbc8c88d492cf4cb7573a82d958bd49bd2b98df08592e9796f68f095c0617f60864d6f2bab239a056c3e23817d5132ccaf4
+  checksum: f138a1fe089fc56d8a4702cfff4b220bbcc9cb5e4d2b2c6a3f52d6bf42ecb1b427fc6117e59c8e9aa93de18f1adee19e4f2d23a5292255f2c8b0745298618ad0
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:1.0.0-next.103":
-  version: 1.0.0-next.103
-  resolution: "@sveltejs/kit@npm:1.0.0-next.103"
-  dependencies:
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.9
-    cheap-watch: ^1.0.3
-    sade: ^1.7.4
-    vite: ^2.2.4
-  peerDependencies:
-    svelte: ^3.38.2
-  bin:
-    svelte-kit: svelte-kit.js
-  checksum: 0e7f3f621dba9b7772907aafb962236710b92054a128aca814e79f8438c5a3e76cd44ef90ddb73cf0cc9d1993495e7d83a3368cf9749cd4e578050de448a7ed0
-  languageName: node
-  linkType: hard
-
-"@sveltejs/kit@npm:1.0.0-next.104":
-  version: 1.0.0-next.104
-  resolution: "@sveltejs/kit@npm:1.0.0-next.104"
-  dependencies:
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.9
-    cheap-watch: ^1.0.3
-    sade: ^1.7.4
-    vite: ^2.2.4
-  peerDependencies:
-    svelte: ^3.38.2
-  bin:
-    svelte-kit: svelte-kit.js
-  checksum: 375d750cc56049595e20128194c51ef07c36ac571f4ea034724080d322e16727bac7976afa6ae13d8a2f86972845b875c7f25231a21689ba474048332f7d0328
-  languageName: node
-  linkType: hard
-
-"@sveltejs/kit@npm:^1.0.0-next.107":
-  version: 1.0.0-next.107
-  resolution: "@sveltejs/kit@npm:1.0.0-next.107"
+"@sveltejs/kit@npm:1.0.0-next.108, @sveltejs/kit@npm:^1.0.0-next.108":
+  version: 1.0.0-next.108
+  resolution: "@sveltejs/kit@npm:1.0.0-next.108"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.0-next.10
     cheap-watch: ^1.0.3
@@ -4234,7 +4202,7 @@ __metadata:
     svelte: ^3.38.2
   bin:
     svelte-kit: svelte-kit.js
-  checksum: ed566e4e9e5e528ceb807fe17a64f20996fbd23a40326e0f521039df95f8b8c0b3f606c86bdff95743de4c7e47d8dd8f886ad43718138963dabb0bcd7aa91559
+  checksum: d88f5da444380421e0306c88d2e4516494070c1ce020f1f336a6b89ee5d485ae7032be48eacd1ff678137144387ff3560aa1b4c9aa4ee929121252a70502a42b
   languageName: node
   linkType: hard
 
@@ -4254,25 +4222,6 @@ __metadata:
     svelte: ^3.37.0
     vite: ^2.2.3
   checksum: 3298afbc82bb51e6cbdd9bb5feebd20fc75e07f1012b1732b7c0fc7235a95515ec0f2944405fe34d8779fffa541ea67213926167550e7b367e278aaef85a9cc3
-  languageName: node
-  linkType: hard
-
-"@sveltejs/vite-plugin-svelte@npm:^1.0.0-next.9":
-  version: 1.0.0-next.9
-  resolution: "@sveltejs/vite-plugin-svelte@npm:1.0.0-next.9"
-  dependencies:
-    "@rollup/pluginutils": ^4.1.0
-    chalk: ^4.1.1
-    debug: ^4.3.2
-    hash-sum: ^2.0.0
-    require-relative: ^0.8.7
-    slash: ^4.0.0
-    source-map: ^0.7.3
-    svelte-hmr: ^0.14.2
-  peerDependencies:
-    svelte: ^3.37.0
-    vite: ^2.2.3
-  checksum: 94391c29f50d0bf05dbcf61972234e5cf8558e576c8a7376e849935d1f2a961d2846ea380d67ec4bbc5c19906836ec5c8c796c589669c4947ab02dd692cf7dfe
   languageName: node
   linkType: hard
 
@@ -4903,12 +4852,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/yargs@npm:^16.0.1":
-  version: 16.0.1
-  resolution: "@types/yargs@npm:16.0.1"
+"@types/yargs@npm:^16.0.2":
+  version: 16.0.2
+  resolution: "@types/yargs@npm:16.0.2"
   dependencies:
     "@types/yargs-parser": "*"
-  checksum: 7b141b6a9efe2da5af054b022f2fbfa3a34d664f1db384babc567b20e9935ac18924c8075780ea22f5e0da4f5714f24dc27b05b6475cd060031648f154183a45
+  checksum: 4c63921bc54297e1a0a35cb70c76b0c5d90085b78e7569ae21ef22aef9f826adfaad8c43bfa3987d98d0136dbbe977914ae0918d4a40cf073b425c9349ede75d
   languageName: node
   linkType: hard
 
@@ -8957,15 +8906,6 @@ __metadata:
   bin:
     esbuild: bin/esbuild
   checksum: 9226fc3d74f7555c96778c5d9204312c578e9c11b472deebfbab52c4ac58b9efc3a40be529368f6ccbe257d0059c6b8fd142c179824a3227d055d912c7b5a94a
-  languageName: node
-  linkType: hard
-
-"esbuild@npm:^0.9.3":
-  version: 0.9.7
-  resolution: "esbuild@npm:0.9.7"
-  bin:
-    esbuild: bin/esbuild
-  checksum: 78a45e561156d8ecedfdbccddb83486b14f892a2624c100ff4a5150353a416b85a881d298a11da3447d3a2655571237dc9049a011ca10f4fedded2ffaab397c9
   languageName: node
   linkType: hard
 
@@ -18622,11 +18562,11 @@ fsevents@^1.2.7:
     "@storybook/addons": ^6.2.9
     "@storybook/preset-scss": ^1.0.3
     "@storybook/svelte": ^6.2.9
-    "@sveltejs/adapter-netlify": ^1.0.0-next.12
-    "@sveltejs/adapter-node": ^1.0.0-next.20
-    "@sveltejs/adapter-static": ^1.0.0-next.9
-    "@sveltejs/adapter-vercel": ^1.0.0-next.17
-    "@sveltejs/kit": ^1.0.0-next.107
+    "@sveltejs/adapter-netlify": ^1.0.0-next.13
+    "@sveltejs/adapter-node": ^1.0.0-next.21
+    "@sveltejs/adapter-static": ^1.0.0-next.10
+    "@sveltejs/adapter-vercel": ^1.0.0-next.18
+    "@sveltejs/kit": ^1.0.0-next.108
     "@sveltestack/svelte-query": ^1.4.0
     "@testing-library/jest-dom": ^5.12.0
     "@testing-library/svelte": ^3.0.3
@@ -18634,7 +18574,7 @@ fsevents@^1.2.7:
     "@types/jest": ^26.0.23
     "@types/node": ^15.3.0
     "@types/node-fetch": ^2.5.10
-    "@types/yargs": ^16.0.1
+    "@types/yargs": ^16.0.2
     "@typescript-eslint/eslint-plugin": ^4.24.0
     "@typescript-eslint/parser": ^4.24.0
     "@yarnpkg/pnpify": ^3.0.0-rc.3
@@ -19956,24 +19896,6 @@ typescript@^4.2.4:
     unist-util-stringify-position: ^2.0.0
     vfile-message: ^2.0.0
   checksum: ee33bee7fb29cae493c3263c4298a28319ab6383ad2f017c036e7213911c6ca6e25d38e6347e59ab8fd0470b123b5522d1d2f6872e418c2e08fd3216fb160e39
-  languageName: node
-  linkType: hard
-
-"vite@npm:^2.2.4":
-  version: 2.2.4
-  resolution: "vite@npm:2.2.4"
-  dependencies:
-    esbuild: ^0.9.3
-    fsevents: ~2.3.1
-    postcss: ^8.2.1
-    resolve: ^1.19.0
-    rollup: ^2.38.5
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    vite: bin/vite.js
-  checksum: f0eb18ccd94a65c8db6846c6da5b46297121fc3604dfb6a48bbbd3b96d9e3096b717bdfa7001dce0de6ca2e991da6da920bd01658824f9ab34f5904281ccacae
   languageName: node
   linkType: hard
 
