@@ -122,7 +122,7 @@
 		"node-fetch": "^2.6.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.14.2",
+		"@babel/core": "^7.14.3",
 		"@babel/preset-env": "^7.14.2",
 		"@fullhuman/postcss-purgecss": "^4.0.3",
 		"@mdx-js/react": "^1.6.22",
@@ -161,7 +161,7 @@
 		"autoprefixer": "^10.2.5",
 		"babel-jest": "^26.6.3",
 		"babel-loader": "^8.2.2",
-		"chromatic": "^5.8.0",
+		"chromatic": "^5.8.1",
 		"cross-env": "^7.0.3",
 		"css-loader": "^5.2.4",
 		"cssnano": "^5.0.2",
@@ -181,7 +181,7 @@
 		"postcss-html": "^0.36.0",
 		"postcss-import": "^14.0.2",
 		"postcss-load-config": "^3.0.1",
-		"postcss-mixins": "^7.0.3",
+		"postcss-mixins": "^8.0.0",
 		"postcss-nested": "^5.0.5",
 		"postcss-scss": "^3.0.5",
 		"postcss-simple-vars": "^6.0.3",

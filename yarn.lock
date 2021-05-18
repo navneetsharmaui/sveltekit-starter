@@ -130,16 +130,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.14.2, @babel/core@npm:^7.14.2":
-  version: 7.14.2
-  resolution: "@babel/core@npm:7.14.2"
+"@babel/core@npm:7.14.3, @babel/core@npm:^7.14.3":
+  version: 7.14.3
+  resolution: "@babel/core@npm:7.14.3"
   dependencies:
     "@babel/code-frame": ^7.12.13
-    "@babel/generator": ^7.14.2
+    "@babel/generator": ^7.14.3
     "@babel/helper-compilation-targets": ^7.13.16
     "@babel/helper-module-transforms": ^7.14.2
     "@babel/helpers": ^7.14.0
-    "@babel/parser": ^7.14.2
+    "@babel/parser": ^7.14.3
     "@babel/template": ^7.12.13
     "@babel/traverse": ^7.14.2
     "@babel/types": ^7.14.2
@@ -149,7 +149,7 @@ __metadata:
     json5: ^2.1.2
     semver: ^6.3.0
     source-map: ^0.5.0
-  checksum: 16dc0a52484da794afc69ac7f13721b7cf2f7e17db6467a36f19fef24fa59a8cea1524faa260d0c05f5a99836fb65acf076cf15abf6846fc66f6c142a94a8327
+  checksum: 4bc2d1abf53e8d1399d5fe159f4f6d275feb64cdfb3a975e903edcbbd98b71ba4a216af28f43db0a5303691a291590837964934acaf673b024563f3acad919f6
   languageName: node
   linkType: hard
 
@@ -183,6 +183,17 @@ __metadata:
     jsesc: ^2.5.1
     source-map: ^0.5.0
   checksum: eacc93d3446dec6fac064cd884ac6e2ecbcfed65f8de069da72855a8124d33004a9dc9f06833e18fae2e352929c493b46035785f948549d2e9d503af0bef8a79
+  languageName: node
+  linkType: hard
+
+"@babel/generator@npm:^7.14.3":
+  version: 7.14.3
+  resolution: "@babel/generator@npm:7.14.3"
+  dependencies:
+    "@babel/types": ^7.14.2
+    jsesc: ^2.5.1
+    source-map: ^0.5.0
+  checksum: 519fce36f3663dd346522d50d13b8549c02c0a340650c62db1bee0595a47f910b433f3bbdb513cc582bd932c5045b2673c8ef6a97913f9335fb16aa06085f274
   languageName: node
   linkType: hard
 
@@ -577,6 +588,15 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: 18dffc18a2c15f8877988c9b5a46c87f1763e8a383c3210c9b5b651955b1ac46dc54da27acc09acd7fb917f37e0bd92b8985dc4c9d7f1e750dfccbcea730aa0e
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.14.3":
+  version: 7.14.3
+  resolution: "@babel/parser@npm:7.14.3"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 5e8d1b2bfc53b59c7476c32adee20c8a4d19fdab58b04b6b177d89319bd76526219dad2f6ab6f51a80a518d0cbcdc3980b73c18bde16017aeee2dd8a50687fe3
   languageName: node
   linkType: hard
 
@@ -6978,9 +6998,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^5.8.0":
-  version: 5.8.0
-  resolution: "chromatic@npm:5.8.0"
+"chromatic@npm:^5.8.1":
+  version: 5.8.1
+  resolution: "chromatic@npm:5.8.1"
   dependencies:
     "@actions/core": ^1.2.4
     "@actions/github": ^4.0.0
@@ -7022,7 +7042,7 @@ __metadata:
     chroma: bin/register.js
     chromatic: bin/register.js
     chromatic-cli: bin/register.js
-  checksum: 28d1dd528465be098c738679673f4ad3a8ac3cf88e90787c9b3f009e690085a4bc94df3c278828d7be1ad68e3b0b44cf039c4d2340cf42a338dfbdbbe3c2fb99
+  checksum: baa732d0cc7f8545964141d4bfd76b2ac7bd25a1b36542b380fd30419e33dd24170530defeee14a3b1fc7183eca9a2da8a00f8858c261fec5c24c47e8d7483b5
   languageName: node
   linkType: hard
 
@@ -10340,7 +10360,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.0.0, globby@npm:^11.0.1, globby@npm:^11.0.2":
+"globby@npm:^11.0.0, globby@npm:^11.0.1, globby@npm:^11.0.3":
   version: 11.0.3
   resolution: "globby@npm:11.0.3"
   dependencies:
@@ -15293,17 +15313,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss-mixins@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "postcss-mixins@npm:7.0.3"
+"postcss-mixins@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "postcss-mixins@npm:8.0.0"
   dependencies:
-    globby: ^11.0.2
+    globby: ^11.0.3
     postcss-js: ^3.0.3
     postcss-simple-vars: ^6.0.3
     sugarss: ^3.0.3
   peerDependencies:
-    postcss: ^8.2.0
-  checksum: a62ea94b6f46e9fd45f1382aa38fb4012b97b2245e1ba9afcc98b93e9ebd39f04b73e8ae9932f00ed1e46eec5c3fc49cdbed346b3a36eb1088fda9523abb694e
+    postcss: ^8.2.14
+  checksum: 2463452b065624892de0c6a076b5e0ae9d6dc59639c251817e17c6d92fec57cf7d617ec6eb62573472b185b83eb901027079bb7c8cb394d3fa34061f23da1ef3
   languageName: node
   linkType: hard
 
@@ -18580,7 +18600,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "sveltkit-starter@workspace:."
   dependencies:
-    "@babel/core": ^7.14.2
+    "@babel/core": ^7.14.3
     "@babel/preset-env": ^7.14.2
     "@fullhuman/postcss-purgecss": ^4.0.3
     "@lukeed/uuid": ^2.0.0
@@ -18621,7 +18641,7 @@ fsevents@^1.2.7:
     autoprefixer: ^10.2.5
     babel-jest: ^26.6.3
     babel-loader: ^8.2.2
-    chromatic: ^5.8.0
+    chromatic: ^5.8.1
     cookie: ^0.4.1
     cross-env: ^7.0.3
     css-loader: ^5.2.4
@@ -18643,7 +18663,7 @@ fsevents@^1.2.7:
     postcss-html: ^0.36.0
     postcss-import: ^14.0.2
     postcss-load-config: ^3.0.1
-    postcss-mixins: ^7.0.3
+    postcss-mixins: ^8.0.0
     postcss-nested: ^5.0.5
     postcss-scss: ^3.0.5
     postcss-simple-vars: ^6.0.3
