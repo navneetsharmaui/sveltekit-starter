@@ -1,0 +1,87 @@
+{
+	"version": 1,
+	"projects": {
+		"sveltekit-starter": {
+			"projectType": "application",
+			"root": ".",
+			"sourceRoot": "src",
+			"routes": "src/routes",
+			"lib": "src/lib",
+			"assets": "static",
+			"architect": {
+				"build": {
+					"configurations": {
+						"prod": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.prod.ts"
+								}
+							]
+						},
+						"dev": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.dev.ts"
+								}
+							]
+						},
+						"qa": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.qa.ts"
+								}
+							]
+						},
+						"local": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.local.ts"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"configurations": {
+						"prod": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.prod.ts"
+								}
+							]
+						},
+						"dev": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.dev.ts"
+								}
+							]
+						},
+						"qa": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.qa.ts"
+								}
+							]
+						},
+						"local": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.local.ts"
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,4 @@
+export enum APIS {
+	IN_MEMORY = 'IN_MEMORY',
+	CHUCK_NORRIS = 'CHUCK_NORRIS',
+}

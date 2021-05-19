@@ -11,6 +11,8 @@
 		"importsNotUsedAsValues": "error",
 		"isolatedModules": true,
 		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
 		/**
 			To have warnings/errors of the Svelte compiler at the correct position,
 			enable source maps by default.
@@ -39,17 +41,22 @@
 			"$models": ["src/lib/models/index.ts"],
 			"$models/*": ["src/lib/models/*"],
 			"$data": ["src/lib/data/index.ts"],
-			"$data/*": ["src/lib/data/*"]
+			"$data/*": ["src/lib/data/*"],
+			"$environment/*": ["src/environments/*"]
 		}
 	},
 	"include": [
 		"src/**/*.d.ts",
 		"src/*.d.ts",
+		"src/*.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
 		"src/**/**/**/*.ts",
 		"src/**/*.svelte",
-		"./jest-setup.ts"
+		"scripts/*.ts",
+		"./jest-setup.ts",
+		"scripts/js/sitemap.ts",
+		"scripts/js/environment.setup.ts"
 	],
 	"exclude": [
 		"node_modules/*",

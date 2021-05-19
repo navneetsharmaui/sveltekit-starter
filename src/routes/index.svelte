@@ -1,19 +1,11 @@
 <style lang="scss" type="text/scss">
 </style>
 
-<script lang="ts" context="module">
-	export async function load({ fetch }) {
-		try {
-			await fetch('/sitemap.xml');
-
-			return true;
-		} catch (error) {
-			console.error(error);
-		}
-	}
-</script>
-
 <script lang="ts">
+	// Start: External Imports
+	import { useQuery } from '@sveltestack/svelte-query';
+	// End: External Imports
+
 	// Start: Svelte Imports
 	import { onMount } from 'svelte';
 	// End: Svelte Imports
@@ -21,7 +13,7 @@
 	// Start: Local Imports
 
 	// Core services
-	import { JSONHttpUtil } from '$lib/core/services/https';
+	import { jsonHttpUtil, sveltekitStarterEnvironmentFacade } from '$core/core';
 
 	// Utils
 	import { Logger, LoggerUtils } from '$lib/utils/logger';
@@ -33,11 +25,12 @@
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 	// End: Local Imports
 
+	// Start: Local component properties
 	/**
 	 * @type {IMetaTagProperties}
 	 */
 	const metaData: Partial<IMetaTagProperties> = {
-		title: 'Home | Sveltekit',
+		title: `${sveltekitStarterEnvironmentFacade.environmentName} | Sveltekit`,
 		description:
 			'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook).',
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter home'],
@@ -45,10 +38,23 @@
 
 	const logger: Logger = LoggerUtils.getInstance('Index');
 
+	const githubApiUrl = 'https://api.github.com/repos';
+	const githubUserName = 'SvelteStack';
+	const githubRepoName = 'svelte-query';
+	const queryResult = useQuery<any, Error>('repoData', () =>
+		jsonHttpUtil.get<any>(`${githubApiUrl}/${githubUserName}/${githubRepoName}`),
+	);
+
+	// End: Local component properties
+
+	// Start: Local component methods
+
 	onMount(async () => {
-		const data = await JSONHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
+		const data = await jsonHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
 		logger.debug(data);
 	});
+
+	// End: Local component methods
 </script>
 
 <!-- Start: Header Tag -->
@@ -80,4 +86,22 @@
 		</div>
 	</div>
 </section>
+
+{#if $queryResult.isLoading}
+	<span>Loading...</span>
+{:else if $queryResult.error}
+	<span> An error has occurred {$queryResult.error.message}</span>
+{:else}
+	<div>
+		<h1>
+			{$queryResult.data.name}
+		</h1>
+		<p>
+			{$queryResult.data.description}
+		</p>
+		<strong>👀 {$queryResult.data.subscribers_count}</strong>
+		<strong>✨ {$queryResult.data.stargazers_count}</strong>
+		<strong>🍴 {$queryResult.data.forks_count}</strong>
+	</div>
+{/if}
 <!-- End: Home Page container -->
