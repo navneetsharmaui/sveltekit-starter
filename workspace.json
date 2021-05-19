@@ -3,34 +3,42 @@
 	"projects": {
 		"sveltekit-starter": {
 			"projectType": "application",
-			"root": "./",
+			"root": ".",
 			"sourceRoot": "src",
 			"routes": "src/routes",
 			"assets": "static",
 			"architect": {
 				"build": {
 					"configurations": {
-						"production": {
+						"prod": {
 							"fileReplacements": [
 								{
-									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
-									"with": "libs/my-tickets/environments/src/lib/environment.prod.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.prod.ts"
 								}
 							]
 						},
 						"dev": {
 							"fileReplacements": [
 								{
-									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
-									"with": "libs/my-tickets/environments/src/lib/environment.dev.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.dev.ts"
 								}
 							]
 						},
 						"qa": {
 							"fileReplacements": [
 								{
-									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
-									"with": "libs/my-tickets/environments/src/lib/environment.qa.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.qa.ts"
+								}
+							]
+						},
+						"local": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.local.ts"
 								}
 							]
 						}
@@ -38,27 +46,35 @@
 				},
 				"serve": {
 					"configurations": {
-						"production": {
+						"prod": {
 							"fileReplacements": [
 								{
-									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
-									"with": "libs/my-tickets/environments/src/lib/environment.prod.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.prod.ts"
 								}
 							]
 						},
 						"dev": {
 							"fileReplacements": [
 								{
-									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
-									"with": "libs/my-tickets/environments/src/lib/environment.dev.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.dev.ts"
 								}
 							]
 						},
 						"qa": {
 							"fileReplacements": [
 								{
-									"replace": "libs/my-tickets/environments/src/lib/environment.ts",
-									"with": "libs/my-tickets/environments/src/lib/environment.qa.ts"
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.qa.ts"
+								}
+							]
+						},
+						"local": {
+							"fileReplacements": [
+								{
+									"replace": "/src/environments/environment.ts",
+									"with": "/src/environments/environment.local.ts"
 								}
 							]
 						}
