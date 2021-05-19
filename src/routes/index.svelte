@@ -1,18 +1,6 @@
 <style lang="scss" type="text/scss">
 </style>
 
-<script lang="ts" context="module">
-	export async function load({ fetch }) {
-		try {
-			await fetch('/sitemap.xml');
-
-			return true;
-		} catch (error) {
-			console.error(error);
-		}
-	}
-</script>
-
 <script lang="ts">
 	// Start: External Imports
 	import { useQuery } from '@sveltestack/svelte-query';

@@ -10,6 +10,7 @@ node_modules
 
 # Ignore the build css
 static/*.css
+static/sitemap.xml
 
 # Storybook files #
 ###################

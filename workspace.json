@@ -6,6 +6,7 @@
 			"root": ".",
 			"sourceRoot": "src",
 			"routes": "src/routes",
+			"lib": "src/lib",
 			"assets": "static",
 			"architect": {
 				"build": {
