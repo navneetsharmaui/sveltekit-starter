@@ -37,4 +37,12 @@ export class SveltekitStarterEnvironmentFacade<
 	public get environmentName(): string {
 		return this.coreConfig.environment.name;
 	}
+
+	public get launchURL(): string {
+		return this.coreConfig.environment.lauchURL;
+	}
+
+	public get isProd(): boolean {
+		return this.coreConfig.environment.production;
+	}
 }

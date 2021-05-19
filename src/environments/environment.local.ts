@@ -12,6 +12,7 @@ export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_E
 	environmentType: EnvironmentType.LOCAL,
 	production: false,
 	isDebugMode: true,
+	lauchURL: import.meta.env.VITE_BASE_URL,
 	apiUrls: {
 		CHUCK_NORRIS: import.meta.env.VITE_CHUCK_NORRIS_API_URL,
 		IN_MEMORY: '',

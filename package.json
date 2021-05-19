@@ -57,7 +57,7 @@
 		"build:postcss": "cross-env TAILWIND_MODE=build NODE_ENV=production cross-env-shell postcss static/global.css -o static/global.css",
 		"build:postcss:taildwindcss": "cross-env TAILWIND_MODE=build NODE_ENV=production STYLE_TYPE=TAILWIND postcss src/styles/tailwind.postcss -o static/tailwind.css",
 		"build:sveltekit": "cross-env-shell svelte-kit build",
-		"build": "run-s build:env:prod build:scss build:postcss build:postcss:taildwindcss build:sveltekit build:env:local",
+		"build": "run-s build:sitemap:prod build:env:prod build:scss build:postcss build:postcss:taildwindcss build:sveltekit build:env:local",
 		"build:verbose:sveltekit": "cross-env-shell svelte-kit build --verbose",
 		"build:verbose": "run-s build:scss build:postcss build:postcss:taildwindcss build:verbose:sveltekit",
 		"build:static": "cross-env ADAPTER=static OPTIONS='{}' yarn build",

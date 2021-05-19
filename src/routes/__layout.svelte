@@ -6,6 +6,9 @@
 	import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
 	// End: External Imports
 
+	// Core services
+	import { sveltekitStarterEnvironmentFacade } from '$core/core';
+
 	// Components
 	import Header from '$ui/components/header/Header.svelte';
 
@@ -36,12 +39,13 @@
 		},
 	];
 
+	const applicationHeaderTitle = `${sveltekitStarterEnvironmentFacade.environmentName} | Sveltekit`;
 	const queryClient = new QueryClient();
 	// End: Local component properties
 </script>
 
 <!-- Start: Header Navigation -->
-<Header title="Sveltekit Starter" navLinks="{navLinks}" />
+<Header title="{applicationHeaderTitle}" navLinks="{navLinks}" />
 <!-- End: Header Navigation -->
 
 <QueryClientProvider client="{queryClient}">

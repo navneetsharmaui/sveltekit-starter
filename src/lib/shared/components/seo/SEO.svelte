@@ -4,7 +4,7 @@
 	import type { IMetaTagProperties } from '$lib/models/interfaces/imeta-tag-properties.interface';
 
 	// Data
-	import { variables } from '$data/variables';
+	import { sveltekitStarterEnvironmentFacade } from '$core/core';
 	// End: Local Imports
 
 	// Start: Exported Properties
@@ -21,17 +21,25 @@
 			...metaData.openGraph,
 			title: metaData.title,
 			description: metaData.description,
-			url: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
+			url: metaData.url
+				? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
+				: sveltekitStarterEnvironmentFacade.launchURL,
 			locale: 'en_US',
 		},
 		twitter: {
 			...metaData.twitter,
 			title: metaData.title,
 			description: metaData.description,
-			site: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
+			site: metaData.url
+				? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
+				: sveltekitStarterEnvironmentFacade.launchURL,
 		},
-		url: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
-		searchUrl: metaData.searchUrl ? `${variables.basePath}${metaData.searchUrl}` : variables.basePath,
+		url: metaData.url
+			? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
+			: sveltekitStarterEnvironmentFacade.launchURL,
+		searchUrl: metaData.searchUrl
+			? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.searchUrl}`
+			: sveltekitStarterEnvironmentFacade.launchURL,
 	};
 
 	const jsonLd = (content) => `<${'script'} type="application/ld+json">${JSON.stringify(content)}</${'script'}>`;
@@ -50,25 +58,33 @@
 		if (typeof metaData.image === 'object') {
 			metaData.openGraph = {
 				...metaData.openGraph,
-				image: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
+				image: metaData.url
+					? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
+					: sveltekitStarterEnvironmentFacade.launchURL,
 				'image:width': metaData.image.width,
 				'image:height': metaData.image.height,
 				'image:alt': metaData.image.alt || metaData.title,
 			};
 			metaData.twitter = {
 				...metaData.twitter,
-				image: metaData.url ? `${variables.basePath}${metaData.url}` : variables.basePath,
+				image: metaData.url
+					? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
+					: sveltekitStarterEnvironmentFacade.launchURL,
 				'image:alt': metaData.image.alt || metaData.title,
 			};
 		}
 	}
+
+	const isProd = sveltekitStarterEnvironmentFacade.isProd;
 </script>
 
 <svelte:head>
 	<meta name="robots" content="{metaData.robots}" />
 	<meta name="googlebot" content="{metaData.robots}" />
 
-	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+	{#if isProd}
+		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+	{/if}
 
 	{#if metaData && metaData.title}
 		<title>{metaData.title}</title>
@@ -120,7 +136,7 @@
 			'@context': 'https://schema.org',
 			'@type': 'Organization',
 			url: metaData.url,
-			logo: `${variables.basePath}/favicon.ico`,
+			logo: `${sveltekitStarterEnvironmentFacade.launchURL}/favicon.ico`,
 		})}
 	{/if}
 
