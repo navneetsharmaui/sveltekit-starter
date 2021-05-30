@@ -13,7 +13,8 @@
 	// Start: Local Imports
 
 	// Core services
-	import { jsonHttpUtil, sveltekitStarterEnvironmentFacade } from '$core/core';
+	import { sveltekitStarterEnvironmentFacade } from '$core/services/environment';
+	import { jsonHttpUtil } from '$core/services/https';
 
 	// Utils
 	import { Logger, LoggerUtils } from '$lib/utils/logger';

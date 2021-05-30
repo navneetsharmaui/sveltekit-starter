@@ -1,10 +1,10 @@
 <script lang="ts">
 	// Start: Local Imports
 	// Models
-	import type { IMetaTagProperties } from '$lib/models/interfaces/imeta-tag-properties.interface';
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 
 	// Data
-	import { sveltekitStarterEnvironmentFacade } from '$core/core';
+	import { sveltekitStarterEnvironmentFacade } from '$core/services/environment/environment.facade';
 	// End: Local Imports
 
 	// Start: Exported Properties
