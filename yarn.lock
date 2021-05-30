@@ -18466,14 +18466,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"svelte-jester@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "svelte-jester@npm:1.5.0"
-  dependencies:
-    cosmiconfig: ^7.0.0
+"svelte-jester@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "svelte-jester@npm:1.6.0"
   peerDependencies:
     svelte: ">= 3"
-  checksum: 77604fc6511b76f98aa275cdab1d30f1398eb8cfe32641e39bf98ae837b1832e6b80aae431c6e76fbd40591cc7c7ecd59cb3ed9b274039a2018e830c9703150f
+  checksum: b2ce4dd99eafd3a395dfebb119b5b71dd1479d5c5893fadde74a0f9e5cafa5988d326c6be69f74982ae82e2b489390a4243e88ead2b0a10bcac7b6c761bb5629
   languageName: node
   linkType: hard
 
@@ -18633,7 +18631,7 @@ fsevents@^1.2.7:
     sass-loader: ^11.1.1
     style-loader: ^2.0.0
     svelte: ^3.38.2
-    svelte-jester: ^1.5.0
+    svelte-jester: ^1.6.0
     svelte-loader: ^3.1.1
     svelte-preprocess: ^4.7.3
     tailwindcss: ^2.1.2

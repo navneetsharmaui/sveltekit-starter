@@ -3,7 +3,7 @@
 	// Components
 	import SEO from '../seo/SEO.svelte';
 	// Models
-	import type { IMetaTagProperties } from '$lib/models/interfaces/imeta-tag-properties.interface';
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 	// End: Local Imports
 
 	const description =
