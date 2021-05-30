@@ -1,9 +1,7 @@
-import { singleton, inject } from 'tsyringe';
-
+import { environment } from '$environment/environment';
 import type { SVELTEKIT_STARTER_ENPOINT_CONFIG } from '$models/types/sveltekit-endpoits.type';
 import type { ISveltekitStarterCoreConfig } from '$models/interfaces/isveltekit-core-config.interface';
 import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
-import { SveltekitCoreConfigToken } from '$lib/core/tokens';
 
 /**
  * A facacde class for the Environment properties.
@@ -17,14 +15,10 @@ import { SveltekitCoreConfigToken } from '$lib/core/tokens';
  * @alpha
  * @public
  */
-@singleton()
 export class SveltekitStarterEnvironmentFacade<
 	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG>,
 > {
-	constructor(
-		@inject(SveltekitCoreConfigToken)
-		private readonly coreConfig: ISveltekitStarterCoreConfig<T>,
-	) {}
+	constructor(private readonly coreConfig: ISveltekitStarterCoreConfig<T>) {}
 
 	public get endPoints(): SVELTEKIT_STARTER_ENPOINT_CONFIG {
 		return this.coreConfig.environment.chuckNorriesAPIConfig.endPoints;
@@ -46,3 +40,7 @@ export class SveltekitStarterEnvironmentFacade<
 		return this.coreConfig.environment.production;
 	}
 }
+
+export const sveltekitStarterEnvironmentFacade = new SveltekitStarterEnvironmentFacade({
+	environment: environment,
+});

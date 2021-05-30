@@ -16693,13 +16693,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"reflect-metadata@npm:^0.1.13":
-  version: 0.1.13
-  resolution: "reflect-metadata@npm:0.1.13"
-  checksum: 629101e6c8b7e0d3166fa51953f908f45b5c73dbaf1375c4f8c3ed62221b870c951343b9b031d0c49957e7262a88020f41be25731ee85b5d779f12c7cec66005
-  languageName: node
-  linkType: hard
-
 "refractor@npm:^2.4.1":
   version: 2.10.1
   resolution: "refractor@npm:2.10.1"
@@ -18636,7 +18629,6 @@ fsevents@^1.2.7:
     postcss-syntax: ^0.36.2
     prettier: ~2.3.0
     prettier-plugin-svelte: ^2.3.0
-    reflect-metadata: ^0.1.13
     sass: ^1.34.0
     sass-loader: ^11.1.1
     style-loader: ^2.0.0
@@ -18648,7 +18640,6 @@ fsevents@^1.2.7:
     ts-jest: ^26.5.6
     ts-node: ^9.1.1
     tslib: ^2.2.0
-    tsyringe: ^4.5.0
     typescript: ^4.2.4
     vite: ^2.3.3
     yargs: ^17.0.1
@@ -19222,15 +19213,6 @@ fsevents@^1.2.7:
   peerDependencies:
     typescript: ">=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta"
   checksum: a10e746258ca9c8e5cdd5e363259b4e353a6729b432f1b30455b9d84ff3fd2f12a44fedafd13872518b0e951fa8cdf56a5b35908bc91d5bf5e7d342548427f2e
-  languageName: node
-  linkType: hard
-
-"tsyringe@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "tsyringe@npm:4.5.0"
-  dependencies:
-    tslib: ^1.9.3
-  checksum: c480dd6bcbe4fc5754dd213b086a4007f8d63c8f0412833beef6de37ae460a2bc6dcc8b9dedf30db82c766c01cae4a79b4c057cdacaf23ad1972e6335a9f3095
   languageName: node
   linkType: hard
 

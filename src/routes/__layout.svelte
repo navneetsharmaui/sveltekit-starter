@@ -2,12 +2,11 @@
 	// Start: Local Imports
 
 	// Start: External Imports
-	import 'reflect-metadata';
 	import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
 	// End: External Imports
 
 	// Core services
-	import { sveltekitStarterEnvironmentFacade } from '$core/core';
+	import { sveltekitStarterEnvironmentFacade } from '$core/services/environment';
 
 	// Components
 	import Header from '$ui/components/header/Header.svelte';
