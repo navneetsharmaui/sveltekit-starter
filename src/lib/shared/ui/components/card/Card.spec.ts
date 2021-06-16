@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import Card from './Card.svelte';
 import { render } from '@testing-library/svelte';
 

@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import Header from './Header.svelte';
 import { render } from '@testing-library/svelte';
 

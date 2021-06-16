@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import Button from './Button.svelte';
 import { render } from '@testing-library/svelte';
 

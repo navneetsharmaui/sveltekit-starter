@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import Footer from './Footer.svelte';
 import { render } from '@testing-library/svelte';
 

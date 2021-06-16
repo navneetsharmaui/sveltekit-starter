@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import Title from './Title.svelte';
 import { render } from '@testing-library/svelte';
 
