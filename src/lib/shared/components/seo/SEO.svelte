@@ -4,7 +4,7 @@
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 
 	// Data
-	import { sveltekitStarterEnvironmentFacade } from '$core/services/environment/environment.facade';
+	import { environment } from '$environment/environment';
 	// End: Local Imports
 
 	// Start: Exported Properties
@@ -14,32 +14,25 @@
 	export let metaData: Partial<IMetaTagProperties> = {};
 	// End: Exported Properties
 
+	const BASE_URL: string = environment.launchURL
+		? environment.launchURL
+		: 'https://sveltekit-starter-blog.netlify.app';
+
 	metaData = {
 		...metaData,
 		robots: 'index,follow',
 		openGraph: {
 			...metaData.openGraph,
+			url: `${BASE_URL}${metaData.url}/`,
 			title: metaData.title,
 			description: metaData.description,
-			url: metaData.url
-				? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
-				: sveltekitStarterEnvironmentFacade.launchURL,
 			locale: 'en_US',
 		},
 		twitter: {
 			...metaData.twitter,
 			title: metaData.title,
 			description: metaData.description,
-			site: metaData.url
-				? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
-				: sveltekitStarterEnvironmentFacade.launchURL,
 		},
-		url: metaData.url
-			? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
-			: sveltekitStarterEnvironmentFacade.launchURL,
-		searchUrl: metaData.searchUrl
-			? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.searchUrl}`
-			: sveltekitStarterEnvironmentFacade.launchURL,
 	};
 
 	const jsonLd = (content) => `<${'script'} type="application/ld+json">${JSON.stringify(content)}</${'script'}>`;
@@ -48,34 +41,30 @@
 		if (!!metaData.image && typeof metaData.image === 'string') {
 			metaData.openGraph = {
 				...metaData.openGraph,
-				image: metaData.image,
+				image: `${BASE_URL}${metaData.image}`,
 			};
 			metaData.twitter = {
 				...metaData.twitter,
-				image: metaData.image,
+				image: `${BASE_URL}${metaData.image}`,
 			};
 		}
 		if (typeof metaData.image === 'object') {
 			metaData.openGraph = {
 				...metaData.openGraph,
-				image: metaData.url
-					? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
-					: sveltekitStarterEnvironmentFacade.launchURL,
+				image: `${BASE_URL}${metaData.image}`,
 				'image:width': metaData.image.width,
 				'image:height': metaData.image.height,
 				'image:alt': metaData.image.alt || metaData.title,
 			};
 			metaData.twitter = {
 				...metaData.twitter,
-				image: metaData.url
-					? `${sveltekitStarterEnvironmentFacade.launchURL}${metaData.url}`
-					: sveltekitStarterEnvironmentFacade.launchURL,
+				image: `${BASE_URL}${metaData.image}`,
 				'image:alt': metaData.image.alt || metaData.title,
 			};
 		}
 	}
 
-	const isProd = sveltekitStarterEnvironmentFacade.isProd;
+	const isProd = environment.production;
 </script>
 
 <svelte:head>
@@ -83,7 +72,7 @@
 	<meta name="googlebot" content="{metaData.robots}" />
 
 	{#if isProd}
-		<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+		<link rel="sitemap" type="application/xml" title="Sveltekit Starter - Sitemap" href="/sitemap.xml" />
 	{/if}
 
 	{#if metaData && metaData.title}
@@ -99,16 +88,8 @@
 		<meta name="keywords" content="{metaData.keywords.join(', ')}" />
 	{/if}
 
-	{#if metaData && metaData.url}
-		<link rel="canonical" href="{metaData.url}" />
-	{/if}
-
-	{#if metaData && metaData.rss}
-		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{metaData.rss}" />
-	{/if}
-
-	{#if metaData && metaData.atom}
-		<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="{metaData.atom}" />
+	{#if metaData && metaData.url && BASE_URL}
+		<link rel="canonical" href="{`${BASE_URL}${metaData.url}/`}" />
 	{/if}
 
 	{#if metaData && metaData.twitter}
@@ -136,7 +117,7 @@
 			'@context': 'https://schema.org',
 			'@type': 'Organization',
 			url: metaData.url,
-			logo: `${sveltekitStarterEnvironmentFacade.launchURL}/favicon.ico`,
+			logo: `${BASE_URL}/favicon.ico`,
 		})}
 	{/if}
 

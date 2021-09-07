@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"moduleResolution": "node",
 		"module": "es2020",
-		"lib": ["es2020"],
+		"lib": ["es2020", "DOM"],
 		"target": "es2019",
 		/**
 			svelte-preprocess cannot figure out whether you have a value or a type, so tell TypeScript
@@ -24,18 +24,20 @@
 		"baseUrl": ".",
 		"allowJs": true,
 		"checkJs": true,
-		"types": ["node", "jest", "@testing-library/jest-dom", "yargs", "cookie", "node-fetch"],
+		"types": ["node", "yargs", "cookie", "node-fetch", "nprogress"],
 		"paths": {
 			"$app/*": [".svelte-kit/dev/runtime/app/*", ".svelte-kit/build/runtime/app/*"],
 			"$lib/*": ["src/lib/*"],
+			"$stores": ["src/stores/index.ts"],
 			"$core": ["src/lib/core/index.ts"],
 			"$core/*": ["src/lib/core/*"],
 			"$utils": ["src/lib/utils/index.ts"],
 			"$utils/*": ["src/lib/utils/*"],
+			"$layouts/*": ["src/lib/layouts/*"],
 			"$shared": ["src/lib/shared/index.ts"],
 			"$shared/*": ["src/lib/shared/*"],
 			"$components": ["src/lib/shared/components/index.ts"],
-			"$components/*": ["src/lib/shared/ui/*"],
+			"$components/*": ["src/lib/shared/components/*"],
 			"$ui": ["src/lib/shared/ui/index.ts"],
 			"$ui/*": ["src/lib/shared/ui/*"],
 			"$models": ["src/lib/models/index.ts"],
@@ -54,9 +56,7 @@
 		"src/**/**/**/*.ts",
 		"src/**/*.svelte",
 		"scripts/*.ts",
-		"./jest-setup.ts",
-		"scripts/js/sitemap.ts",
-		"scripts/js/environment.setup.ts"
+		"scripts/js/*.ts"
 	],
 	"exclude": [
 		"node_modules/*",

@@ -1,1 +1,1 @@
-export * from './environment.facade';
+export { sveltekitStarterEnvironmentFacade } from './environment.facade';

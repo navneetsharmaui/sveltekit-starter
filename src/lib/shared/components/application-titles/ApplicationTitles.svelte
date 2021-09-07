@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { IApplicationRouteTitle } from '$lib/models';
+	import type { IApplicationRouteTitle } from '$models/interfaces/iapplication-route-title.interface';
 
 	import { onMount } from 'svelte';
 	import Title from '../title/Title.svelte';

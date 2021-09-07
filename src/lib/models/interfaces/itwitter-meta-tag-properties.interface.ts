@@ -21,4 +21,8 @@ export interface ITwitterMetaTagProperties {
 	'app:name:googleplay': string;
 	'app:id:googleplay': string;
 	'app:url:googleplay': string;
+	label1: string;
+	data1: string;
+	label2: string;
+	data2: string;
 }

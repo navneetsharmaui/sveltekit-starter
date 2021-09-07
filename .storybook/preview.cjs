@@ -5,7 +5,6 @@ const { withInfo } = require('@storybook/addon-info');
 
 // Global CSS Imports
 import '../static/tailwind.css';
-import '../static/global.css';
 
 export const parameters = {
 	actions: { argTypesRegex: '^on[A-Z].*' },

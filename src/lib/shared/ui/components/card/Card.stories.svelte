@@ -10,7 +10,7 @@
 <Template let:args>
 	<Card {...args} on:click="{args.onClick}">
 		<span slot="card-content">
-			<div> Navneet </div>
+			<div> Sveltekit Starter </div>
 			<div> SSE </div>
 		</span>
 	</Card>

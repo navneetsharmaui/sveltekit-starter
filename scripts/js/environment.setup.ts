@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 
-const pathToWorkspaceJSON = './workspace.json';
+const pathToWorkspaceJSON = './sveltekit-space.json';
 
 // const pathToEnvironmentPorpertiesFolder = './src/environments';
 

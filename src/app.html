@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
@@ -8,11 +8,11 @@
 
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="theme-color" content="#ff6600" />
+		<meta name="theme-color" content="#fff" />
 		<link rel="manifest" href="/manifest.json" />
 		<link
 			rel="preload"
-			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"
+			href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 			as="style"
 			onload="this.onload=null;this.rel='stylesheet'"
 		/>
@@ -23,15 +23,21 @@
 			onload="this.onload=null;this.rel='stylesheet'"
 		/>
 		<noscript>
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap" />
+			<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			/>
 			<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 		</noscript>
-		<link rel="stylesheet" href="/tailwind.css" />
-		<link rel="stylesheet" href="/global.css" />
+
 		%svelte.head%
 	</head>
 	<body>
 		<div id="starter">%svelte.body%</div>
-		<noscript> Please enable JavaScript to continue using this application. </noscript>
 	</body>
+	<noscript>
+		<div class="flex flex-col max-h-full min-h-full h-full w-full min-w-full max-w-full">
+			<p> Please enable JavaScript to continue using this application. </p>
+		</div>
+	</noscript>
 </html>

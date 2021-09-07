@@ -1,18 +1,35 @@
+<script lang="ts" context="module">
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ fetch }) {
+		try {
+			await fetch('/sitemap.xml');
+			return true;
+		} catch (error) {
+			console.error(error);
+		}
+	}
+</script>
+
 <script lang="ts">
 	// Start: Local Imports
 
 	// Start: External Imports
-	import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
+	import '../styles/tailwind.postcss';
+
 	// End: External Imports
 
 	// Core services
-	import { sveltekitStarterEnvironmentFacade } from '$core/services/environment';
 
 	// Components
 	import Header from '$ui/components/header/Header.svelte';
+	import Footer from '$ui/components/footer/Footer.svelte';
+	import CompiledStyles from '$components/compiled-styles/CompiledStyles.svelte';
 
 	// Models
 	import type { IHeaderNavLink } from '$models/interfaces/iheader-nav-link.interface';
+	import type { ICompiledCSS } from '$models/interfaces/icompiled-css.interface';
 	// End: Local Imports
 
 	// Start: Local component properties
@@ -25,8 +42,8 @@
 			label: 'Home',
 		},
 		{
-			path: '/about',
-			label: 'About',
+			path: '/projects',
+			label: 'Projects',
 		},
 		{
 			path: '/settings',
@@ -38,17 +55,42 @@
 		},
 	];
 
-	const applicationHeaderTitle = `${sveltekitStarterEnvironmentFacade.environmentName} | Sveltekit`;
-	const queryClient = new QueryClient();
+	const stylesList: ICompiledCSS[] = [
+		{
+			url: '/tailwind.css',
+		},
+	];
 	// End: Local component properties
+
+	// Start: Local component methods
+
+	const toggleThemeMode = (event: CustomEvent<{ dark: boolean }>): void => {
+		const htmlTag = document.getElementsByTagName('html').item(0);
+		htmlTag.className = event.detail.dark ? 'dark' : 'light';
+	};
+
+	// End: Local component methods
 </script>
 
-<!-- Start: Header Navigation -->
-<Header title="{applicationHeaderTitle}" navLinks="{navLinks}" />
-<!-- End: Header Navigation -->
+<CompiledStyles cssFiles="{stylesList}" />
 
-<QueryClientProvider client="{queryClient}">
-	<!-- Start: Defaull layout slot -->
-	<slot />
-	<!-- End: Defaull layout slot -->
-</QueryClientProvider>
+<div class="bg-white dark:bg-black">
+	<!-- Start: Header Navigation -->
+	<Header
+		on:toggleTheme="{(e) => toggleThemeMode(e)}"
+		navLinks="{navLinks}"
+		logoImage="{'/images/author/sveltekit-blogger.svg'}"
+		title="{'Sveltekit Starter'}"
+		useThemeModeButton="{true}"
+		useTitleAndLogo="{true}"
+	/>
+	<!-- End: Header Navigation -->
+	<main id="skip" class="flex flex-col justify-center px-8 bg-white dark:bg-black">
+		<!-- Start: Defaull layout slot -->
+		<slot />
+		<!-- End: Defaull layout slot -->
+		<!-- Start: Footer -->
+		<Footer />
+		<!-- End: Footer -->
+	</main>
+</div>

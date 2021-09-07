@@ -1,59 +1,74 @@
-<style lang="scss" type="text/scss">
-</style>
-
 <script lang="ts">
 	// Start: External Imports
-	import { useQuery } from '@sveltestack/svelte-query';
 	// End: External Imports
 
 	// Start: Svelte Imports
-	import { onMount } from 'svelte';
 	// End: Svelte Imports
 
 	// Start: Local Imports
 
 	// Core services
-	import { sveltekitStarterEnvironmentFacade } from '$core/services/environment';
-	import { jsonHttpUtil } from '$core/services/https';
 
 	// Utils
-	import { Logger, LoggerUtils } from '$lib/utils/logger';
 
 	// Components
 	import HeadTags from '$components/head-tags/HeadTags.svelte';
+	import BlogPost from '$components/blog-post/BlogPost.svelte';
+	import ProjectCard from '$components/project-card/ProjectCard.svelte';
 
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
+	import type { IProjectCard } from '$models/interfaces/iproject-card.interface';
+	import type { IBlogPostSummary } from '$models/interfaces/iblog-post-summary.interface';
+	import ExternalLink from '$lib/shared/ui/components/external-link/ExternalLink.svelte';
 	// End: Local Imports
 
+	// Exports
 	// Start: Local component properties
 	/**
 	 * @type {IMetaTagProperties}
 	 */
 	const metaData: Partial<IMetaTagProperties> = {
-		title: `${sveltekitStarterEnvironmentFacade.environmentName} | Sveltekit`,
+		title: `Sveltekit Start | Sveltekit`,
 		description:
 			'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable project. (sveltekit, typescript, tailwindcss, postcss, husky, Storybook).',
 		keywords: ['sveltekit', 'sveltekit starter', 'sveltekit starter home'],
 	};
 
-	const logger: Logger = LoggerUtils.getInstance('Index');
+	const blogs: IBlogPostSummary[] = [
+		{
+			title: 'Welcome to my site!',
+			summary: 'Fusce ac lorem sit amet metus vestibulum dapibus ut at mauris. Etiam ut pulvinar nibh.',
+		},
+		{
+			title: 'A second article',
+			summary: 'Fusce ac lorem sit amet metus vestibulum dapibus ut at mauris. Etiam ut pulvinar nibh.',
+		},
+		{
+			title: 'Yet another article',
+			summary: 'Fusce ac lorem sit amet metus vestibulum dapibus ut at mauris. Etiam ut pulvinar nibh.',
+		},
+	];
 
-	const githubApiUrl = 'https://api.github.com/repos';
-	const githubUserName = 'SvelteStack';
-	const githubRepoName = 'svelte-query';
-	const queryResult = useQuery<any, Error>('repoData', () =>
-		jsonHttpUtil.get<any>(`${githubApiUrl}/${githubUserName}/${githubRepoName}`),
-	);
-
+	const projects: IProjectCard[] = [
+		{
+			title: 'Sveltekit Starter',
+			description:
+				'Sveltekit starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable web application.',
+			slug: 'https://github.com/navneetsharmaui/sveltekit-starter',
+			icon: '',
+		},
+		{
+			title: 'Sveltekit Blog',
+			description:
+				'Sveltekit Blog starter project created with sveltekit, typescript, tailwindcss, postcss, husky, and storybook. The project has the structure set up for the scaleable web application and blog.',
+			slug: 'https://github.com/navneetsharmaui/sveltekit-blog',
+			icon: '',
+		},
+	];
 	// End: Local component properties
 
 	// Start: Local component methods
-
-	onMount(async () => {
-		const data = await jsonHttpUtil.get<any>('https://jsonplaceholder.typicode.com/photos?_limit=20');
-		logger.debug(data);
-	});
 
 	// End: Local component methods
 </script>
@@ -63,46 +78,43 @@
 <!-- End: Header Tag -->
 
 <!-- Start: Home Page container -->
-<section class="text-gray-600 body-font">
-	<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-		<div
-			class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+<div class="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+	<h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+		Hey, I’m Sveltekit Starter
+	</h1>
+	<p class="prose text-gray-600 dark:text-gray-400 mb-16">
+		I'm a developer and creator. I work as the Software Developer at XYZ. You’ve found my personal slice of the
+		internet –&nbsp; while you're here
+		<a sveltekit:prefetch href="/about" aria-label="about me" class="text-blue-700 hover:text-blue-800 transition"
+			>learn more about me.</a
 		>
-			<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Sveltekit Starter Template </h1>
-			<p class="mb-8 leading-relaxed"
-				>The application is setup with the lastest stack of most promising tools for the Web development.</p
-			>
-			<p class="mb-8 leading-relaxed">Tailwindcss | Postcss | Modular Styles | Global Styles</p>
-			<p class="mb-8 leading-relaxed">Typescript | Husky | Storybook</p>
-			<p class="mb-8 leading-relaxed">PWA | SSR | Scalable project structure</p>
-		</div>
-		<div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-			<img
-				class="object-cover object-center rounded"
-				alt="hero"
-				src="https://dummyimage.com/720x600"
-				width="720"
-				height="600"
-			/>
-		</div>
-	</div>
-</section>
+	</p>
 
-{#if $queryResult.isLoading}
-	<span>Loading...</span>
-{:else if $queryResult.error}
-	<span> An error has occurred {$queryResult.error.message}</span>
-{:else}
-	<div>
-		<h1>
-			{$queryResult.data.name}
-		</h1>
-		<p>
-			{$queryResult.data.description}
-		</p>
-		<strong>👀 {$queryResult.data.subscribers_count}</strong>
-		<strong>✨ {$queryResult.data.stargazers_count}</strong>
-		<strong>🍴 {$queryResult.data.forks_count}</strong>
-	</div>
-{/if}
+	<p class="prose text-gray-600 dark:text-gray-400 mb-16">
+		If you want to use the pre setup blog template then you can use
+		<ExternalLink href="{'https://github.com/navneetsharmaui/sveltekit-blog'}" ariaLabel="{'Sveltekit blog'}"
+			>Sveltekit Blog Template</ExternalLink
+		>
+	</p>
+
+	<!-- Start: Popular Blog Section -->
+	<h2 class="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white"> Most Recent </h2>
+
+	{#if blogs.length > 0}
+		{#each blogs as blog}
+			<BlogPost blog="{blog}" />
+		{/each}
+	{/if}
+	<!-- End: Popular Blog Section -->
+
+	<!-- Start: Top Projects -->
+	<h2 class="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white"> Top Projects </h2>
+
+	{#if projects.length > 0}
+		{#each projects as project}
+			<ProjectCard project="{project}" />
+		{/each}
+	{/if}
+	<!-- End: Top Projects -->
+</div>
 <!-- End: Home Page container -->

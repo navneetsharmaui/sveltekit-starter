@@ -3,7 +3,7 @@ import type { ISveltekitStarterEnvironmentConfig } from './isveltekit-strater-en
 
 export interface ISveltekitStarterCoreConfig<
 	T extends ISveltekitStarterEnvironmentConfig<K>,
-	K = SVELTEKIT_DATA_ENPOINT_CONFIG,
+	K = SVELTEKIT_DATA_ENPOINT_CONFIG
 > {
 	environment: T;
 }

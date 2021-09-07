@@ -15,8 +15,8 @@ import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isve
  * @alpha
  * @public
  */
-export class SveltekitStarterEnvironmentFacade<
-	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG>,
+class SveltekitStarterEnvironmentFacade<
+	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG>
 > {
 	constructor(private readonly coreConfig: ISveltekitStarterCoreConfig<T>) {}
 
@@ -33,7 +33,7 @@ export class SveltekitStarterEnvironmentFacade<
 	}
 
 	public get launchURL(): string {
-		return this.coreConfig.environment.lauchURL;
+		return this.coreConfig.environment.launchURL;
 	}
 
 	public get isProd(): boolean {

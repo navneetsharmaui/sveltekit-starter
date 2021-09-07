@@ -1,6 +1,3 @@
-<style lang="scss" type="text/scss">
-</style>
-
 <script lang="ts" context="module">
 	/**
 	 * The load function whihc automatically gets executed with page and fetch parameters provided when the route
@@ -23,7 +20,6 @@
 <script lang="ts">
 	// Start: Local Imports
 	// Components
-	import { Card } from '$ui/components/card';
 	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
 	// Models
@@ -70,56 +66,43 @@
 <!-- End: Header Tag -->
 
 <!-- Start: User Section -->
-<section class="text-gray-600 body-font">
-	<div class="container px-5 py-24 mx-auto">
-		<div class="flex flex-col text-center w-full mb-20">
-			<p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
-		</div>
-		<div class="flex flex-col text-center w-full mb-20">
-			<div class="lg:w-1/4 mx-auto">
-				<!-- Start: User Card -->
-				<Card>
-					<!-- Start: Projected Slot with user details -->
-					<span slot="card-content">
-						<div
-							class="w-16 h-16 sm:mb-4 mb-4 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 flex-shrink-0"
-						>
-							<svg
-								fill="none"
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								class="w-10 h-10"
-								viewBox="0 0 24 24"
-							>
-								<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-								<circle cx="12" cy="7" r="4"></circle>
-							</svg>
-						</div>
-						<div class="font-medium">{user.name}</div>
-						<div class="font-normal">{user.job}</div>
-						<a class="text-red-500 cursor-pointer inline-flex items-center" href="/users"
-							>Go back
-							<svg
-								class="w-4 h-4 ml-2"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<path d="M5 12h14"></path>
-								<path d="M12 5l7 7-7 7"></path>
-							</svg>
-						</a>
-					</span>
-					<!-- End: Projected Slot with user details -->
-				</Card>
-				<!-- End: User Card -->
-			</div>
-		</div>
+<div class="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+	<h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-4 dark:text-white"> {user.name} </h1>
+	<div class="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
+		<h2 class="dark:text-white">
+			{user.job}
+		</h2>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem rerum aut reiciendis
+			nemo consectetur aliquid sunt, atque obcaecati doloribus autem possimus incidunt. Iusto non vero tenetur
+			consequuntur deleniti.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo suscipit excepturi
+			praesentium exercitationem quam enim, aut cum similique architecto in tenetur vel dolores atque voluptatum
+			amet hic.
+		</p>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem rerum aut reiciendis
+			nemo consectetur aliquid sunt, atque obcaecati doloribus autem possimus incidunt. Iusto non vero tenetur
+			consequuntur deleniti.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo suscipit excepturi
+			praesentium exercitationem quam enim, aut cum similique architecto in tenetur vel dolores atque voluptatum
+			amet hic.
+		</p>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem rerum aut reiciendis
+			nemo consectetur aliquid sunt, atque obcaecati doloribus autem possimus incidunt. Iusto non vero tenetur
+			consequuntur deleniti.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo suscipit excepturi
+			praesentium exercitationem quam enim, aut cum similique architecto in tenetur vel dolores atque voluptatum
+			amet hic.
+		</p>
 	</div>
-</section>
+</div>
+
 <!-- End: User Section -->

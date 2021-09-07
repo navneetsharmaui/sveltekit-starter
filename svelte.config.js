@@ -4,15 +4,15 @@
 // command env properties
 const hasAdapter = process.env.ADAPTER;
 const adapt = hasAdapter ? hasAdapter : 'node';
-const isSSR = process.env.SSR ? true : false;
 const isAMP = process.env.AMP ? true : false;
 
 // Imports
-import sveltePreprocess from 'svelte-preprocess';
+import { imagetools } from 'vite-imagetools';
+
+import preprocess from 'svelte-preprocess';
 import { resolve } from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
 
 // Adapters
 import staticAdapter from '@sveltejs/adapter-static';
@@ -21,11 +21,9 @@ import netlifyAdapter from '@sveltejs/adapter-netlify';
 import vercelAdapter from '@sveltejs/adapter-vercel';
 
 // Custom require function as replacement for the require from the commonJS in ES Module
-const customRequire = createRequire(import.meta.url); // jshint ignore:line
 
 // Custom __dirname as replacement for the __dirname from the commonJS in ES Module
 const __dirname = dirname(fileURLToPath(import.meta.url)); // jshint ignore:line
-const pkg = customRequire('./package.json');
 
 const options = JSON.stringify(process.env.OPTIONS || '{}');
 
@@ -49,35 +47,33 @@ const adapter = getAdapters(adapt);
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
-		sveltePreprocess({
-			defaults: {
-				style: 'scss',
-			},
+		preprocess({
 			postcss: true,
 			scss: {
 				prependData: `@import 'src/styles/variables/index.scss';`,
 				outputStyle: 'compressed',
 			},
+			preserve: ['ld+json'],
 		}),
 	],
+
 	kit: {
-		ssr: isSSR,
-		amp: isAMP,
 		target: '#starter',
+		ssr: true,
+		amp: isAMP,
 		prerender: {
 			crawl: true,
 			enabled: true,
-			force: true,
+			onError: 'fail',
 			pages: ['*'],
 		},
 		vite: () => ({
-			ssr: {
-				noExternal: [...Object.keys(pkg.dependencies || {})],
-			},
 			resolve: {
 				alias: {
+					$stores: resolve(__dirname, './src/stores'),
 					$components: resolve(__dirname, './src/lib/shared/components'),
 					$ui: resolve(__dirname, './src/lib/shared/ui'),
+					$layouts: resolve(__dirname, './src/lib/layouts'),
 					$shared: resolve(__dirname, './src/lib/shared'),
 					$models: resolve(__dirname, './src/lib/models'),
 					$data: resolve(__dirname, './src/lib/data'),
@@ -86,9 +82,7 @@ const config = {
 					$environment: resolve(__dirname, './src/environments'),
 				},
 			},
-			optimizeDeps: {
-				include: ['detect-node', 'broadcast-channel'],
-			},
+			plugins: [imagetools({ force: true })],
 		}),
 	},
 };

@@ -13,7 +13,6 @@ export interface IMetaTagProperties {
 	searchUrl: string;
 	sitemapUrl: string;
 
-	rss: string;
 	atom: string;
 
 	twitter: Partial<ITwitterMetaTagProperties>;

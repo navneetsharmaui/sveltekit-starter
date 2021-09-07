@@ -20,7 +20,6 @@
 	const dispatch = createEventDispatcher();
 
 	const onClick = (event) => {
-		console.log(event);
 		rounded = !rounded;
 
 		dispatch('click', event);

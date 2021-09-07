@@ -12,7 +12,16 @@
 </style>
 
 <script lang="ts" context="module">
-	export function load({ error, status }) {
+	export function load({
+		error,
+		status,
+	}): {
+		props: {
+			title: string;
+			status: any;
+			error: any;
+		};
+	} {
 		return {
 			props: {
 				title: `${status}: ${error.message}`,

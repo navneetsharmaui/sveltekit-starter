@@ -6,11 +6,19 @@ node_modules
 /build
 /functions
 /.vercel_build_output
+/.netlify
 /workers-site
+*.log
 
 # Ignore the build css
 static/*.css
+
+# Ignore the xml
 static/sitemap.xml
+static/feed.xml
+
+static/images/blogs
+static/images/snippets
 
 # Storybook files #
 ###################

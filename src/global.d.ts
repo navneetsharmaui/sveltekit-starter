@@ -8,7 +8,7 @@
 declare module '@storybook/addon-svelte-csf';
 
 /**
- * Wiht these declarations images can be imported in the components.
+ * With these declarations images can be imported in the components.
  *
  * @example
  * ```svelte
@@ -64,11 +64,22 @@ declare module '*.wbep' {
 	export = value;
 }
 
+declare module 'micro-cookie-session';
+declare module 'svelte-awesome';
+
 // Start: Interfaces
+
+interface Locals {
+	userid: string;
+}
 
 interface ImportMetaEnv {
 	VITE_BASE_URL: string;
 	VITE_CHUCK_NORRIS_API_URL: string;
 	VITE_CHUCK_NORRIS_API_LANG: string;
+	VITE_SESSION_KEY: string;
+	VITE_TWITTER_API_KEY: string;
+	VITE_TWITTER_TWEETS_ENDPOINT: string;
+	VITE_TWITTER_SEARCH_URL: string;
 	VITE_GITHUB_API_URL: string;
 }
