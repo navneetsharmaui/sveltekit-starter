@@ -137,7 +137,7 @@
 		"@sveltejs/adapter-netlify": "^1.0.0-next.30",
 		"@sveltejs/adapter-node": "^1.0.0-next.43",
 		"@sveltejs/adapter-static": "^1.0.0-next.17",
-		"@sveltejs/adapter-vercel": "^1.0.0-next.27",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.26",
 		"@sveltejs/kit": "^1.0.0-next.142",
 		"@tailwindcss/typography": "^0.4.1",
 		"@types/cookie": "^0.4.1",
