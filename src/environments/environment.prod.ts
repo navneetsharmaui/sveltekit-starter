@@ -12,15 +12,15 @@ export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_E
 	environmentType: EnvironmentType.PROD,
 	production: true,
 	isDebugMode: false,
-	launchURL: import.meta.env.VITE_BASE_URL,
+	launchURL: import.meta.env.SVELTEKIT_STARTER_BASE_URL,
 	apiUrls: {
-		CHUCK_NORRIS: import.meta.env.VITE_CHUCK_NORRIS_API_URL,
+		CHUCK_NORRIS: import.meta.env.SVELTEKIT_STARTER_CHUCK_NORRIS_API_URL,
 		IN_MEMORY: '',
-		GITHUB: import.meta.env.VITE_GITHUB_API_URL,
+		GITHUB: import.meta.env.SVELTEKIT_STARTER_GITHUB_API_URL,
 	},
 	chuckNorriesAPIConfig: {
-		defaultAPILang: import.meta.env.VITE_CHUCK_NORRIS_API_LANG
-			? import.meta.env.VITE_CHUCK_NORRIS_API_LANG
+		defaultAPILang: import.meta.env.SVELTEKIT_STARTER_CHUCK_NORRIS_API_LANG
+			? import.meta.env.SVELTEKIT_STARTER_CHUCK_NORRIS_API_LANG
 			: 'en-US',
 		endPoints: {
 			SEARCH: SVELTEKIT_SEARCH_ENPOINTS_PROD.SEARCH,
@@ -28,14 +28,14 @@ export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_E
 		},
 	},
 	sessionConfig: {
-		SESSION_KEY: import.meta.env.VITE_SESSION_KEY,
+		SESSION_KEY: import.meta.env.SVELTEKIT_STARTER_SESSION_KEY,
 	},
 	twitterConfig: {
-		TWITTER_API_KEY: import.meta.env.VITE_TWITTER_API_KEY,
-		TWITTER_TWEETS_ENDPOINT: import.meta.env.VITE_TWITTER_TWEETS_ENDPOINT,
-		TWITTER_SEARCH_URL: import.meta.env.VITE_TWITTER_SEARCH_URL,
+		TWITTER_API_KEY: import.meta.env.SVELTEKIT_STARTER_TWITTER_API_KEY,
+		TWITTER_TWEETS_ENDPOINT: import.meta.env.SVELTEKIT_STARTER_TWITTER_TWEETS_ENDPOINT,
+		TWITTER_SEARCH_URL: import.meta.env.SVELTEKIT_STARTER_TWITTER_SEARCH_URL,
 	},
 	gitHubConfig: {
-		GITHUB_API_URL: import.meta.env.VITE_GITHUB_API_URL,
+		GITHUB_API_URL: import.meta.env.SVELTEKIT_STARTER_GITHUB_API_URL,
 	},
 };

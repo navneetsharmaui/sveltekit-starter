@@ -82,6 +82,7 @@ const config = {
 					$environment: resolve(__dirname, './src/environments'),
 				},
 			},
+			envPrefix: ['VITE_', 'SVELTEKIT_STARTER_'],
 			plugins: [imagetools({ force: true })],
 		}),
 	},
