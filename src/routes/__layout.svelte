@@ -2,7 +2,6 @@
 	// Start: Local Imports
 
 	// Start: External Imports
-	import '../styles/tailwind.postcss';
 
 	// End: External Imports
 
