@@ -71,10 +71,6 @@
 	<meta name="robots" content="{metaData.robots}" />
 	<meta name="googlebot" content="{metaData.robots}" />
 
-	{#if isProd}
-		<link rel="sitemap" type="application/xml" title="Sveltekit Starter - Sitemap" href="/sitemap.xml" />
-	{/if}
-
 	{#if metaData && metaData.title}
 		<title>{metaData.title}</title>
 		<meta name="title" content="{metaData.title}" />
