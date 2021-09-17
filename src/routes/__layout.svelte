@@ -1,3 +1,16 @@
+<script lang="ts" context="module">
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ page }) {
+		return {
+			props: {
+				path: page.path,
+			},
+		};
+	}
+</script>
+
 <script lang="ts">
 	// Start: Local Imports
 
@@ -10,6 +23,7 @@
 	// Components
 	import Header from '$ui/components/header/Header.svelte';
 	import Footer from '$ui/components/footer/Footer.svelte';
+	import RouteTransition from '$ui/components/route-transition/RouteTransition.svelte';
 	import CompiledStyles from '$components/compiled-styles/CompiledStyles.svelte';
 
 	// Models
@@ -18,6 +32,8 @@
 	// End: Local Imports
 
 	// Start: Local component properties
+	export let path = '';
+
 	/**
 	 * @type {IHeaderNavLink}
 	 */
@@ -72,7 +88,9 @@
 	<!-- End: Header Navigation -->
 	<main id="skip" class="flex flex-col justify-center px-8 bg-white dark:bg-black">
 		<!-- Start: Defaull layout slot -->
-		<slot />
+		<RouteTransition referesh="{path}">
+			<slot />
+		</RouteTransition>
 		<!-- End: Defaull layout slot -->
 		<!-- Start: Footer -->
 		<Footer />
