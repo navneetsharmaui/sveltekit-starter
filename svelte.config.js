@@ -65,7 +65,7 @@ const config = {
 			crawl: true,
 			enabled: true,
 			onError: 'fail',
-			pages: ['*'],
+			entries: ['*'],
 		},
 		vite: () => ({
 			resolve: {
