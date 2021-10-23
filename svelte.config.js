@@ -1,4 +1,4 @@
-e/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* jshint esversion: 9 */
 
 // command env properties
