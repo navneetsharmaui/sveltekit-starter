@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+e/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* jshint esversion: 9 */
 
 // command env properties
@@ -65,7 +65,7 @@ const config = {
 			crawl: true,
 			enabled: true,
 			onError: 'fail',
-			pages: ['*'],
+			entries: ['*'],
 		},
 		vite: () => ({
 			resolve: {
