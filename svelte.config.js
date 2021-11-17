@@ -10,8 +10,7 @@ const isAMP = process.env.AMP ? true : false;
 import { imagetools } from 'vite-imagetools';
 
 import preprocess from 'svelte-preprocess';
-import { resolve } from 'path';
-import { dirname } from 'path';
+import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 // Adapters
