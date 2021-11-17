@@ -26,8 +26,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url)); // jshint ignore:line
 
 const options = JSON.stringify(process.env.OPTIONS || '{}');
 
-const getAdapters = (adapt) => {
-	switch (adapt) {
+const getAdapters = (key) => {
+	switch (key) {
 		case 'node':
 			return nodeAdapter;
 		case 'static':
