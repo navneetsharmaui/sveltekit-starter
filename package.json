@@ -183,7 +183,6 @@
 		"ts-node": "^10.2.1",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0",
-		"vite-imagetools": "^3.6.8",
 		"yargs": "^17.1.1"
 	},
 	"type": "module",
