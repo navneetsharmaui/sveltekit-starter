@@ -7,7 +7,6 @@ const adapt = hasAdapter ? hasAdapter : 'node';
 const isAMP = process.env.AMP ? true : false;
 
 // Imports
-import { imagetools } from 'vite-imagetools';
 
 import preprocess from 'svelte-preprocess';
 import { resolve, dirname } from 'path';
@@ -82,7 +81,7 @@ const config = {
 				},
 			},
 			envPrefix: ['VITE_', 'SVELTEKIT_STARTER_'],
-			plugins: [imagetools({ force: true })],
+			plugins: [],
 		}),
 	},
 };
