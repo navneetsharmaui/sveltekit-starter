@@ -51,7 +51,8 @@ const config = {
 				prependData: `@import 'src/styles/variables/index.scss';`,
 				outputStyle: 'compressed',
 			},
-			preserve: ['ld+json'],
+			preserve: ['ld+json', 'module'],
+			typescript: true,
 		}),
 	],
 
