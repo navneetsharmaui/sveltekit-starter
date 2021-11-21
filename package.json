@@ -144,7 +144,6 @@
 		"@types/node": "^16.7.2",
 		"@types/node-fetch": "^2.5.12",
 		"@types/nprogress": "^0.2.0",
-		"@types/yargs": "^17.0.2",
 		"@typescript-eslint/eslint-plugin": "^4.29.3",
 		"@typescript-eslint/parser": "^4.29.3",
 		"autoprefixer": "^10.3.3",
@@ -182,8 +181,7 @@
 		"tailwindcss": "^2.2.4",
 		"ts-node": "^10.2.1",
 		"tslib": "^2.0.0",
-		"typescript": "^4.0.0",
-		"yargs": "^17.1.1"
+		"typescript": "^4.0.0"
 	},
 	"type": "module",
 	"engines": {
