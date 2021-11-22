@@ -5,7 +5,8 @@ import type { ITwitterConfig } from './itwitter-config.interface';
 import type { ISessionConfig } from './isession-config.interface';
 import type { IGitHubConfig } from './igithub-config.interface';
 
-export interface ISveltekitStarterEnvironmentConfig<T = SVELTEKIT_DATA_ENPOINT_CONFIG> extends IEnvironmentConfig {
+export interface ISveltekitStarterEnvironmentConfig<T = SVELTEKIT_DATA_ENPOINT_CONFIG>
+	extends IEnvironmentConfig {
 	apiUrls: SVELTEKIT_STARTER_API_CONFIG;
 	chuckNorriesAPIConfig: Partial<ISveltekitDBConfig<T>>;
 	sessionConfig: Partial<ISessionConfig>;

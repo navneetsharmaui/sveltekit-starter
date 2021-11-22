@@ -1,6 +1,9 @@
 import { EnvironmentName } from '$models/enums/environment-name.enum';
 import { EnvironmentType } from '$models/enums/environment-type.enum';
-import { SVELTEKIT_DATA_ENPOINTS_QA, SVELTEKIT_SEARCH_ENPOINTS_QA } from '$models/enums/sveltekit-endpoint.qa.enum';
+import {
+	SVELTEKIT_DATA_ENPOINTS_QA,
+	SVELTEKIT_SEARCH_ENPOINTS_QA,
+} from '$models/enums/sveltekit-endpoint.qa.enum';
 import type { SVELTEKIT_STARTER_ENPOINT_CONFIG } from '$models/types/sveltekit-endpoits.type';
 import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
 

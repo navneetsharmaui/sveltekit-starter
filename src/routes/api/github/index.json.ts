@@ -26,7 +26,10 @@ export async function get({ query }) {
 	const allRespos = await githubUserRepos.json();
 
 	const reposWithoutFork = allRespos.filter((repo) => !repo.fork);
-	const stars = reposWithoutFork.reduce((accumulator, repo) => accumulator + repo['stargazers_count'], 0);
+	const stars = reposWithoutFork.reduce(
+		(accumulator, repo) => accumulator + repo['stargazers_count'],
+		0,
+	);
 	return {
 		status: 200,
 		headers: {

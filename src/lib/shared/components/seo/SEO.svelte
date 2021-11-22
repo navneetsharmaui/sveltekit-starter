@@ -35,7 +35,8 @@
 		},
 	};
 
-	const jsonLd = (content) => `<${'script'} type="application/ld+json">${JSON.stringify(content)}</${'script'}>`;
+	const jsonLd = (content) =>
+		`<${'script'} type="application/ld+json">${JSON.stringify(content)}</${'script'}>`;
 
 	$: {
 		if (!!metaData.image && typeof metaData.image === 'string') {

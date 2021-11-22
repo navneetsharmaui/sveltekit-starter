@@ -49,8 +49,8 @@
 	<h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-4 dark:text-white"> Users </h1>
 	<div class="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
 		<p>
-			This page is setup in a way where you can programmatically route to sub routes. Click on each user card to
-			go to there details view.
+			This page is setup in a way where you can programmatically route to sub routes. Click on
+			each user card to go to there details view.
 		</p>
 	</div>
 	{#if users.length > 0}
@@ -75,7 +75,9 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100">
+						<h3
+							class="text-lg font-bold tracking-tight text-gray-900 dark:text-gray-100"
+						>
 							{user.name}
 						</h3>
 						<p class="leading-5 text-gray-700 dark:text-gray-300">

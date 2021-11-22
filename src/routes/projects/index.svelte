@@ -72,7 +72,9 @@
 				>Sveltekit Starter Project</ExternalLink
 			>
 			&nbsp;and&nbsp;
-			<ExternalLink href="https://github.com/navneetsharmaui/sveltekit-blog">Sveltekit Blog Project</ExternalLink>
+			<ExternalLink href="https://github.com/navneetsharmaui/sveltekit-blog"
+				>Sveltekit Blog Project</ExternalLink
+			>
 		</p>
 	</div>
 	{#if projects.length > 0}

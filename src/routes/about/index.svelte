@@ -52,13 +52,15 @@
 				>Sveltekit Starter Project</ExternalLink
 			>
 			&nbsp;and&nbsp;
-			<ExternalLink href="https://github.com/navneetsharmaui/sveltekit-blog">Sveltekit Blog Project</ExternalLink>
+			<ExternalLink href="https://github.com/navneetsharmaui/sveltekit-blog"
+				>Sveltekit Blog Project</ExternalLink
+			>
 		</p>
 		<p>
-			The template has all the route and sample pages setup for you which you can change and customize further.
-			All the pages are by default loaded from the different JS file and is fetched using prefetch when use hover
-			over the links, which reduces the load time when user eventually decides to click on the link and load the
-			route
+			The template has all the route and sample pages setup for you which you can change and
+			customize further. All the pages are by default loaded from the different JS file and is
+			fetched using prefetch when use hover over the links, which reduces the load time when
+			user eventually decides to click on the link and load the route
 		</p>
 	</div>
 </div>

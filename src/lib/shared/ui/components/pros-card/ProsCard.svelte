@@ -4,7 +4,9 @@
 	export let pros!: string[];
 </script>
 
-<div class="border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900 rounded p-6 my-4 w-full">
+<div
+	class="border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900 rounded p-6 my-4 w-full"
+>
 	<span>{`You might use ${title} if...`}</span>
 	<div class="mt-4">
 		{#each pros as pro, index (pro)}

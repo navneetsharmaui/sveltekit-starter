@@ -51,7 +51,12 @@
 			metaData = {
 				title: `${user.name} | Sveltekit`,
 				url: `/users/${user.id}`,
-				keywords: ['sveltekit', 'sveltekit-starter', 'sveltekit-starter-users', `sveltekit ${user.id}`],
+				keywords: [
+					'sveltekit',
+					'sveltekit-starter',
+					'sveltekit-starter-users',
+					`sveltekit ${user.id}`,
+				],
 				searchUrl: `/users/${user.id}`,
 			};
 		}
@@ -67,40 +72,42 @@
 
 <!-- Start: User Section -->
 <div class="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-	<h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-4 dark:text-white"> {user.name} </h1>
+	<h1 class="font-bold text-3xl md:text-5xl tracking-tight mb-4 dark:text-white">
+		{user.name}
+	</h1>
 	<div class="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
 		<h2 class="dark:text-white">
 			{user.job}
 		</h2>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem rerum aut reiciendis
-			nemo consectetur aliquid sunt, atque obcaecati doloribus autem possimus incidunt. Iusto non vero tenetur
-			consequuntur deleniti.
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem
+			rerum aut reiciendis nemo consectetur aliquid sunt, atque obcaecati doloribus autem
+			possimus incidunt. Iusto non vero tenetur consequuntur deleniti.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo suscipit excepturi
-			praesentium exercitationem quam enim, aut cum similique architecto in tenetur vel dolores atque voluptatum
-			amet hic.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo
+			suscipit excepturi praesentium exercitationem quam enim, aut cum similique architecto in
+			tenetur vel dolores atque voluptatum amet hic.
 		</p>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem rerum aut reiciendis
-			nemo consectetur aliquid sunt, atque obcaecati doloribus autem possimus incidunt. Iusto non vero tenetur
-			consequuntur deleniti.
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem
+			rerum aut reiciendis nemo consectetur aliquid sunt, atque obcaecati doloribus autem
+			possimus incidunt. Iusto non vero tenetur consequuntur deleniti.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo suscipit excepturi
-			praesentium exercitationem quam enim, aut cum similique architecto in tenetur vel dolores atque voluptatum
-			amet hic.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo
+			suscipit excepturi praesentium exercitationem quam enim, aut cum similique architecto in
+			tenetur vel dolores atque voluptatum amet hic.
 		</p>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem rerum aut reiciendis
-			nemo consectetur aliquid sunt, atque obcaecati doloribus autem possimus incidunt. Iusto non vero tenetur
-			consequuntur deleniti.
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae consequatur voluptatem
+			rerum aut reiciendis nemo consectetur aliquid sunt, atque obcaecati doloribus autem
+			possimus incidunt. Iusto non vero tenetur consequuntur deleniti.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo suscipit excepturi
-			praesentium exercitationem quam enim, aut cum similique architecto in tenetur vel dolores atque voluptatum
-			amet hic.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime recusandae omnis quo
+			suscipit excepturi praesentium exercitationem quam enim, aut cum similique architecto in
+			tenetur vel dolores atque voluptatum amet hic.
 		</p>
 	</div>
 </div>

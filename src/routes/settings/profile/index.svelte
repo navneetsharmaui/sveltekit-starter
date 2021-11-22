@@ -30,11 +30,11 @@
 	<h2 class="text-3xl md:text-5xl tracking-tight mb-4 dark:text-white"> Profile </h2>
 	<div class="mb-8 text-gray-600 dark:text-gray-400 text-justify">
 		<p>
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni rem consectetur, temporibus aliquam totam
-			ullam. Voluptatibus vel reprehenderit officiis. Quibusdam odio, error quaerat soluta amet suscipit a
-			veritatis ipsum sint! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, omnis blanditiis eius
-			velit ab quisquam pariatur esse hic facere expedita tenetur quas ut illo cumque nobis laboriosam illum ad
-			magnam?
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni rem consectetur,
+			temporibus aliquam totam ullam. Voluptatibus vel reprehenderit officiis. Quibusdam odio,
+			error quaerat soluta amet suscipit a veritatis ipsum sint! Lorem ipsum dolor sit amet
+			consectetur, adipisicing elit. Autem, omnis blanditiis eius velit ab quisquam pariatur
+			esse hic facere expedita tenetur quas ut illo cumque nobis laboriosam illum ad magnam?
 		</p>
 	</div>
 </div>

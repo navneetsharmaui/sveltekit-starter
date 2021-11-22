@@ -57,7 +57,8 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="{2}"
-					d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+					d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+				></path>
 			{/if}
 		</svg>
 	</button>
@@ -68,15 +69,30 @@
 	<!-- <a href="#skip" class="skip-nav"> Skip to content </a> -->
 	{#if useTitleAndLogo}
 		<div class="w-auto p-1 text-gray-900 dark:text-gray-100 font-bold">
-			<a sveltekit:prefetch href="/" class="flex flex-row h-12 justify-center items-center" aria-label="{title}">
-				<img src="{logoImage}" alt="{title}" width="3rem" height="3rem" class="w-12 h-12 mr-2 rounded-full" />
+			<a
+				sveltekit:prefetch
+				href="/"
+				class="flex flex-row h-12 justify-center items-center"
+				aria-label="{title}"
+			>
+				<img
+					src="{logoImage}"
+					alt="{title}"
+					width="3rem"
+					height="3rem"
+					class="w-12 h-12 mr-2 rounded-full"
+				/>
 				{title}
 			</a>
 		</div>
 	{/if}
 	<div class="flex flex-row items-center">
 		{#each navLinks as navLink, index (navLink.path)}
-			<a sveltekit:prefetch href="{navLink.path}" class="p-1 text-gray-900 sm:p-4 dark:text-gray-100">
+			<a
+				sveltekit:prefetch
+				href="{navLink.path}"
+				class="p-1 text-gray-900 sm:p-4 dark:text-gray-100"
+			>
 				{navLink.label}
 			</a>
 		{/each}
