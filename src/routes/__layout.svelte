@@ -15,6 +15,7 @@
 	// Start: Local Imports
 
 	// Start: External Imports
+	import '../styles/tailwind.css';
 
 	// End: External Imports
 
