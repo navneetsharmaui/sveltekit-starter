@@ -25,11 +25,9 @@
 	import Header from '$ui/components/header/Header.svelte';
 	import Footer from '$ui/components/footer/Footer.svelte';
 	import RouteTransition from '$ui/components/route-transition/RouteTransition.svelte';
-	import CompiledStyles from '$components/compiled-styles/CompiledStyles.svelte';
 
 	// Models
 	import type { IHeaderNavLink } from '$models/interfaces/iheader-nav-link.interface';
-	import type { ICompiledCSS } from '$models/interfaces/icompiled-css.interface';
 	// End: Local Imports
 
 	// Start: Local component properties
@@ -57,11 +55,6 @@
 		},
 	];
 
-	const stylesList: ICompiledCSS[] = [
-		{
-			url: '/tailwind.css',
-		},
-	];
 	// End: Local component properties
 
 	// Start: Local component methods
@@ -73,8 +66,6 @@
 
 	// End: Local component methods
 </script>
-
-<CompiledStyles cssFiles="{stylesList}" />
 
 <div class="bg-white dark:bg-black">
 	<!-- Start: Header Navigation -->
