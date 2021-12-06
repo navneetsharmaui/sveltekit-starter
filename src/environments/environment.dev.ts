@@ -27,9 +27,6 @@ export const environment: ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_E
 			SERVICE: SVELTEKIT_DATA_ENPOINTS_DEV.SERVICE,
 		},
 	},
-	sessionConfig: {
-		SESSION_KEY: import.meta.env.SVELTEKIT_STARTER_SESSION_KEY,
-	},
 	twitterConfig: {
 		TWITTER_API_KEY: import.meta.env.SVELTEKIT_STARTER_TWITTER_API_KEY,
 		TWITTER_TWEETS_ENDPOINT: import.meta.env.SVELTEKIT_STARTER_TWITTER_TWEETS_ENDPOINT,
