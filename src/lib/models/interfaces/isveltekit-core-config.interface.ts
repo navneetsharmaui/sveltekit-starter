@@ -1,4 +1,4 @@
-import type { SVELTEKIT_DATA_ENPOINT_CONFIG } from '../types';
+import type { SVELTEKIT_DATA_ENPOINT_CONFIG } from '../types/sveltekit-endpoits.type';
 import type { ISveltekitStarterEnvironmentConfig } from './isveltekit-strater-environment.interface';
 
 export interface ISveltekitStarterCoreConfig<
