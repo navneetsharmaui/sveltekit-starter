@@ -1,4 +1,5 @@
-import type { EnvironmentName, EnvironmentType } from '../enums';
+import type { EnvironmentName } from '../enums/environment-name.enum';
+import type { EnvironmentType } from '../enums/environment-type.enum';
 import type { APIConfig } from '../types/api-config.type';
 
 export interface IConfig {
