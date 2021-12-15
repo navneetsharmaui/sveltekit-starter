@@ -2,8 +2,6 @@
 /* jshint esversion: 9 */
 
 // command env properties
-const hasAdapter = process.env.ADAPTER;
-const adapt = hasAdapter ? hasAdapter : 'node';
 const isAMP = process.env.AMP ? true : false;
 
 // Imports
@@ -13,9 +11,6 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 // Adapters
-import staticAdapter from '@sveltejs/adapter-static';
-import nodeAdapter from '@sveltejs/adapter-node';
-import netlifyAdapter from '@sveltejs/adapter-netlify';
 import vercelAdapter from '@sveltejs/adapter-vercel';
 
 // Custom require function as replacement for the require from the commonJS in ES Module
@@ -24,23 +19,6 @@ import vercelAdapter from '@sveltejs/adapter-vercel';
 const __dirname = dirname(fileURLToPath(import.meta.url)); // jshint ignore:line
 
 const options = JSON.stringify(process.env.OPTIONS || '{}');
-
-const getAdapters = (key) => {
-	switch (key) {
-		case 'node':
-			return nodeAdapter;
-		case 'static':
-			return staticAdapter;
-		case 'netlify':
-			return netlifyAdapter;
-		case 'vercel':
-			return vercelAdapter;
-		default:
-			return nodeAdapter;
-	}
-};
-
-const adapter = getAdapters(adapt);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -57,6 +35,7 @@ const config = {
 	],
 
 	kit: {
+		adapter: vercelAdapter(options),
 		target: '#starter',
 		ssr: true,
 		amp: isAMP,
@@ -86,9 +65,5 @@ const config = {
 		}),
 	},
 };
-
-if (hasAdapter) {
-	config.kit.adapter = adapter(options);
-}
 
 export default config;
