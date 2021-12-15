@@ -119,7 +119,6 @@
 		"@storybook/addon-svelte-csf": "^1.1.0",
 		"@storybook/preset-scss": "^1.0.3",
 		"@storybook/svelte": "^6.3.8",
-		"@sveltejs/adapter-static": "1.0.0-next.17",
 		"@sveltejs/adapter-vercel": "1.0.0-next.26",
 		"@sveltejs/kit": "1.0.0-next.142",
 		"@tailwindcss/typography": "^0.4.1",
