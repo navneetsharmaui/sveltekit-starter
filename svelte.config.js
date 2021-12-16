@@ -2,7 +2,6 @@
 /* jshint esversion: 9 */
 
 // command env properties
-const isAMP = process.env.AMP ? true : false;
 
 // Imports
 
@@ -38,7 +37,6 @@ const config = {
 		adapter: vercelAdapter(options),
 		target: '#starter',
 		ssr: true,
-		amp: isAMP,
 		prerender: {
 			crawl: true,
 			enabled: true,
