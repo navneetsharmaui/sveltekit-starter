@@ -89,7 +89,6 @@
 		"@sveltejs/adapter-vercel": "1.0.0-next.26",
 		"@sveltejs/kit": "1.0.0-next.142",
 		"@tailwindcss/typography": "^0.4.1",
-		"@types/cookie": "^0.4.1",
 		"@types/node": "^16.7.2",
 		"@types/node-fetch": "^2.5.12",
 		"@types/nprogress": "^0.2.0",
