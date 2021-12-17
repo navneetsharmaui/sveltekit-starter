@@ -77,11 +77,6 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.15.0",
-		"@fortawesome/fontawesome-free": "^5.15.4",
-		"@fortawesome/fontawesome-svg-core": "^1.2.36",
-		"@fortawesome/free-brands-svg-icons": "^5.15.4",
-		"@fortawesome/free-regular-svg-icons": "^5.15.4",
-		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@storybook/addon-actions": "^6.3.8",
 		"@storybook/addon-cssresources": "^6.2.9",
 		"@storybook/addon-essentials": "^6.3.8",
