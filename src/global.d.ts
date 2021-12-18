@@ -64,8 +64,6 @@ declare module '*.wbep' {
 	export = value;
 }
 
-declare module 'svelte-awesome';
-
 // Start: Interfaces
 
 interface Locals {
