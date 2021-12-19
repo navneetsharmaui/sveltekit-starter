@@ -16,7 +16,7 @@
 
 	const BASE_URL: string = environment.launchURL
 		? environment.launchURL
-		: 'https://sveltekit-starter-blog.netlify.app';
+		: 'https://sveltekit-starter-one.vercel.app';
 
 	metaData = {
 		...metaData,
