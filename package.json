@@ -71,9 +71,7 @@
 		"eslint": "eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore .",
 		"eslint:fix": "eslint ./src/**/*.{js,svelte,ts} --ignore-path .gitignore . --fix",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "1.0.0-next.26",
