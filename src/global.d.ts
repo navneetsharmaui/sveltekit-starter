@@ -2,10 +2,7 @@
 /// <reference types="svelte" />
 /// <reference types="vite/client" />
 
-/// <reference types="@storybook/addon-svelte-csf" />
-
 // Modules
-declare module '@storybook/addon-svelte-csf';
 
 /**
  * With these declarations images can be imported in the components.
