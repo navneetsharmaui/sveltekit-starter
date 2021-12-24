@@ -1,4 +1,4 @@
-<style lang="scss" type="text/scss">
+<style>
 	h1 {
 		font-size: 2.8em;
 		font-weight: 700;

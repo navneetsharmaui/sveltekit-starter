@@ -1,4 +1,4 @@
-<style lang="scss">
+<style>
 	:global(#nprogress) {
 		pointer-events: none;
 	}

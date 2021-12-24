@@ -1,6 +1,3 @@
-<style lang="scss">
-</style>
-
 <script lang="ts" context="module">
 	export async function load({ page, fetch }) {
 		return {
