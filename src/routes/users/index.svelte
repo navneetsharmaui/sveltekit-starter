@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	export async function load({ page, fetch }) {
+	export async function load({ fetch }) {
 		return {
 			props: {
 				users: await fetch('/users.json').then((res) => res.json()),
