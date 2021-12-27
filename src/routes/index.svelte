@@ -20,7 +20,7 @@
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 	import type { IProjectCard } from '$models/interfaces/iproject-card.interface';
 	import type { IBlogPostSummary } from '$models/interfaces/iblog-post-summary.interface';
-	import ExternalLink from '$lib/shared/ui/components/external-link/ExternalLink.svelte';
+	import ExternalLink from '$ui/components/external-link/ExternalLink.svelte';
 	// End: Local Imports
 
 	// Exports
