@@ -41,7 +41,6 @@
 	"scripts": {
 		"prepare": "husky install",
 		"prebuild": "rimraf .svelte-kit && rimraf build && rimraf .vercel_build_output",
-		"pre-commit": "lint-staged",
 		"check-env": "node --loader ts-node/esm scripts/js/check-env.ts",
 		"dev:sveltekit": "svelte-kit dev",
 		"dev:sveltekit:host": "svelte-kit dev --host=0.0.0.0",
