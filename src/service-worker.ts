@@ -1,56 +1,69 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
+/* eslint-disable no-restricted-globals */
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/// <reference lib="webworker" />
 
-import { timestamp, build, files } from '$service-worker';
+import { build, files, timestamp } from '$service-worker';
 
-const CACHED_ASSESTS = `cache-${timestamp}`;
+const cacheName = `DISCOVER-TWITTER-SPACE-${timestamp}`;
+const worker = (self as unknown) as ServiceWorkerGlobalScope;
 
-const TO_CACHE = build.concat(files);
+const filesToCache = build.concat(files);
+const cacheFilesWitTimeStamp = filesToCache.map((file) => `${file}?${timestamp}`);
+const staticAssests = new Set(filesToCache);
 
-self.addEventListener('install', (event) => {
-	event.waitUntil(caches.open(CACHED_ASSESTS).then((cache) => cache.addAll(TO_CACHE)));
+const cache = async () => {
+	const cachedItems = await caches.open(cacheName);
+	await cachedItems.addAll(cacheFilesWitTimeStamp);
+};
+
+const clear = async () => {
+	const cachedItems = await caches.open(cacheName);
+	await cachedItems.delete(cacheName);
+};
+
+worker.addEventListener('install', async (event: ExtendableEvent) => {
+	event.waitUntil(cache());
+	await worker.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-	event.waitUntil(
-		caches.keys().then(async (keys) => {
-			for (const key of keys) {
-				if (!key.includes(timestamp)) caches.delete(key);
-			}
-			self.clients.claim();
-		}),
-	);
+worker.addEventListener('activate', async (event: ExtendableEvent) => {
+	event.waitUntil(clear());
+	await worker.clients.claim();
 });
+/**
+ * Fetch the asset from the cache or the network and store it in the cache.
+ * Fall back to the cache if the application is offline.
+ */
+const fetchAndCache = async (event: FetchEvent) => {
+	const cachedItems = await caches.open(`offline${cacheName}`);
+	try {
+		const response = await fetch(event.request);
+		await cachedItems.put(event.request, response.clone());
+		return response;
+	} catch (error) {
+		const cachedResponse = await cachedItems.match(event.request);
+		if (cachedResponse) {
+			return cachedResponse;
+		}
+		throw error;
+	}
+};
 
-self.addEventListener('fetch', (event) => {
-	const { request } = event;
+worker.addEventListener('fetch', (event) => {
+	if (event.request.method === 'GET' || event.request.headers.has('range')) return;
 
-	if (!(request.url.indexOf('http') === 0)) return;
-	if (
-		request.method !== 'GET' ||
-		request.headers.has('range') ||
-		(request.cache === 'only-if-cached' && request.mode !== 'same-origin')
-	)
-		return;
-
-	const url = new URL(request.url);
-	const cached = caches.match(request);
-
-	if (url.origin === location.origin && TO_CACHE.includes(url.pathname)) {
-		event.respondWith(cached);
-	} else if (url.protocol === 'https:' || location.hostname === 'localhost') {
-		const promise = fetch(request);
-
-		promise.then((response) => {
-			// cache successful responses
-			if (response.ok && response.type === 'basic') {
-				const clone = response.clone();
-				caches.open(CACHED_ASSESTS).then((cache) => {
-					cache.put(request, clone);
-				});
-			}
-		});
-
-		event.respondWith(promise.catch(() => cached || promise));
+	const url = new URL(event.request.url);
+	const isHttp = url.protocol.startsWith('http');
+	const isDevServerRequest =
+		url.hostname === worker.location.hostname && url.port === worker.location.port;
+	const isStaticAsset = url.host === worker.location.host && staticAssests.has(url.pathname);
+	const skipBecauseUncached = event.request.cache === 'only-if-cached' && !isStaticAsset;
+	if (isHttp && !isDevServerRequest && !isStaticAsset && !skipBecauseUncached) {
+		event.respondWith(
+			(async () => {
+				const cachedAsset = await caches.match(event.request);
+				return cachedAsset || fetchAndCache(event);
+			})(),
+		);
 	}
 });
