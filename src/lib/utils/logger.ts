@@ -10,14 +10,14 @@ export enum LogLevel {
 export class Logger {
 	static level = LogLevel.Debug;
 
-	private _source: string;
+	private source: string;
 
 	constructor(component: string) {
-		this._source = component;
+		this.source = component;
 	}
 
 	public debug(...data: unknown[]): void {
-		this.log(console.log, LogLevel.Debug, data);
+		this.log(console.info, LogLevel.Debug, data);
 	}
 
 	public info(...data: unknown[]): void {
@@ -34,10 +34,8 @@ export class Logger {
 
 	private log = (fun: () => void, level: LogLevel, objects: unknown[]): void => {
 		if (level >= Logger.level) {
-			const log = this._source
-				? ['[' + this._source + ']'].concat(objects as string[])
-				: objects;
-			fun.apply(console, log);
+			const log = this.source ? [`[${this.source}]`].concat(objects as string[]) : objects;
+			fun.apply<Console, unknown[], void>(console, log);
 		}
 	};
 }
