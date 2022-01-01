@@ -20,11 +20,11 @@ class SveltekitStarterEnvironmentFacade<
 > {
 	constructor(private readonly coreConfig: ISveltekitStarterCoreConfig<T>) {}
 
-	public get endPoints(): SVELTEKIT_STARTER_ENPOINT_CONFIG {
+	public get endPoints(): SVELTEKIT_STARTER_ENPOINT_CONFIG | undefined {
 		return this.coreConfig.environment.chuckNorriesAPIConfig.endPoints;
 	}
 
-	public get defaultAPILang(): string {
+	public get defaultAPILang(): string | undefined {
 		return this.coreConfig.environment.chuckNorriesAPIConfig.defaultAPILang;
 	}
 
