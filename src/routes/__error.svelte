@@ -12,7 +12,8 @@
 </style>
 
 <script lang="ts" context="module">
-	export function load({
+	import type { ErrorLoad } from '@sveltejs/kit';
+	export const load: ErrorLoad = ({
 		error,
 		status,
 	}): {
@@ -21,15 +22,13 @@
 			status: any;
 			error: any;
 		};
-	} {
-		return {
-			props: {
-				title: `${status}: ${error.message}`,
-				status,
-				error,
-			},
-		};
-	}
+	} => ({
+		props: {
+			title: `${status}: ${error?.message || ''}`,
+			status,
+			error,
+		},
+	});
 </script>
 
 <script lang="ts">
