@@ -1,14 +1,11 @@
 <script lang="ts" context="module">
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export async function load({ page }) {
-		return {
-			props: {
-				path: page.path,
-			},
-		};
-	}
+	import type { Load } from '@sveltejs/kit';
+
+	export const load: Load = async ({ page }) => ({
+		props: {
+			path: page.path,
+		},
+	});
 </script>
 
 <script lang="ts">
@@ -61,7 +58,9 @@
 
 	const toggleThemeMode = (event: CustomEvent<{ dark: boolean }>): void => {
 		const htmlTag = document.getElementsByTagName('html').item(0);
-		htmlTag.className = event.detail.dark ? 'dark' : 'light';
+		if (htmlTag) {
+			htmlTag.className = event.detail.dark ? 'dark' : 'light';
+		}
 	};
 
 	// End: Local component methods
