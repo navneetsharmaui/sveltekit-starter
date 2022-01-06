@@ -1,20 +1,11 @@
 <script lang="ts" context="module">
-	/**
-	 * The load function whihc automatically gets executed with page and fetch parameters provided when the route
-	 * is loaded. The load function here is asynchronous as the we are fetching the data from the external file.
-	 *
-	 * @param page
-	 * @param fetch
-	 *
-	 * return props Type{{user: UserModel}}
-	 */
-	export async function load({ page, fetch }) {
-		return {
-			props: {
-				user: await fetch(`/users/${page.params.user}.json`).then((res) => res.json()),
-			},
-		};
-	}
+	import type { Load } from '@sveltejs/kit';
+
+	export const load: Load = async ({ page, fetch }) => ({
+		props: {
+			user: await fetch(`/users/${page.params.user}.json`).then((res) => res.json()),
+		},
+	});
 </script>
 
 <script lang="ts">
