@@ -1,11 +1,11 @@
 <script lang="ts" context="module">
-	export async function load({ fetch }) {
-		return {
-			props: {
-				users: await fetch('/users.json').then((res) => res.json()),
-			},
-		};
-	}
+	import type { Load } from '@sveltejs/kit';
+
+	export const load: Load = async ({ fetch }) => ({
+		props: {
+			users: await fetch('/users.json').then((res) => res.json()),
+		},
+	});
 </script>
 
 <script lang="ts">
