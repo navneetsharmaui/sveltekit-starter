@@ -1,16 +1,24 @@
 /dist
+dist
 /build
+build
 /.svelte
 /.svelte-kit
+.svelte-kit
 /.yarn
+.yarn
 /examples
 node_modules
 /node_modules
 /functions
 
 /.vercel_build_output
+.vercel_build_output
 /workers-site
 static/global.css
+static/*.js
+
+svelte.config.js
 
 # Storybook files #
 ###################
