@@ -16,9 +16,7 @@ static/*.css
 # Ignore the xml
 static/sitemap.xml
 static/feed.xml
-
-static/images/blogs
-static/images/snippets
+static/rss.xml
 
 # Storybook files #
 ###################
@@ -68,3 +66,5 @@ pids
 /.env.local
 /.env.*.local
 !.env.example
+
+stats.html
