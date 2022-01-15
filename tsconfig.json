@@ -28,14 +28,13 @@
 		"checkJs": true,
 		"types": ["node", "node-fetch", "nprogress"],
 		"paths": {
-			"$app/*": [".svelte-kit/dev/runtime/app/*", ".svelte-kit/build/runtime/app/*"],
 			"$lib/*": ["src/lib/*"],
 			"$stores": ["src/stores/index.ts"],
+			"$stores/*": ["src/stores/*"],
 			"$core": ["src/lib/core/index.ts"],
 			"$core/*": ["src/lib/core/*"],
 			"$utils": ["src/lib/utils/index.ts"],
 			"$utils/*": ["src/lib/utils/*"],
-			"$layouts/*": ["src/lib/layouts/*"],
 			"$shared": ["src/lib/shared/index.ts"],
 			"$shared/*": ["src/lib/shared/*"],
 			"$components": ["src/lib/shared/components/index.ts"],
@@ -50,15 +49,14 @@
 		}
 	},
 	"include": [
+		"*.d.ts",
 		"src/**/*.d.ts",
-		"src/*.d.ts",
-		"src/*.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
-		"src/**/**/**/*.ts",
 		"src/**/*.svelte",
-		"scripts/*.ts",
-		"scripts/js/*.ts"
+		"src/**/*.d.ts",
+		"src/*.d.ts",
+		"src/**/**/**/*.ts"
 	],
 	"exclude": [
 		"node_modules/*",
@@ -68,6 +66,8 @@
 		"build/*",
 		"coverage/*",
 		".vercel_build_output/*",
-		"functions/*"
+		"functions/*",
+		"static/*",
+		"scripts/*"
 	]
 }
