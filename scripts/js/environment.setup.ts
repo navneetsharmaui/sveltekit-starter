@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable no-console */
 import fs from 'fs';
 
@@ -18,22 +22,23 @@ try {
 	const project = getArguments(processArguments, '--project');
 	const architectType = getArguments(processArguments, '--arhitect-type');
 	// const configuration = getArguments(processArguments, '--configurations');
-	const fileToRead = mode ? mode : 'local';
+	const fileToRead = mode || 'local';
 
-	const writeToFile = (filePath: string, data): void => fs.writeFileSync(filePath, data);
+	const writeToFile = (filePath: string, data: any): void => fs.writeFileSync(filePath, data);
 
 	const workspace = JSON.parse(
 		fs.readFileSync(pathToWorkspaceJSON, {
 			encoding: 'utf8',
 		}),
 	);
-	const root = workspace['projects'][project]['root'];
-	const fileReplacements =
-		workspace['projects'][project]['architect'][architectType]['configurations'][fileToRead]['fileReplacements'];
+	const { root } = workspace.projects[project];
+	const { fileReplacements } = workspace.projects[project].architect[
+		architectType
+	].configurations[fileToRead];
 
-	fileReplacements.forEach((value) => {
-		const content = fs.readFileSync(`${root}${value.with}`);
-		writeToFile(`${root}${value.replace}`, content);
+	fileReplacements.forEach((value: any) => {
+		const content = fs.readFileSync(`${root as string}${value.with as string}`);
+		writeToFile(`${root as string}${value.replace as string}`, content);
 	});
 } catch (error) {
 	console.error(error);
