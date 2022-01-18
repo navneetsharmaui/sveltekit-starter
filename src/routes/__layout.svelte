@@ -30,28 +30,6 @@
 	// Start: Local component properties
 	export let path = '';
 
-	/**
-	 * @type {IHeaderNavLink}
-	 */
-	const navLinks: IHeaderNavLink[] = [
-		{
-			path: '/',
-			label: 'Home',
-		},
-		{
-			path: '/projects',
-			label: 'Projects',
-		},
-		{
-			path: '/settings',
-			label: 'Settings',
-		},
-		{
-			path: '/users',
-			label: 'Users',
-		},
-	];
-
 	// End: Local component properties
 
 	// Start: Local component methods
@@ -70,14 +48,10 @@
 	<!-- Start: Header Navigation -->
 	<Header
 		on:toggleTheme="{(e) => toggleThemeMode(e)}"
-		navLinks="{navLinks}"
-		logoImage="{'/images/author/sveltekit-blogger.svg'}"
-		title="{'Sveltekit Starter'}"
 		useThemeModeButton="{true}"
-		useTitleAndLogo="{true}"
 	/>
 	<!-- End: Header Navigation -->
-	<main id="skip" class="flex flex-col justify-center px-8 bg-white dark:bg-black">
+	<main class="flex flex-col justify-center px-8 bg-white dark:bg-black">
 		<!-- Start: Defaull layout slot -->
 		<RouteTransition referesh="{path}">
 			<slot />
