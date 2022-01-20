@@ -9,7 +9,7 @@
 	// End: Local Imports
 
 	// Start: Exported Properties
-	export let useThemeModeButton!: boolean;
+	export let useThemeModeButton!: boolean | undefined;
 
 	// End: Exported Properties
 
