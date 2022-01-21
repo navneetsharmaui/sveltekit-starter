@@ -1,5 +1,3 @@
 import type { Handle } from '@sveltejs/kit';
 
-export const handle: Handle = async ({ request, resolve }) => {
-	return resolve(request);
-};
+export const handle: Handle = async ({ request, resolve }) => resolve(request);
