@@ -1,4 +1,6 @@
+/* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable no-restricted-globals */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /// <reference lib="webworker" />
 
