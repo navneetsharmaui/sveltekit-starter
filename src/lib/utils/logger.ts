@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 export enum LogLevel {
 	off = 0,
 	Debug,
