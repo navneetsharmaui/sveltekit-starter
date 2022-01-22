@@ -13,6 +13,7 @@
 
 <script lang="ts" context="module">
 	import type { ErrorLoad } from '@sveltejs/kit';
+
 	export const load: ErrorLoad = ({
 		error,
 		status,
@@ -32,28 +33,21 @@
 </script>
 
 <script lang="ts">
-	// Start: Sevelte Imports
-	import { dev } from '$app/env';
-	// End: Sevelte Imports
-
 	// Start: Local Imports
+	// Models
+	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
 
 	//  Components
 	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
-	// Models
-	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
-	// End: Local Imports
+	// Start: Sevelte Imports
+	import { dev } from '$app/env';
+	// End: Sevelte Imports
 
+	// End: Local Imports
 	// Start: Exported Properties
-	/**
-	 * @type {string}
-	 */
 	export let status: string;
 
-	/**
-	 * @type {string}
-	 */
 	export let error: Error;
 	// End: Exported Properties
 
