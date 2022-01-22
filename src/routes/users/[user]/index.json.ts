@@ -1,12 +1,15 @@
+import type { RequestHandler } from '@sveltejs/kit';
 import { userData } from '$data/data';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function get({ params }) {
-	return userData.find((value) => value.id === params.user)
-		? {
-				body: userData[userData.findIndex((value) => value.id === params.user)],
-		  }
-		: {
-				status: 404,
-		  };
-}
+export const get: RequestHandler = ({ params }) => {
+	const userPayload = userData.find((value) => value.id === params.user);
+	if (userPayload) {
+		return {
+			body: JSON.stringify(userData[userData.findIndex((value) => value.id === params.user)]),
+			status: 200,
+		};
+	}
+	return {
+		status: 404,
+	};
+};

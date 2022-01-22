@@ -3,7 +3,7 @@
 
 	export const load: Load = async ({ page, fetch }) => ({
 		props: {
-			user: await fetch(`/users/${page.params.user}.json`).then((res) => res.json()),
+			user: await fetch(`/users/${page.params.user}.json`).then((res) => res.json() as Promise<UserModel>),
 		},
 	});
 </script>
