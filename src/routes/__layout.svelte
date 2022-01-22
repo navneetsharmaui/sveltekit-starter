@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import type { Load } from '@sveltejs/kit';
 
-	export const load: Load = async ({ page }) => ({
+	export const load: Load = ({ page }) => ({
 		props: {
 			path: page.path,
 		},
@@ -22,9 +22,6 @@
 	import Header from '$ui/components/header/Header.svelte';
 	import Footer from '$ui/components/footer/Footer.svelte';
 	import RouteTransition from '$ui/components/route-transition/RouteTransition.svelte';
-
-	// Models
-	import type { IHeaderNavLink } from '$models/interfaces/iheader-nav-link.interface';
 	// End: Local Imports
 
 	// Start: Local component properties
