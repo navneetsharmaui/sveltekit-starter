@@ -1,37 +1,43 @@
 import type {
-	SVELTEKIT_DATA_ENPOINTS,
-	SVELTEKIT_DATA_ENPOINTS_DEV,
-	SVELTEKIT_DATA_ENPOINTS_PROD,
-	SVELTEKIT_DATA_ENPOINTS_QA,
-	SVELTEKIT_SEARCH_ENPOINTS,
-	SVELTEKIT_SEARCH_ENPOINTS_DEV,
-	SVELTEKIT_SEARCH_ENPOINTS_PROD,
-	SVELTEKIT_SEARCH_ENPOINTS_QA,
-} from '../enums';
+	SveltekitDataEndpointsDev,
+	SveltekitSearchEndpointsDev,
+} from '../enums/sveltekit-endpoint.dev.enum';
+import type {
+	SveltekitDataEndpointsQa,
+	SveltekitSearchEndpointsQa,
+} from '../enums/sveltekit-endpoint.qa.enum';
+import type {
+	SveltekitDataEndpointsProd,
+	SveltekitSearchEndpointsProd,
+} from '../enums/sveltekit-endpoint.prod.enum';
+import type {
+	SveltekitDataEndpoints,
+	SveltekitSearchEndpoints,
+} from '../enums/sveltekit-endpoint.enum';
 
-export type SVELTEKIT_DATA_ENPOINT_TYPE = 'SERVICE';
+export type SveltekitDataEndpointType = 'SERVICE';
 
-export type SVELTEKIT_SEARCH_ENPOINT_TYPE = 'SEARCH';
+export type SveltekitSearchEndpointType = 'SEARCH';
 
-export type SVELTEKIT_ENPOINT_TYPE = SVELTEKIT_DATA_ENPOINT_TYPE | SVELTEKIT_SEARCH_ENPOINT_TYPE;
+export type SveltekitEndpointType = SveltekitDataEndpointType | SveltekitSearchEndpointType;
 
-export type SVELTEKIT_ENPOINTS = SVELTEKIT_DATA_ENPOINTS | SVELTEKIT_SEARCH_ENPOINTS;
+export type SveltekitEndpoints = SveltekitDataEndpoints | SveltekitSearchEndpoints;
 
-export type SVELTEKIT_DATA_ENPOINT_CONFIG = {
-	[key in SVELTEKIT_DATA_ENPOINT_TYPE]:
-		| SVELTEKIT_DATA_ENPOINTS
-		| SVELTEKIT_DATA_ENPOINTS_PROD
-		| SVELTEKIT_DATA_ENPOINTS_DEV
-		| SVELTEKIT_DATA_ENPOINTS_QA;
+export type SveltekitDataEndpointConfig = {
+	[key in SveltekitDataEndpointType]:
+		| SveltekitDataEndpoints
+		| SveltekitDataEndpointsProd
+		| SveltekitDataEndpointsDev
+		| SveltekitDataEndpointsQa;
 };
 
-export type SVELTEKIT_SEARCH_ENPOINT_CONFIG = {
-	[key in SVELTEKIT_SEARCH_ENPOINT_TYPE]:
-		| SVELTEKIT_SEARCH_ENPOINTS
-		| SVELTEKIT_SEARCH_ENPOINTS_PROD
-		| SVELTEKIT_SEARCH_ENPOINTS_DEV
-		| SVELTEKIT_SEARCH_ENPOINTS_QA;
+export type SveltekitSearchEndpointConfig = {
+	[key in SveltekitSearchEndpointType]:
+		| SveltekitSearchEndpoints
+		| SveltekitSearchEndpointsProd
+		| SveltekitSearchEndpointsDev
+		| SveltekitSearchEndpointsQa;
 };
 
-export type SVELTEKIT_STARTER_ENPOINT_CONFIG = SVELTEKIT_DATA_ENPOINT_CONFIG &
-	SVELTEKIT_SEARCH_ENPOINT_CONFIG;
+export type SveltekitStarterEndpointConfig = SveltekitDataEndpointConfig &
+	SveltekitSearchEndpointConfig;

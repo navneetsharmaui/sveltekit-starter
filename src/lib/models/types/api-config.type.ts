@@ -1,3 +1,3 @@
-export type APIConfig = {
+export type ApiConfig = {
 	[key in string]: string;
 };
