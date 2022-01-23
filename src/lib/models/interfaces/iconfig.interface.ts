@@ -1,6 +1,6 @@
 import type { EnvironmentName } from '../enums/environment-name.enum';
 import type { EnvironmentType } from '../enums/environment-type.enum';
-import type { APIConfig } from '../types/api-config.type';
+import type { ApiConfig } from '../types/api-config.type';
 
 export interface IConfig {
 	launchURL: string;
@@ -8,5 +8,5 @@ export interface IConfig {
 	production: boolean;
 	isDebugMode: boolean;
 	name: EnvironmentName;
-	apiUrls: APIConfig;
+	apiUrls: ApiConfig;
 }
