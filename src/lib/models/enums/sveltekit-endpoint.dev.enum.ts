@@ -1,8 +1,8 @@
 // LOCAL
-export enum SVELTEKIT_DATA_ENPOINTS_DEV {
+export enum SveltekitDataEndpointsDev {
 	SERVICE = '/service',
 }
 
-export enum SVELTEKIT_SEARCH_ENPOINTS_DEV {
+export enum SveltekitSearchEndpointsDev {
 	SEARCH = '/search',
 }
