@@ -1,5 +1,5 @@
 import { environment } from '$environment/environment';
-import type { SVELTEKIT_STARTER_ENPOINT_CONFIG } from '$models/types/sveltekit-endpoits.type';
+import type { SveltekitStarterEndpointConfig } from '$models/types/sveltekit-endpoits.type';
 import type { ISveltekitStarterCoreConfig } from '$models/interfaces/isveltekit-core-config.interface';
 import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isveltekit-strater-environment.interface';
 
@@ -16,11 +16,11 @@ import type { ISveltekitStarterEnvironmentConfig } from '$models/interfaces/isve
  * @public
  */
 class SveltekitStarterEnvironmentFacade<
-	T extends ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG> = ISveltekitStarterEnvironmentConfig<SVELTEKIT_STARTER_ENPOINT_CONFIG>
+	T extends ISveltekitStarterEnvironmentConfig<SveltekitStarterEndpointConfig> = ISveltekitStarterEnvironmentConfig<SveltekitStarterEndpointConfig>
 > {
 	constructor(private readonly coreConfig: ISveltekitStarterCoreConfig<T>) {}
 
-	public get endPoints(): SVELTEKIT_STARTER_ENPOINT_CONFIG | undefined {
+	public get endPoints(): SveltekitStarterEndpointConfig | undefined {
 		return this.coreConfig.environment.chuckNorriesAPIConfig.endPoints;
 	}
 
@@ -42,5 +42,5 @@ class SveltekitStarterEnvironmentFacade<
 }
 
 export const sveltekitStarterEnvironmentFacade = new SveltekitStarterEnvironmentFacade({
-	environment: environment,
+	environment,
 });
