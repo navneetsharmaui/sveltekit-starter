@@ -1,11 +1,11 @@
 export class JSONHttp {
-	public async get<T>(url: string): Promise<T> {
-		const res = await this.fetch(url);
-		return res.json();
+	public static async get<T>(url: string): Promise<T> {
+		const res = await JSONHttp.fetch(url);
+		return res.json() as Promise<T>;
 	}
 
-	private async fetch(url: string): Promise<Response> {
-		return await fetch(url);
+	private static async fetch(url: string): Promise<Response> {
+		return fetch(url);
 	}
 }
 
