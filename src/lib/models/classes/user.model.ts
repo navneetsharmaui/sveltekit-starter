@@ -3,7 +3,9 @@ import type { IDeserializable } from '$models/interfaces/ideserializable.interfa
 
 export class UserModel implements IDeserializable<IUser>, IUser {
 	public name!: string;
+
 	public job!: string;
+
 	public id!: string;
 
 	deserialize(input: IUser): this {
