@@ -1,15 +1,10 @@
 <script lang="ts">
 	// Start: Local Imports
-
 	// Models
 	import type { IBlogPostSummary } from '$models/interfaces/iblog-post-summary.interface';
-
 	// End: Local Imports
 
 	// Start: Exported Properties
-	/**
-	 * @type {IBlogPostSummary}
-	 */
 	export let blog!: IBlogPostSummary;
 	// End: Exported Properties
 </script>
