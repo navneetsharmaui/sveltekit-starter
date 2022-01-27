@@ -1,9 +1,10 @@
 <script lang="ts">
 	// Start: Local Imports
-	// Components
-	import SEO from '../seo/SEO.svelte';
 	// Models
 	import type { IMetaTagProperties } from '$models/interfaces/imeta-tag-properties.interface';
+
+	// Components
+	import SEO from '../seo/SEO.svelte';
 	// End: Local Imports
 
 	const description =
