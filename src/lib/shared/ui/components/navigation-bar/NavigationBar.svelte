@@ -16,7 +16,7 @@
 	const toggleTheme = (): void => {
 		dark = !dark;
 		dispatch('toggleTheme', {
-			dark: dark,
+			dark,
 		});
 	};
 </script>
