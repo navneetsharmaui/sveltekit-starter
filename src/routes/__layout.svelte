@@ -43,10 +43,7 @@
 
 <div class="bg-white dark:bg-black">
 	<!-- Start: Header Navigation -->
-	<Header
-		on:toggleTheme="{(e) => toggleThemeMode(e)}"
-		useThemeModeButton="{true}"
-	/>
+	<Header on:toggleTheme="{(e) => toggleThemeMode(e)}" useThemeModeButton="{true}" />
 	<!-- End: Header Navigation -->
 	<main class="flex flex-col justify-center px-8 bg-white dark:bg-black">
 		<!-- Start: Defaull layout slot -->

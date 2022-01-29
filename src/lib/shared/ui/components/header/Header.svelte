@@ -21,8 +21,5 @@
 <!-- End: Navigation Progress bar -->
 
 <!-- Start: Navigation bar -->
-<NavigationBar
-	useThemeModeButton="{useThemeModeButton}"
-	on:toggleTheme
-/>
+<NavigationBar useThemeModeButton="{useThemeModeButton}" on:toggleTheme />
 <!-- End: Navigation bar -->

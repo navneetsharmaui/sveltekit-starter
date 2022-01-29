@@ -5,7 +5,8 @@
 	export let cssClasses = '';
 
 	$: if (!cssClasses) {
-		cssClasses = 'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-500 transition';
+		cssClasses =
+			'text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-500 transition';
 	}
 </script>
 
@@ -21,12 +22,7 @@
 			<slot />
 		</a>
 	{:else}
-		<a
-			href="{href}"
-			class="{cssClasses}"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="{href}" class="{cssClasses}" target="_blank" rel="noopener noreferrer">
 			<slot />
 		</a>
 	{/if}
