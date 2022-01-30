@@ -31,10 +31,16 @@ html {
 	scroll-behavior: smooth;
 }
 
+html, body {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 #starter {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 100%;
 }
 
 .sticky-nav {
@@ -47,10 +53,6 @@ html {
 
 .skip-nav {
 	@apply absolute px-4 py-2 transition-transform duration-200 transform -translate-y-12 left-1/4 focus:top-4 focus:translate-y-3 -top-8;
-}
-
-main {
-	min-height: calc(100vh - 104px);
 }
 
 @supports not (backdrop-filter: none) {
