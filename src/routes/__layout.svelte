@@ -45,24 +45,9 @@
 	<!-- Start: Header Navigation -->
 	<Header on:toggleTheme="{(e) => toggleThemeMode(e)}" useThemeModeButton="{true}" />
 	<!-- End: Header Navigation -->
-	<main class="block w-full bg-white dark:bg-black min-w-full min-h-full max-h-full">
-		<aside
-			class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-col md:flex-nowrap md:overflow-hidden shadow-xl flex flex-row flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6 bg-gray-50 border-r-[1px] border-solid border-gray-200"
-		>
-			<div class="px-4 min-w-full mt-4 mb-8">
-				<h1 class="font-bold text-xl text-green-500">Sveltekit Starter</h1>
-			</div>
-			<nav class="px-4 w-full">
-				<ul>
-					<li class="font-semibold cursor-pointer py-2"> Home </li>
-					<li class="font-semibold cursor-pointer py-2"> Dashboard </li>
-					<li class="font-semibold cursor-pointer py-2"> Project </li>
-					<li class="font-semibold cursor-pointer py-2"> Users </li>
-				</ul>
-			</nav>
-		</aside>
+	<main class="flex flex-col w-full bg-white dark:bg-black min-w-full min-h-full max-h-full">
 		<article
-			class="relative md:ml-64 flex flex-col w-[calc(100vw - 15rem - 1rem)] p-0 h-auto m-0 px-4 overflow-y-auto"
+			class="relative md:ml-64 flex flex-col justify-center items-start w-[calc(100vw - 15rem - 1rem)] p-0 h-auto m-0 px-4 overflow-y-auto"
 		>
 			<!-- Start: Defaull layout slot -->
 			<RouteTransition referesh="{path}">
