@@ -1,13 +1,3 @@
-<script lang="ts" context="module">
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = ({ page }) => ({
-		props: {
-			path: page.path,
-		},
-	});
-</script>
-
 <script lang="ts">
 	// Start: Local Imports
 
@@ -19,13 +9,11 @@
 	// Core services
 
 	// Components
-	import Header from '$ui/components/header/Header.svelte';
-	import Footer from '$ui/components/footer/Footer.svelte';
-	import RouteTransition from '$ui/components/route-transition/RouteTransition.svelte';
+	import Header from '$ui/components/headers/Header.svelte';
+	import Footer from '$ui/components/footers/Footer.svelte';
 	// End: Local Imports
 
 	// Start: Local component properties
-	export let path = '';
 
 	// End: Local component properties
 
@@ -50,9 +38,7 @@
 			class="relative md:ml-64 flex flex-col justify-center items-start w-[calc(100vw - 15rem - 1rem)] p-0 h-auto m-0 px-4 overflow-y-auto"
 		>
 			<!-- Start: Defaull layout slot -->
-			<RouteTransition referesh="{path}">
-				<slot />
-			</RouteTransition>
+			<slot />
 			<!-- End: Defaull layout slot -->
 			<!-- Start: Footer -->
 			<Footer />
