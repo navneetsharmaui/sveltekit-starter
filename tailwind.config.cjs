@@ -1,4 +1,4 @@
-/* jshint esversion: 9 */
+/* jshint esversion: 11 */
 
 const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 
