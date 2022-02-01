@@ -1,10 +1,6 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* jshint esversion: 9 */
-
-// command env properties
+/* jshint esversion: 11 */
 
 // Imports
-
 import preprocess from 'svelte-preprocess';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
