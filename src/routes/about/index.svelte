@@ -9,9 +9,6 @@
 	// End: Local Imports
 
 	// Start: Local component properties
-	/**
-	 * @type {IMetaTagProperties}
-	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: 'About | Sveltekit Starter',
 		description: 'About page of Sveltekit starter project',
