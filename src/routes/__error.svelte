@@ -14,16 +14,7 @@
 <script lang="ts" context="module">
 	import type { ErrorLoad } from '@sveltejs/kit';
 
-	export const load: ErrorLoad = ({
-		error,
-		status,
-	}): {
-		props: {
-			title: string;
-			status: any;
-			error: any;
-		};
-	} => ({
+	export const load: ErrorLoad = ({ error, status }) => ({
 		props: {
 			title: `${status}: ${error?.message || ''}`,
 			status,
@@ -50,10 +41,6 @@
 
 	export let error: Error;
 	// End: Exported Properties
-
-	/**
-	 * @type {IMetaTagProperties}
-	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: `${status} | Sveltekit`,
 		description: '404 page of Sveltekit starter project',
