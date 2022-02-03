@@ -26,9 +26,6 @@
 
 	// Start: Local component properties
 
-	/**
-	 * @type {IMetaTagProperties}
-	 */
 	let metaData: Partial<IMetaTagProperties> = {
 		title: `${user.name} | Sveltekit`,
 		description:
