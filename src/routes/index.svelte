@@ -25,9 +25,6 @@
 
 	// Exports
 	// Start: Local component properties
-	/**
-	 * @type {IMetaTagProperties}
-	 */
 	const metaData: Partial<IMetaTagProperties> = {
 		title: `Sveltekit Start | Sveltekit`,
 		description:
