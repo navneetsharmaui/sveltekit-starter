@@ -5,7 +5,7 @@
 
 	// Components
 	import { NavigationProgressBar } from '$ui/components/navigation-progress-bar';
-	import { NavigationBar } from '$ui/components/navigation-bar';
+	import NavigationBar from '$ui/components/navigation-bars/NavigationBar.svelte';
 	// End: Local Imports
 
 	// Start: Exported Properties
