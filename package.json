@@ -107,7 +107,7 @@
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"rimraf": "^3.0.2",
-		"svelte": "^3.42.3",
+		"svelte": "^3.49.0",
 		"svelte-check": "^2.2.5",
 		"svelte-loader": "^3.1.2",
 		"svelte-preprocess": "^4.7.4",
