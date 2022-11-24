@@ -1,25 +1,5 @@
-<script lang="ts" context="module">
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = ({ page }) => {
-		const { params } = page;
-		if (!params.invoice || Number.isNaN(params.invoice) || Number(params.invoice) > 88888) {
-			return {
-				status: 404,
-				error: 'Not Invoice found with given id',
-			};
-		}
-		return {
-			props: {
-				invoice: page.params.invoice,
-			},
-			status: 200,
-		};
-	};
-</script>
-
 <script lang="ts">
-	export let invoice: number;
+	export let data: { invoice: number } = { invoice: 0 };
 </script>
 
 <div class="w-full flex flex-col p-6">
@@ -38,7 +18,7 @@
 	<div class="w-full flex flex-row text-xs my-2">
 		<span> Invoice </span>
 		<span class="px-2">
-			#{invoice}
+			#{data.invoice}
 		</span>
 	</div>
 	<div class="w-full flex flex-col items-center justify-center mt-6">

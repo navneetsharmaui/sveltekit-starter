@@ -12,15 +12,19 @@
 </style>
 
 <script lang="ts" context="module">
-	import type { ErrorLoad } from '@sveltejs/kit';
+	throw new Error(
+		'@migration task: Replace error load function (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3293209)',
+	);
 
-	export const load: ErrorLoad = ({ error, status }) => ({
-		props: {
-			title: `${status}: ${error?.message || ''}`,
-			status,
-			error,
-		},
-	});
+	// import type { ErrorLoad } from '@sveltejs/kit';
+
+	// export const load: ErrorLoad = ({ error, status }) => ({
+	// 	props: {
+	// 		title: `${status}: ${error?.message || ''}`,
+	// 		status,
+	// 		error,
+	// 	},
+	// });
 </script>
 
 <script lang="ts">
@@ -32,7 +36,7 @@
 	import HeadTags from '$components/head-tags/HeadTags.svelte';
 
 	// Start: Sevelte Imports
-	import { dev } from '$app/env';
+	import { dev } from '$app/environment';
 	// End: Sevelte Imports
 
 	// End: Local Imports

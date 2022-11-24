@@ -1,13 +1,3 @@
-<script lang="ts" context="module">
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ fetch }) => ({
-		props: {
-			users: await fetch('/users.json').then((res) => res.json() as Promise<UserModel[]>),
-		},
-	});
-</script>
-
 <script lang="ts">
 	// Sevelte Imports
 	// Utils
@@ -21,7 +11,7 @@
 	// End: Local Imports
 
 	// Start: Exported properties
-	export let users: UserModel[] = [];
+	export let data: { users: UserModel[] } = { users: [] };
 	// End: Exported properties
 
 	// Start: Local component properties
@@ -47,8 +37,8 @@
 			each user card to go to there details view.
 		</p>
 	</div>
-	{#if users.length > 0}
-		{#each users as user}
+	{#if data.users.length > 0}
+		{#each data.users as user}
 			<a sveltekit:prefetch href="{`/users/${user.id}`}" class="w-full">
 				<div
 					class="mb-4 hover:transition-shadow hover:shadow dark:hover:transition-shadow dark:hover:shadow flex items-center border border-gray-200 dark:border-gray-800 rounded p-4"

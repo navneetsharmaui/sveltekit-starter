@@ -1,7 +1,8 @@
 import type { RequestHandler } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import { userData } from '$data/data';
 
-export const get: RequestHandler = ({ params }) => {
+export const GET: RequestHandler = ({ params }) => {
 	const userPayload = userData.find((value) => value.id === params.user);
 	if (userPayload) {
 		return {
@@ -9,7 +10,5 @@ export const get: RequestHandler = ({ params }) => {
 			status: 200,
 		};
 	}
-	return {
-		status: 404,
-	};
+	throw error(404);
 };

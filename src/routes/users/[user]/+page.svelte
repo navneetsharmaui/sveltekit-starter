@@ -1,16 +1,8 @@
-<script lang="ts" context="module">
-	import type { Load } from '@sveltejs/kit';
-
-	export const load: Load = async ({ page, fetch }) => ({
-		props: {
-			user: await fetch(`/users/${page.params.user}.json`).then(
-				(res) => res.json() as Promise<UserModel>,
-			),
-		},
-	});
-</script>
-
 <script lang="ts">
+	throw new Error(
+		'@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)',
+	);
+
 	// Start: Local Imports
 	// Components
 	import HeadTags from '$components/head-tags/HeadTags.svelte';
