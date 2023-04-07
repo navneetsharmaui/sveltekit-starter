@@ -75,7 +75,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "1.0.0-next.26",
-		"@sveltejs/kit": "1.0.0-next.142",
+		"@sveltejs/kit": "1.15.2",
 		"@tailwindcss/typography": "^0.4.1",
 		"@types/node": "^16.7.2",
 		"@types/node-fetch": "^2.5.12",
